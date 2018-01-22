@@ -8,6 +8,8 @@
 
 #import "DTiTunesViewController.h"
 #import <WebKit/WebKit.h>
+#import <TFHpple.h>
+#import "DTAppsViewController.h"
 
 @interface DTiTunesViewController ()<WKNavigationDelegate, WKUIDelegate>
 
@@ -81,6 +83,9 @@
         [webView evaluateJavaScript:[NSString stringWithFormat:@"document.getElementById('accountpassword').value='%@';", self.accountModel.password.decryptAESString] completionHandler:^(id _Nullable password, NSError * _Nullable error) {}];
         [webView evaluateJavaScript:@"document.forms[0].submit(); " completionHandler:^(id _Nullable success, NSError * _Nullable error) {}];
     }
+    if ([webView.URL.absoluteString isEqualToString:DTiTunesApps]) {
+        self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithImage:UIImageMake(@"列表") position:QMUINavigationButtonPositionNone target:self action:@selector(rightBarButtonItemDidClick)];
+    }
 }
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
@@ -89,7 +94,49 @@
 }
 
 - (void)rightBarButtonItemDidClick {
-    
+    weakOBJ(self);
+    [self.wkWebView evaluateJavaScript:@"document.documentElement.innerHTML" completionHandler:^(NSString * _Nullable html, NSError * _Nullable error) {
+        NSString *nameXPath = @"//div[@bo-bind='app.name']";
+        NSString *statusXPath = @"//span[@ng-bind='l10n.interpolate(appVersionStatusService.getVersionStatusKey(app, version.stateKey, referenceData))']";
+        NSString *iconXPath = @"//div[@ng-class='getIconClass(app)']";
+        TFHpple *hpple = [[TFHpple alloc] initWithHTMLData:[html dataUsingEncoding:NSUTF8StringEncoding]];
+        NSArray <NSString *>*appNames = [weak_self appNames:[hpple searchWithXPathQuery:nameXPath]];
+        NSArray <NSString *>*appStatus = [weak_self appStatus:[hpple searchWithXPathQuery:statusXPath]];
+        NSArray <NSString *>*appIcons = [weak_self appIcons:[hpple searchWithXPathQuery:iconXPath]];
+        weakOBJ(appStatus);
+        weakOBJ(appIcons);
+        NSMutableArray <NSDictionary *>*apps = [NSMutableArray array];
+        [appNames enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [apps addObject:@{@"appName":obj, @"appStatus":weak_appStatus[idx], @"appIcon":weak_appIcons[idx]}];
+        }];
+        DTAppsViewController *appsViewControl = [[DTAppsViewController alloc] init];
+        appsViewControl.appsArr = apps;
+        [weak_self.navigationController pushViewController:appsViewControl animated:YES];
+    }];
+}
+
+- (NSArray <NSString *>*)appNames:(NSArray <TFHppleElement *>*)appNames {
+    NSMutableArray <NSString *>*array = [NSMutableArray array];
+    [appNames enumerateObjectsUsingBlock:^(TFHppleElement * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [array addObject:obj.text];
+    }];
+    return array;
+}
+
+- (NSArray <NSString *>*)appStatus:(NSArray <TFHppleElement *>*)appStatus {
+    NSMutableArray <NSString *>*array = [NSMutableArray array];
+    [appStatus enumerateObjectsUsingBlock:^(TFHppleElement * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [array addObject:obj.text];
+    }];
+    return array;
+}
+
+- (NSArray <NSString *>*)appIcons:(NSArray <TFHppleElement *>*)appIcons {
+    NSMutableArray <NSString *>*array = [NSMutableArray array];
+    [appIcons enumerateObjectsUsingBlock:^(TFHppleElement * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [array addObject:[[[obj.attributes valueForKey:@"style"] stringByReplacingOccurrencesOfString:@"background-image:url(" withString:@""] stringByReplacingOccurrencesOfString:@")" withString:@""]];
+    }];
+    return array;
 }
 
 @end

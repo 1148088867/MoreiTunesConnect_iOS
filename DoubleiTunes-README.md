@@ -12,4 +12,5 @@
 #### Function文件夹说明
 - Account   账号管理中心
 - CreateAccount 新建账户
-- iTunes    iTunes
+- iTunes    iTunes Connect
+- App's     App状态列表

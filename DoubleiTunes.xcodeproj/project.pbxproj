@@ -21,6 +21,10 @@
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
+		92C8EB782016533D007F2967 /* DTAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB772016533D007F2967 /* DTAppsViewController.m */; };
+		92C8EB7C20165372007F2967 /* DTAppsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB7B20165372007F2967 /* DTAppsView.m */; };
+		92C8EB8020165518007F2967 /* DTAppsStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */; };
+		92C8EB842016563A007F2967 /* DTAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB832016563A007F2967 /* DTAppsCell.m */; };
 		92E79EEC200F9F8B002A2257 /* DTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* DTBaseViewController.m */; };
 		92E79EF1200FA10C002A2257 /* DTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* DTBaseNavigationController.m */; };
 		92E79EF6200FA239002A2257 /* DTAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* DTAccountViewController.m */; };
@@ -59,6 +63,14 @@
 		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* DoubleiTunes-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "DoubleiTunes-README.md"; sourceTree = "<group>"; };
+		92C8EB762016533D007F2967 /* DTAppsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsViewController.h; sourceTree = "<group>"; };
+		92C8EB772016533D007F2967 /* DTAppsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsViewController.m; sourceTree = "<group>"; };
+		92C8EB7A20165372007F2967 /* DTAppsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsView.h; sourceTree = "<group>"; };
+		92C8EB7B20165372007F2967 /* DTAppsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsView.m; sourceTree = "<group>"; };
+		92C8EB7E20165518007F2967 /* DTAppsStatusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsStatusModel.h; sourceTree = "<group>"; };
+		92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsStatusModel.m; sourceTree = "<group>"; };
+		92C8EB822016563A007F2967 /* DTAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsCell.h; sourceTree = "<group>"; };
+		92C8EB832016563A007F2967 /* DTAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsCell.m; sourceTree = "<group>"; };
 		92E79EE8200F9D82002A2257 /* DoubleiTunes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleiTunes.pch; sourceTree = "<group>"; };
 		92E79EEA200F9F8B002A2257 /* DTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTBaseViewController.h; sourceTree = "<group>"; };
 		92E79EEB200F9F8B002A2257 /* DTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTBaseViewController.m; sourceTree = "<group>"; };
@@ -205,6 +217,7 @@
 		92745CA2200E4FB3009DDF39 /* DoubleiTunes */ = {
 			isa = PBXGroup;
 			children = (
+				92C8EB6C201635AC007F2967 /* Library */,
 				92745CBF200E509F009DDF39 /* Base */,
 				92745CBE200E506C009DDF39 /* Function */,
 				92745CBA200E4FFC009DDF39 /* Utils */,
@@ -251,6 +264,7 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				92C8EB71201652F1007F2967 /* Apps */,
 				926EA4AE2015AD3B008F4554 /* iTunes */,
 				920BB6142011FD3D00B24CE1 /* CreateAccount */,
 				92E79EF2200FA21F002A2257 /* Account */,
@@ -265,6 +279,60 @@
 				92E79EE9200F9F5E002A2257 /* ViewController */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		92C8EB6C201635AC007F2967 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		92C8EB71201652F1007F2967 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				92C8EB7D20165502007F2967 /* Model */,
+				92C8EB7920165360007F2967 /* View */,
+				92C8EB7220165314007F2967 /* Controller */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		92C8EB7220165314007F2967 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92C8EB762016533D007F2967 /* DTAppsViewController.h */,
+				92C8EB772016533D007F2967 /* DTAppsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92C8EB7920165360007F2967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92C8EB8120165626007F2967 /* Cell */,
+				92C8EB7A20165372007F2967 /* DTAppsView.h */,
+				92C8EB7B20165372007F2967 /* DTAppsView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92C8EB7D20165502007F2967 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92C8EB7E20165518007F2967 /* DTAppsStatusModel.h */,
+				92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92C8EB8120165626007F2967 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92C8EB822016563A007F2967 /* DTAppsCell.h */,
+				92C8EB832016563A007F2967 /* DTAppsCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		92E79EE9200F9F5E002A2257 /* ViewController */ = {
@@ -508,16 +576,20 @@
 				92E79F00200FADF2002A2257 /* DTAccountView.m in Sources */,
 				920BB61C2011FDC300B24CE1 /* DTCreateAccountView.m in Sources */,
 				92E79F09200FB562002A2257 /* DTAccountModel.m in Sources */,
+				92C8EB842016563A007F2967 /* DTAppsCell.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
+				92C8EB7C20165372007F2967 /* DTAppsView.m in Sources */,
 				92E79EF1200FA10C002A2257 /* DTBaseNavigationController.m in Sources */,
 				920BB6202012015200B24CE1 /* DTCreateAccountCell.m in Sources */,
 				92E79F05200FAE3E002A2257 /* UITableView+DTExtension.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
+				92C8EB782016533D007F2967 /* DTAppsViewController.m in Sources */,
 				926EA4A92014C0F8008F4554 /* UITableViewCell+DTExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* DTAccountCell.m in Sources */,
 				92E79EF6200FA239002A2257 /* DTAccountViewController.m in Sources */,
 				926EA4B62016180E008F4554 /* NSString+DTExtenison.m in Sources */,
 				920BB6182011FD8900B24CE1 /* DTCreateAccountViewController.m in Sources */,
+				92C8EB8020165518007F2967 /* DTAppsStatusModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

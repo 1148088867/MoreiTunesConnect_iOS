@@ -16,6 +16,7 @@
 		926EA4A92014C0F8008F4554 /* UITableViewCell+DTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+DTExtension.m */; };
 		926EA4AD2014E609008F4554 /* DTAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* DTAccountCell.m */; };
 		926EA4B22015AD5A008F4554 /* DTiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4B12015AD5A008F4554 /* DTiTunesViewController.m */; };
+		926EA4B62016180E008F4554 /* NSString+DTExtenison.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4B52016180E008F4554 /* NSString+DTExtenison.m */; };
 		92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CA4200E4FB3009DDF39 /* AppDelegate.m */; };
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
@@ -48,6 +49,8 @@
 		926EA4AC2014E609008F4554 /* DTAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAccountCell.m; sourceTree = "<group>"; };
 		926EA4B02015AD5A008F4554 /* DTiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTiTunesViewController.h; sourceTree = "<group>"; };
 		926EA4B12015AD5A008F4554 /* DTiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTiTunesViewController.m; sourceTree = "<group>"; };
+		926EA4B42016180E008F4554 /* NSString+DTExtenison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DTExtenison.h"; sourceTree = "<group>"; };
+		926EA4B52016180E008F4554 /* NSString+DTExtenison.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTExtenison.m"; sourceTree = "<group>"; };
 		92745CA0200E4FB3009DDF39 /* DoubleiTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoubleiTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92745CA3200E4FB3009DDF39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92745CA4200E4FB3009DDF39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -169,6 +172,15 @@
 				926EA4B12015AD5A008F4554 /* DTiTunesViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		926EA4B3201617ED008F4554 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4B42016180E008F4554 /* NSString+DTExtenison.h */,
+				926EA4B52016180E008F4554 /* NSString+DTExtenison.m */,
+			);
+			path = NSString;
 			sourceTree = "<group>";
 		};
 		92745C97200E4FB3009DDF39 = {
@@ -314,6 +326,7 @@
 		92E79F01200FADFA002A2257 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				926EA4B3201617ED008F4554 /* NSString */,
 				926EA4A62014C0DC008F4554 /* UITableViewCell */,
 				92E79F02200FAE13002A2257 /* UITableView */,
 			);
@@ -503,6 +516,7 @@
 				926EA4A92014C0F8008F4554 /* UITableViewCell+DTExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* DTAccountCell.m in Sources */,
 				92E79EF6200FA239002A2257 /* DTAccountViewController.m in Sources */,
+				926EA4B62016180E008F4554 /* NSString+DTExtenison.m in Sources */,
 				920BB6182011FD8900B24CE1 /* DTCreateAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

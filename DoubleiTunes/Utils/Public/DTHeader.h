@@ -26,5 +26,6 @@
 #import <DWCategory.h>
 #import "DTSqlManager.h"
 #import "DTAccountModel.h"
+#import "NSString+DTExtenison.h"
 
 #endif /* DTHeader_h */

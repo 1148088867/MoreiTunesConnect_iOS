@@ -40,7 +40,7 @@
     DTAccountModel *model = self.accountModelArrM[indexPath.row];
     cell.mail.text = [NSString stringWithFormat:@"Apple id: %@", model.mail.decryptAESString];
     cell.note.text = [NSString stringWithFormat:@"备注: %@", model.note.decryptAESString];
-    cell.addTime.text = model.addTime;
+//    cell.addTime.text = model.addTime;
     return cell;
 }
 
@@ -80,13 +80,38 @@
 - (NSMutableArray<DTAccountModel *> *)accountModelArrM {
     if (!_accountModelArrM) {
         _accountModelArrM = [NSMutableArray array];
+        UIPasteboard *paste = [UIPasteboard generalPasteboard];
+        if ([paste.string hasPrefix:@"{"] && [paste.string hasSuffix:@"}"]) {
+            NSArray <NSString *>*accounts = [[[[[[[paste.string stringByReplacingOccurrencesOfString:@"{" withString:@""] stringByReplacingOccurrencesOfString:@"}" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:@"\r" withString:@""] stringByReplacingOccurrencesOfString:@"\t" withString:@""] componentsSeparatedByString:@">"];
+            [accounts enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                NSArray <NSString *>*infoStr = [obj componentsSeparatedByString:@"/"];
+                if (infoStr.count < 2 ||
+                    !infoStr.firstObject.length ||
+                    !infoStr[1].length) {
+                    QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"添加失败" message:[NSString stringWithFormat:@"<%@>添加失败", infoStr.firstObject] preferredStyle:QMUIAlertControllerStyleAlert];
+                    [alert addAction:[QMUIAlertAction actionWithTitle:@"确定" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {}]];
+                    [alert showWithAnimated:YES];
+                    return ;
+                }
+                NSString *key = [NSString stringWithFormat:@"%@%@", [NSDate currentTimeWithFormat:@"YYYY-MM-dd HH:mm:ss"], [NSString repeat:idx]];
+                DTAccountModel *accountModel = [[DTAccountModel alloc] init];
+                accountModel.mail = infoStr.firstObject.encryptAESString;
+                accountModel.password = infoStr[1].encryptAESString;
+                accountModel.addTime = [NSDate currentTimeWithFormat:@"YYYY-MM-dd HH:mm:ss"];
+                if (infoStr.count == 3 && infoStr.lastObject.length) {
+                    accountModel.note = infoStr.lastObject.encryptAESString;
+                }else {
+                    accountModel.note = key.encryptAESString;
+                }
+                [DTSQL.store putObject:accountModel.yy_modelToJSONObject withId:key intoTable:DTAccountTableName];
+                paste.string = @"";
+            }];
+        }
         [DTSQL.keyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [_accountModelArrM insertObject:[DTAccountModel yy_modelWithJSON:obj.itemObject] atIndex:0];
         }];
     }
     return _accountModelArrM;
 }
-
-
 
 @end

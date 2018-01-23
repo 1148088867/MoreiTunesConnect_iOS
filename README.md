@@ -10,7 +10,7 @@
 - DIY
 - DoubleiTunes交流群
 
-    ![入群二维码](https://github.com/CoderDwang/DoubleiTunes/blob/master/入群二维码.png)
+    ![群二维码](https://github.com/CoderDwang/DoubleiTunes/blob/master/群二维码.png)
 
 ![预览图](https://github.com/CoderDwang/DoubleiTunes/blob/master/预览.gif)
 

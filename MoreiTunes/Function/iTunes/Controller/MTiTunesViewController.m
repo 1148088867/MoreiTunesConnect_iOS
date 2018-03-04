@@ -42,9 +42,9 @@ psx(MTiTunesView, itunesView);
     self.progressHUD.label.text = @"账号登录中...";
     [self.progressHUD showAnimated:YES];
     weakOBJ(self);
-    [DWNetworking postUrlString:MTiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
+    [MTNetwork postUrl:MTiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
                                                        @"password":self.accountModel.password.decryptAESString,
-                                                       @"rememberMe":@"true"} resultCallBack:^(id success, NSError *error, BOOL isCache) {
+                                                       @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
                                                            if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
                                                                [weak_self iTunesConnectAppsNetworking];
                                                            }else {
@@ -61,7 +61,7 @@ psx(MTiTunesView, itunesView);
         [self.progressHUD showAnimated:YES];
     }
     weakOBJ(self);
-    [DWNetworking getUrlString:MTiTunesApps params:nil resultCallBack:^(id success, NSError *error, BOOL isCache) {
+    [MTNetwork getUrl:MTiTunesApps callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];
         if ([success[@"statusCode"] isEqualToString:@"SUCCESS"] && !error) {
             weak_self.itunesView.iTunesAppsArr = [NSArray yy_modelArrayWithClass:[MTiTunesAppsModel class] json:success[@"data"][@"summaries"]];

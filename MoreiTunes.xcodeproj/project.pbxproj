@@ -15,6 +15,7 @@
 		9203753D204BB85900E23339 /* MTiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203753C204BB85900E23339 /* MTiTunesView.m */; };
 		9203755B204BD77A00E23339 /* MTiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755A204BD77A00E23339 /* MTiTunesAppsModel.m */; };
 		9203755F204BDC5A00E23339 /* MTiTunesAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */; };
+		9203757C204C1A5400E23339 /* MTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203757B204C1A5400E23339 /* MTNetwork.m */; };
 		920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* MTSqlManager.m */; };
 		920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* MTCreateAccountViewController.m */; };
 		920BB61C2011FDC300B24CE1 /* MTCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* MTCreateAccountView.m */; };
@@ -50,6 +51,8 @@
 		9203755A204BD77A00E23339 /* MTiTunesAppsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesAppsModel.m; sourceTree = "<group>"; };
 		9203755D204BDC5A00E23339 /* MTiTunesAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesAppsCell.h; sourceTree = "<group>"; };
 		9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesAppsCell.m; sourceTree = "<group>"; };
+		9203757A204C1A5400E23339 /* MTNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTNetwork.h; sourceTree = "<group>"; };
+		9203757B204C1A5400E23339 /* MTNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTNetwork.m; sourceTree = "<group>"; };
 		920BB5F12011E91A00B24CE1 /* MTOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTOutPut.h; sourceTree = "<group>"; };
 		920BB6112011FA8C00B24CE1 /* MTSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSqlManager.h; sourceTree = "<group>"; };
 		920BB6122011FA8C00B24CE1 /* MTSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSqlManager.m; sourceTree = "<group>"; };
@@ -137,6 +140,15 @@
 				9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		92037579204C1A3D00E23339 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9203757A204C1A5400E23339 /* MTNetwork.h */,
+				9203757B204C1A5400E23339 /* MTNetwork.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		920BB6102011FA2700B24CE1 /* Sql */ = {
@@ -253,6 +265,7 @@
 		92745CA2200E4FB3009DDF39 /* MoreiTunes */ = {
 			isa = PBXGroup;
 			children = (
+				92037579204C1A3D00E23339 /* Network */,
 				92C8EB6C201635AC007F2967 /* Library */,
 				92745CBF200E509F009DDF39 /* Base */,
 				92745CBE200E506C009DDF39 /* Function */,
@@ -582,6 +595,7 @@
 				92037533204BB3DB00E23339 /* MTiTunesViewController.m in Sources */,
 				926EA4A92014C0F8008F4554 /* UITableViewCell+MTExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* MTAccountCell.m in Sources */,
+				9203757C204C1A5400E23339 /* MTNetwork.m in Sources */,
 				92E79EF6200FA239002A2257 /* MTAccountViewController.m in Sources */,
 				926EA4B62016180E008F4554 /* NSString+MTExtenison.m in Sources */,
 				920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */,

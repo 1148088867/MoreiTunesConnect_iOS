@@ -17,6 +17,6 @@ psx(QMUILabel, mail);
 psx(QMUILabel, note);
 
 /** 编辑时间 */
-psx(QMUILabel, adMTime);
+psx(QMUILabel, addTime);
 
 @end

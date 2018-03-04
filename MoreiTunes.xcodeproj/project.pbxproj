@@ -13,6 +13,8 @@
 		92037537204BB56D00E23339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037536204BB56D00E23339 /* Foundation.framework */; };
 		92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037538204BB57500E23339 /* libsqlite3.tbd */; };
 		9203753D204BB85900E23339 /* MTiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203753C204BB85900E23339 /* MTiTunesView.m */; };
+		9203755B204BD77A00E23339 /* MTiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755A204BD77A00E23339 /* MTiTunesAppsModel.m */; };
+		9203755F204BDC5A00E23339 /* MTiTunesAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */; };
 		920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* MTSqlManager.m */; };
 		920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* MTCreateAccountViewController.m */; };
 		920BB61C2011FDC300B24CE1 /* MTCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* MTCreateAccountView.m */; };
@@ -44,6 +46,10 @@
 		92037538204BB57500E23339 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9203753B204BB85900E23339 /* MTiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesView.h; sourceTree = "<group>"; };
 		9203753C204BB85900E23339 /* MTiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesView.m; sourceTree = "<group>"; };
+		92037559204BD77A00E23339 /* MTiTunesAppsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesAppsModel.h; sourceTree = "<group>"; };
+		9203755A204BD77A00E23339 /* MTiTunesAppsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesAppsModel.m; sourceTree = "<group>"; };
+		9203755D204BDC5A00E23339 /* MTiTunesAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesAppsCell.h; sourceTree = "<group>"; };
+		9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesAppsCell.m; sourceTree = "<group>"; };
 		920BB5F12011E91A00B24CE1 /* MTOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTOutPut.h; sourceTree = "<group>"; };
 		920BB6112011FA8C00B24CE1 /* MTSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSqlManager.h; sourceTree = "<group>"; };
 		920BB6122011FA8C00B24CE1 /* MTSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSqlManager.m; sourceTree = "<group>"; };
@@ -108,6 +114,7 @@
 		9203753A204BB84100E23339 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9203755C204BDC3C00E23339 /* Cell */,
 				9203753B204BB85900E23339 /* MTiTunesView.h */,
 				9203753C204BB85900E23339 /* MTiTunesView.m */,
 			);
@@ -117,8 +124,19 @@
 		9203753E204BCCD500E23339 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				92037559204BD77A00E23339 /* MTiTunesAppsModel.h */,
+				9203755A204BD77A00E23339 /* MTiTunesAppsModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9203755C204BDC3C00E23339 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9203755D204BDC5A00E23339 /* MTiTunesAppsCell.h */,
+				9203755E204BDC5A00E23339 /* MTiTunesAppsCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		920BB6102011FA2700B24CE1 /* Sql */ = {
@@ -550,8 +568,10 @@
 				9203753D204BB85900E23339 /* MTiTunesView.m in Sources */,
 				920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
+				9203755B204BD77A00E23339 /* MTiTunesAppsModel.m in Sources */,
 				92E79EEC200F9F8B002A2257 /* MTBaseViewController.m in Sources */,
 				92E79F00200FADF2002A2257 /* MTAccountView.m in Sources */,
+				9203755F204BDC5A00E23339 /* MTiTunesAppsCell.m in Sources */,
 				920BB61C2011FDC300B24CE1 /* MTCreateAccountView.m in Sources */,
 				92E79F09200FB562002A2257 /* MTAccountModel.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,

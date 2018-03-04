@@ -8,18 +8,25 @@
 
 #import "UITableView+MTExtension.h"
 
+@interface UITableView ()
+
+@end
+
 @implementation UITableView (MTExtension)
 
-- (void)hasData {
-    self.mj_footer.hidden = NO;
+- (void)dw_hasData {
+    QMUILabel *noMoreData = [[QMUILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    noMoreData.font = UIFontMakeNameWithSize(@"AmericanTypewriter-Bold", 14);
+    noMoreData.textAlignment = NSTextAlignmentCenter;
+    noMoreData.text = @"没有更多数据了";
+    self.tableFooterView = noMoreData;
 }
 
-- (UIImage *)cd_noDataViewImage {
-    self.mj_footer.hidden = YES;
+- (UIImage *)dw_noDataViewImage {
     return UIImageMake(@"无数据");
 }
 
-- (NSString *)cd_noDataViewMessage {
+- (NSString *)dw_noDataViewMessage {
     return nil;
 }
 

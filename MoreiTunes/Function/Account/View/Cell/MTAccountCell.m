@@ -30,12 +30,12 @@
         make.top.equalTo(mail.mas_bottom).offset(10);
     }];
     
-    QMUILabel *adMTime = [[QMUILabel alloc] init];
-    adMTime.font = UIFontMakeNameWithSize(@"CourierNewPS-BoldMT", 16);
-    selfClass(adMTime);
-    adMTime.textColor = UIColorGray;
-    [self.contentView addSubview:adMTime];
-    [adMTime mas_makeConstraints:^(MASConstraintMaker *make) {
+    QMUILabel *addTime = [[QMUILabel alloc] init];
+    addTime.font = UIFontMakeNameWithSize(@"CourierNewPS-BoldMT", 16);
+    selfClass(addTime);
+    addTime.textColor = UIColorGray;
+    [self.contentView addSubview:addTime];
+    [addTime mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self.contentView.mas_right);
         make.centerY.equalTo(note.mas_centerY);
     }];

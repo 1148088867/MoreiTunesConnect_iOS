@@ -7,7 +7,11 @@
 //
 
 #import "QMUITableView.h"
+#import "MTiTunesAppsModel.h"
 
 @interface MTiTunesView : QMUITableView
+
+/** app信息数组 */
+psx(NSArray<MTiTunesAppsModel *>, iTunesAppsArr);
 
 @end

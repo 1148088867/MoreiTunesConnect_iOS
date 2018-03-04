@@ -13,4 +13,3 @@
 - Account   账号管理中心
 - CreateAccount 新建账户
 - iTunes    iTunes Connect
-- App's     App状态列表

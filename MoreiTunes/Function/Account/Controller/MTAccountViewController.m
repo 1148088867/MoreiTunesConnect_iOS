@@ -9,7 +9,6 @@
 #import "MTAccountViewController.h"
 #import "MTAccountView.h"
 #import "MTCreateAccountViewController.h"
-#import <MJRefresh.h>
 
 @interface MTAccountViewController ()
 

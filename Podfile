@@ -1,4 +1,4 @@
-target 'DoubleiTunes' do
+target 'MoreiTunes' do
    inhibit_all_warnings! 
 
 # 网络
@@ -18,10 +18,10 @@ pod 'JPFPSStatus'
 
 # 其它
 pod 'YYCategories'
-pod 'JPush'
+#pod 'JPush'
 pod 'YYModel'
 pod 'hpple'
-pod 'DWCategory-OC'
+pod 'DWCategoryKit'
 
 # 数据库
 pod 'YTKKeyValueStore'

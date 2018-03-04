@@ -8,59 +8,58 @@
 
 /* Begin PBXBuildFile section */
 		378D5F348FF0C897BD4CAE2B /* libPods-MoreiTunes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */; };
-		92037533204BB3DB00E23339 /* DTiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92037532204BB3DB00E23339 /* DTiTunesViewController.m */; };
+		92037533204BB3DB00E23339 /* MTiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92037532204BB3DB00E23339 /* MTiTunesViewController.m */; };
 		92037535204BB56800E23339 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037534204BB56800E23339 /* UIKit.framework */; };
 		92037537204BB56D00E23339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037536204BB56D00E23339 /* Foundation.framework */; };
 		92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037538204BB57500E23339 /* libsqlite3.tbd */; };
-		920BB6132011FA8C00B24CE1 /* DTSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* DTSqlManager.m */; };
-		920BB6182011FD8900B24CE1 /* DTCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* DTCreateAccountViewController.m */; };
-		920BB61C2011FDC300B24CE1 /* DTCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* DTCreateAccountView.m */; };
-		920BB6202012015200B24CE1 /* DTCreateAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61F2012015200B24CE1 /* DTCreateAccountCell.m */; };
+		9203753D204BB85900E23339 /* MTiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203753C204BB85900E23339 /* MTiTunesView.m */; };
+		920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* MTSqlManager.m */; };
+		920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* MTCreateAccountViewController.m */; };
+		920BB61C2011FDC300B24CE1 /* MTCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* MTCreateAccountView.m */; };
+		920BB6202012015200B24CE1 /* MTCreateAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61F2012015200B24CE1 /* MTCreateAccountCell.m */; };
 		926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EA4A42014B779008F4554 /* MobileCoreServices.framework */; };
-		926EA4A92014C0F8008F4554 /* UITableViewCell+DTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+DTExtension.m */; };
-		926EA4AD2014E609008F4554 /* DTAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* DTAccountCell.m */; };
-		926EA4B62016180E008F4554 /* NSString+DTExtenison.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4B52016180E008F4554 /* NSString+DTExtenison.m */; };
+		926EA4A92014C0F8008F4554 /* UITableViewCell+MTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+MTExtension.m */; };
+		926EA4AD2014E609008F4554 /* MTAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* MTAccountCell.m */; };
+		926EA4B62016180E008F4554 /* NSString+MTExtenison.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4B52016180E008F4554 /* NSString+MTExtenison.m */; };
 		92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CA4200E4FB3009DDF39 /* AppDelegate.m */; };
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
-		92C8EB782016533D007F2967 /* DTAppsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB772016533D007F2967 /* DTAppsViewController.m */; };
-		92C8EB7C20165372007F2967 /* DTAppsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB7B20165372007F2967 /* DTAppsView.m */; };
-		92C8EB8020165518007F2967 /* DTAppsStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */; };
-		92C8EB842016563A007F2967 /* DTAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C8EB832016563A007F2967 /* DTAppsCell.m */; };
-		92E79EEC200F9F8B002A2257 /* DTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* DTBaseViewController.m */; };
-		92E79EF1200FA10C002A2257 /* DTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* DTBaseNavigationController.m */; };
-		92E79EF6200FA239002A2257 /* DTAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* DTAccountViewController.m */; };
+		92E79EEC200F9F8B002A2257 /* MTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* MTBaseViewController.m */; };
+		92E79EF1200FA10C002A2257 /* MTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* MTBaseNavigationController.m */; };
+		92E79EF6200FA239002A2257 /* MTAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* MTAccountViewController.m */; };
 		92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF9200FA29F002A2257 /* QMUIConfigurationTemplate.m */; };
 		92E79EFC200FAA8A002A2257 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E79EFB200FAA8A002A2257 /* Resources.xcassets */; };
-		92E79F00200FADF2002A2257 /* DTAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EFF200FADF2002A2257 /* DTAccountView.m */; };
-		92E79F05200FAE3E002A2257 /* UITableView+DTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F04200FAE3E002A2257 /* UITableView+DTExtension.m */; };
-		92E79F09200FB562002A2257 /* DTAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F08200FB562002A2257 /* DTAccountModel.m */; };
+		92E79F00200FADF2002A2257 /* MTAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EFF200FADF2002A2257 /* MTAccountView.m */; };
+		92E79F05200FAE3E002A2257 /* UITableView+MTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F04200FAE3E002A2257 /* UITableView+MTExtension.m */; };
+		92E79F09200FB562002A2257 /* MTAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F08200FB562002A2257 /* MTAccountModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92037531204BB3DB00E23339 /* DTiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTiTunesViewController.h; sourceTree = "<group>"; };
-		92037532204BB3DB00E23339 /* DTiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTiTunesViewController.m; sourceTree = "<group>"; };
+		92037531204BB3DB00E23339 /* MTiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesViewController.h; sourceTree = "<group>"; };
+		92037532204BB3DB00E23339 /* MTiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesViewController.m; sourceTree = "<group>"; };
 		92037534204BB56800E23339 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92037536204BB56D00E23339 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92037538204BB57500E23339 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		920BB5F12011E91A00B24CE1 /* DTOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTOutPut.h; sourceTree = "<group>"; };
-		920BB6112011FA8C00B24CE1 /* DTSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTSqlManager.h; sourceTree = "<group>"; };
-		920BB6122011FA8C00B24CE1 /* DTSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTSqlManager.m; sourceTree = "<group>"; };
-		920BB6162011FD8900B24CE1 /* DTCreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTCreateAccountViewController.h; sourceTree = "<group>"; };
-		920BB6172011FD8900B24CE1 /* DTCreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTCreateAccountViewController.m; sourceTree = "<group>"; };
-		920BB61A2011FDC300B24CE1 /* DTCreateAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTCreateAccountView.h; sourceTree = "<group>"; };
-		920BB61B2011FDC300B24CE1 /* DTCreateAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTCreateAccountView.m; sourceTree = "<group>"; };
-		920BB61E2012015200B24CE1 /* DTCreateAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTCreateAccountCell.h; sourceTree = "<group>"; };
-		920BB61F2012015200B24CE1 /* DTCreateAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTCreateAccountCell.m; sourceTree = "<group>"; };
+		9203753B204BB85900E23339 /* MTiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTiTunesView.h; sourceTree = "<group>"; };
+		9203753C204BB85900E23339 /* MTiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTiTunesView.m; sourceTree = "<group>"; };
+		920BB5F12011E91A00B24CE1 /* MTOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTOutPut.h; sourceTree = "<group>"; };
+		920BB6112011FA8C00B24CE1 /* MTSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSqlManager.h; sourceTree = "<group>"; };
+		920BB6122011FA8C00B24CE1 /* MTSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSqlManager.m; sourceTree = "<group>"; };
+		920BB6162011FD8900B24CE1 /* MTCreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCreateAccountViewController.h; sourceTree = "<group>"; };
+		920BB6172011FD8900B24CE1 /* MTCreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCreateAccountViewController.m; sourceTree = "<group>"; };
+		920BB61A2011FDC300B24CE1 /* MTCreateAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCreateAccountView.h; sourceTree = "<group>"; };
+		920BB61B2011FDC300B24CE1 /* MTCreateAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCreateAccountView.m; sourceTree = "<group>"; };
+		920BB61E2012015200B24CE1 /* MTCreateAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCreateAccountCell.h; sourceTree = "<group>"; };
+		920BB61F2012015200B24CE1 /* MTCreateAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCreateAccountCell.m; sourceTree = "<group>"; };
 		926EA4A42014B779008F4554 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		926EA4A72014C0F8008F4554 /* UITableViewCell+DTExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+DTExtension.h"; sourceTree = "<group>"; };
-		926EA4A82014C0F8008F4554 /* UITableViewCell+DTExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+DTExtension.m"; sourceTree = "<group>"; };
-		926EA4AB2014E609008F4554 /* DTAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAccountCell.h; sourceTree = "<group>"; };
-		926EA4AC2014E609008F4554 /* DTAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAccountCell.m; sourceTree = "<group>"; };
-		926EA4B42016180E008F4554 /* NSString+DTExtenison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DTExtenison.h"; sourceTree = "<group>"; };
-		926EA4B52016180E008F4554 /* NSString+DTExtenison.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DTExtenison.m"; sourceTree = "<group>"; };
+		926EA4A72014C0F8008F4554 /* UITableViewCell+MTExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MTExtension.h"; sourceTree = "<group>"; };
+		926EA4A82014C0F8008F4554 /* UITableViewCell+MTExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MTExtension.m"; sourceTree = "<group>"; };
+		926EA4AB2014E609008F4554 /* MTAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAccountCell.h; sourceTree = "<group>"; };
+		926EA4AC2014E609008F4554 /* MTAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAccountCell.m; sourceTree = "<group>"; };
+		926EA4B42016180E008F4554 /* NSString+MTExtenison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MTExtenison.h"; sourceTree = "<group>"; };
+		926EA4B52016180E008F4554 /* NSString+MTExtenison.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTExtenison.m"; sourceTree = "<group>"; };
 		92745CA0200E4FB3009DDF39 /* MoreiTunes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreiTunes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92745CA3200E4FB3009DDF39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		92745CA4200E4FB3009DDF39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,31 +68,23 @@
 		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* MoreiTunes-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunes-README.md"; sourceTree = "<group>"; };
-		92C8EB762016533D007F2967 /* DTAppsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsViewController.h; sourceTree = "<group>"; };
-		92C8EB772016533D007F2967 /* DTAppsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsViewController.m; sourceTree = "<group>"; };
-		92C8EB7A20165372007F2967 /* DTAppsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsView.h; sourceTree = "<group>"; };
-		92C8EB7B20165372007F2967 /* DTAppsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsView.m; sourceTree = "<group>"; };
-		92C8EB7E20165518007F2967 /* DTAppsStatusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsStatusModel.h; sourceTree = "<group>"; };
-		92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsStatusModel.m; sourceTree = "<group>"; };
-		92C8EB822016563A007F2967 /* DTAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAppsCell.h; sourceTree = "<group>"; };
-		92C8EB832016563A007F2967 /* DTAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAppsCell.m; sourceTree = "<group>"; };
-		92E79EE8200F9D82002A2257 /* DoubleiTunes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoubleiTunes.pch; sourceTree = "<group>"; };
-		92E79EEA200F9F8B002A2257 /* DTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTBaseViewController.h; sourceTree = "<group>"; };
-		92E79EEB200F9F8B002A2257 /* DTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTBaseViewController.m; sourceTree = "<group>"; };
-		92E79EED200FA075002A2257 /* DTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTHeader.h; sourceTree = "<group>"; };
-		92E79EEF200FA10C002A2257 /* DTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTBaseNavigationController.h; sourceTree = "<group>"; };
-		92E79EF0200FA10C002A2257 /* DTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTBaseNavigationController.m; sourceTree = "<group>"; };
-		92E79EF4200FA239002A2257 /* DTAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAccountViewController.h; sourceTree = "<group>"; };
-		92E79EF5200FA239002A2257 /* DTAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAccountViewController.m; sourceTree = "<group>"; };
+		92E79EE8200F9D82002A2257 /* MoreiTunes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreiTunes.pch; sourceTree = "<group>"; };
+		92E79EEA200F9F8B002A2257 /* MTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseViewController.h; sourceTree = "<group>"; };
+		92E79EEB200F9F8B002A2257 /* MTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseViewController.m; sourceTree = "<group>"; };
+		92E79EED200FA075002A2257 /* MTHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTHeader.h; sourceTree = "<group>"; };
+		92E79EEF200FA10C002A2257 /* MTBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseNavigationController.h; sourceTree = "<group>"; };
+		92E79EF0200FA10C002A2257 /* MTBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseNavigationController.m; sourceTree = "<group>"; };
+		92E79EF4200FA239002A2257 /* MTAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAccountViewController.h; sourceTree = "<group>"; };
+		92E79EF5200FA239002A2257 /* MTAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAccountViewController.m; sourceTree = "<group>"; };
 		92E79EF8200FA29F002A2257 /* QMUIConfigurationTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMUIConfigurationTemplate.h; sourceTree = "<group>"; };
 		92E79EF9200FA29F002A2257 /* QMUIConfigurationTemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMUIConfigurationTemplate.m; sourceTree = "<group>"; };
 		92E79EFB200FAA8A002A2257 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
-		92E79EFE200FADF2002A2257 /* DTAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAccountView.h; sourceTree = "<group>"; };
-		92E79EFF200FADF2002A2257 /* DTAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAccountView.m; sourceTree = "<group>"; };
-		92E79F03200FAE3E002A2257 /* UITableView+DTExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+DTExtension.h"; sourceTree = "<group>"; };
-		92E79F04200FAE3E002A2257 /* UITableView+DTExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DTExtension.m"; sourceTree = "<group>"; };
-		92E79F07200FB562002A2257 /* DTAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTAccountModel.h; sourceTree = "<group>"; };
-		92E79F08200FB562002A2257 /* DTAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTAccountModel.m; sourceTree = "<group>"; };
+		92E79EFE200FADF2002A2257 /* MTAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAccountView.h; sourceTree = "<group>"; };
+		92E79EFF200FADF2002A2257 /* MTAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAccountView.m; sourceTree = "<group>"; };
+		92E79F03200FAE3E002A2257 /* UITableView+MTExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+MTExtension.h"; sourceTree = "<group>"; };
+		92E79F04200FAE3E002A2257 /* UITableView+MTExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+MTExtension.m"; sourceTree = "<group>"; };
+		92E79F07200FB562002A2257 /* MTAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAccountModel.h; sourceTree = "<group>"; };
+		92E79F08200FB562002A2257 /* MTAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAccountModel.m; sourceTree = "<group>"; };
 		97392A9DD04EF65536654B05 /* Pods-MoreiTunes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunes/Pods-MoreiTunes.debug.xcconfig"; sourceTree = "<group>"; };
 		E8254C966D28F609333984B5 /* Pods-MoreiTunes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunes/Pods-MoreiTunes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,11 +105,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9203753A204BB84100E23339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9203753B204BB85900E23339 /* MTiTunesView.h */,
+				9203753C204BB85900E23339 /* MTiTunesView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9203753E204BCCD500E23339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		920BB6102011FA2700B24CE1 /* Sql */ = {
 			isa = PBXGroup;
 			children = (
-				920BB6112011FA8C00B24CE1 /* DTSqlManager.h */,
-				920BB6122011FA8C00B24CE1 /* DTSqlManager.m */,
+				920BB6112011FA8C00B24CE1 /* MTSqlManager.h */,
+				920BB6122011FA8C00B24CE1 /* MTSqlManager.m */,
 			);
 			path = Sql;
 			sourceTree = "<group>";
@@ -135,8 +142,8 @@
 		920BB6152011FD7700B24CE1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				920BB6162011FD8900B24CE1 /* DTCreateAccountViewController.h */,
-				920BB6172011FD8900B24CE1 /* DTCreateAccountViewController.m */,
+				920BB6162011FD8900B24CE1 /* MTCreateAccountViewController.h */,
+				920BB6172011FD8900B24CE1 /* MTCreateAccountViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				920BB61D2012014100B24CE1 /* Cell */,
-				920BB61A2011FDC300B24CE1 /* DTCreateAccountView.h */,
-				920BB61B2011FDC300B24CE1 /* DTCreateAccountView.m */,
+				920BB61A2011FDC300B24CE1 /* MTCreateAccountView.h */,
+				920BB61B2011FDC300B24CE1 /* MTCreateAccountView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,8 +161,8 @@
 		920BB61D2012014100B24CE1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				920BB61E2012015200B24CE1 /* DTCreateAccountCell.h */,
-				920BB61F2012015200B24CE1 /* DTCreateAccountCell.m */,
+				920BB61E2012015200B24CE1 /* MTCreateAccountCell.h */,
+				920BB61F2012015200B24CE1 /* MTCreateAccountCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -163,8 +170,8 @@
 		926EA4A62014C0DC008F4554 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				926EA4A72014C0F8008F4554 /* UITableViewCell+DTExtension.h */,
-				926EA4A82014C0F8008F4554 /* UITableViewCell+DTExtension.m */,
+				926EA4A72014C0F8008F4554 /* UITableViewCell+MTExtension.h */,
+				926EA4A82014C0F8008F4554 /* UITableViewCell+MTExtension.m */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -172,8 +179,8 @@
 		926EA4AA2014E5F8008F4554 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				926EA4AB2014E609008F4554 /* DTAccountCell.h */,
-				926EA4AC2014E609008F4554 /* DTAccountCell.m */,
+				926EA4AB2014E609008F4554 /* MTAccountCell.h */,
+				926EA4AC2014E609008F4554 /* MTAccountCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 		926EA4AE2015AD3B008F4554 /* iTunes */ = {
 			isa = PBXGroup;
 			children = (
+				9203753E204BCCD500E23339 /* Model */,
+				9203753A204BB84100E23339 /* View */,
 				926EA4AF2015AD44008F4554 /* Controller */,
 			);
 			path = iTunes;
@@ -189,8 +198,8 @@
 		926EA4AF2015AD44008F4554 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				92037531204BB3DB00E23339 /* DTiTunesViewController.h */,
-				92037532204BB3DB00E23339 /* DTiTunesViewController.m */,
+				92037531204BB3DB00E23339 /* MTiTunesViewController.h */,
+				92037532204BB3DB00E23339 /* MTiTunesViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -198,8 +207,8 @@
 		926EA4B3201617ED008F4554 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				926EA4B42016180E008F4554 /* NSString+DTExtenison.h */,
-				926EA4B52016180E008F4554 /* NSString+DTExtenison.m */,
+				926EA4B42016180E008F4554 /* NSString+MTExtenison.h */,
+				926EA4B52016180E008F4554 /* NSString+MTExtenison.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -262,9 +271,9 @@
 				92745CB1200E4FB3009DDF39 /* Info.plist */,
 				92745CB2200E4FB3009DDF39 /* main.m */,
 				92745CBC200E5032009DDF39 /* Launch Screen.storyboard */,
-				920BB5F12011E91A00B24CE1 /* DTOutPut.h */,
-				92E79EED200FA075002A2257 /* DTHeader.h */,
-				92E79EE8200F9D82002A2257 /* DoubleiTunes.pch */,
+				920BB5F12011E91A00B24CE1 /* MTOutPut.h */,
+				92E79EED200FA075002A2257 /* MTHeader.h */,
+				92E79EE8200F9D82002A2257 /* MoreiTunes.pch */,
 				92E79EFB200FAA8A002A2257 /* Resources.xcassets */,
 			);
 			path = Public;
@@ -273,7 +282,6 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				92C8EB71201652F1007F2967 /* Apps */,
 				926EA4AE2015AD3B008F4554 /* iTunes */,
 				920BB6142011FD3D00B24CE1 /* CreateAccount */,
 				92E79EF2200FA21F002A2257 /* Account */,
@@ -297,58 +305,11 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		92C8EB71201652F1007F2967 /* Apps */ = {
-			isa = PBXGroup;
-			children = (
-				92C8EB7D20165502007F2967 /* Model */,
-				92C8EB7920165360007F2967 /* View */,
-				92C8EB7220165314007F2967 /* Controller */,
-			);
-			path = Apps;
-			sourceTree = "<group>";
-		};
-		92C8EB7220165314007F2967 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				92C8EB762016533D007F2967 /* DTAppsViewController.h */,
-				92C8EB772016533D007F2967 /* DTAppsViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		92C8EB7920165360007F2967 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				92C8EB8120165626007F2967 /* Cell */,
-				92C8EB7A20165372007F2967 /* DTAppsView.h */,
-				92C8EB7B20165372007F2967 /* DTAppsView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		92C8EB7D20165502007F2967 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				92C8EB7E20165518007F2967 /* DTAppsStatusModel.h */,
-				92C8EB7F20165518007F2967 /* DTAppsStatusModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		92C8EB8120165626007F2967 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				92C8EB822016563A007F2967 /* DTAppsCell.h */,
-				92C8EB832016563A007F2967 /* DTAppsCell.m */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		92E79EE9200F9F5E002A2257 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				92E79EEA200F9F8B002A2257 /* DTBaseViewController.h */,
-				92E79EEB200F9F8B002A2257 /* DTBaseViewController.m */,
+				92E79EEA200F9F8B002A2257 /* MTBaseViewController.h */,
+				92E79EEB200F9F8B002A2257 /* MTBaseViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -356,8 +317,8 @@
 		92E79EEE200FA0EC002A2257 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				92E79EEF200FA10C002A2257 /* DTBaseNavigationController.h */,
-				92E79EF0200FA10C002A2257 /* DTBaseNavigationController.m */,
+				92E79EEF200FA10C002A2257 /* MTBaseNavigationController.h */,
+				92E79EF0200FA10C002A2257 /* MTBaseNavigationController.m */,
 			);
 			path = NavigationController;
 			sourceTree = "<group>";
@@ -375,8 +336,8 @@
 		92E79EF3200FA226002A2257 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				92E79EF4200FA239002A2257 /* DTAccountViewController.h */,
-				92E79EF5200FA239002A2257 /* DTAccountViewController.m */,
+				92E79EF4200FA239002A2257 /* MTAccountViewController.h */,
+				92E79EF5200FA239002A2257 /* MTAccountViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -394,8 +355,8 @@
 			isa = PBXGroup;
 			children = (
 				926EA4AA2014E5F8008F4554 /* Cell */,
-				92E79EFE200FADF2002A2257 /* DTAccountView.h */,
-				92E79EFF200FADF2002A2257 /* DTAccountView.m */,
+				92E79EFE200FADF2002A2257 /* MTAccountView.h */,
+				92E79EFF200FADF2002A2257 /* MTAccountView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,8 +374,8 @@
 		92E79F02200FAE13002A2257 /* UITableView */ = {
 			isa = PBXGroup;
 			children = (
-				92E79F03200FAE3E002A2257 /* UITableView+DTExtension.h */,
-				92E79F04200FAE3E002A2257 /* UITableView+DTExtension.m */,
+				92E79F03200FAE3E002A2257 /* UITableView+MTExtension.h */,
+				92E79F04200FAE3E002A2257 /* UITableView+MTExtension.m */,
 			);
 			path = UITableView;
 			sourceTree = "<group>";
@@ -422,8 +383,8 @@
 		92E79F06200FB551002A2257 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92E79F07200FB562002A2257 /* DTAccountModel.h */,
-				92E79F08200FB562002A2257 /* DTAccountModel.m */,
+				92E79F07200FB562002A2257 /* MTAccountModel.h */,
+				92E79F08200FB562002A2257 /* MTAccountModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -478,7 +439,7 @@
 		92745C98200E4FB3009DDF39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DT;
+				CLASSPREFIX = MT;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = CoderDwang;
 				TargetAttributes = {
@@ -586,27 +547,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				920BB6132011FA8C00B24CE1 /* DTSqlManager.m in Sources */,
+				9203753D204BB85900E23339 /* MTiTunesView.m in Sources */,
+				920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
-				92E79EEC200F9F8B002A2257 /* DTBaseViewController.m in Sources */,
-				92E79F00200FADF2002A2257 /* DTAccountView.m in Sources */,
-				920BB61C2011FDC300B24CE1 /* DTCreateAccountView.m in Sources */,
-				92E79F09200FB562002A2257 /* DTAccountModel.m in Sources */,
-				92C8EB842016563A007F2967 /* DTAppsCell.m in Sources */,
+				92E79EEC200F9F8B002A2257 /* MTBaseViewController.m in Sources */,
+				92E79F00200FADF2002A2257 /* MTAccountView.m in Sources */,
+				920BB61C2011FDC300B24CE1 /* MTCreateAccountView.m in Sources */,
+				92E79F09200FB562002A2257 /* MTAccountModel.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
-				92C8EB7C20165372007F2967 /* DTAppsView.m in Sources */,
-				92E79EF1200FA10C002A2257 /* DTBaseNavigationController.m in Sources */,
-				920BB6202012015200B24CE1 /* DTCreateAccountCell.m in Sources */,
-				92E79F05200FAE3E002A2257 /* UITableView+DTExtension.m in Sources */,
+				92E79EF1200FA10C002A2257 /* MTBaseNavigationController.m in Sources */,
+				920BB6202012015200B24CE1 /* MTCreateAccountCell.m in Sources */,
+				92E79F05200FAE3E002A2257 /* UITableView+MTExtension.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
-				92037533204BB3DB00E23339 /* DTiTunesViewController.m in Sources */,
-				92C8EB782016533D007F2967 /* DTAppsViewController.m in Sources */,
-				926EA4A92014C0F8008F4554 /* UITableViewCell+DTExtension.m in Sources */,
-				926EA4AD2014E609008F4554 /* DTAccountCell.m in Sources */,
-				92E79EF6200FA239002A2257 /* DTAccountViewController.m in Sources */,
-				926EA4B62016180E008F4554 /* NSString+DTExtenison.m in Sources */,
-				920BB6182011FD8900B24CE1 /* DTCreateAccountViewController.m in Sources */,
-				92C8EB8020165518007F2967 /* DTAppsStatusModel.m in Sources */,
+				92037533204BB3DB00E23339 /* MTiTunesViewController.m in Sources */,
+				926EA4A92014C0F8008F4554 /* UITableViewCell+MTExtension.m in Sources */,
+				926EA4AD2014E609008F4554 /* MTAccountCell.m in Sources */,
+				92E79EF6200FA239002A2257 /* MTAccountViewController.m in Sources */,
+				926EA4B62016180E008F4554 /* NSString+MTExtenison.m in Sources */,
+				920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +682,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/DoubleiTunes.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/MoreiTunes.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunes/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -741,7 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/DoubleiTunes.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/MoreiTunes.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunes/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,6 +1,6 @@
 //
-//  DTConfiguration.m
-//  DoubleiTunes
+//  MTConfiguration.m
+//  MoreiTunes
 //
 //  Created by Dwang on 2018/1/17.
 //  Copyright © 2018年 CoderDwang. All rights reserved.
@@ -66,8 +66,8 @@
     
     
 #pragma mark - TextField & TextView
-    QMUICMI.textFieldTintColor = nil;                                           // TextFieldTintColor : QMUITextField、QMUITextView 的 tintColor，不影响 UIKit 的输入框
-    QMUICMI.textFieldTextInsets = UIEdgeInsetsMake(0, 7, 0, 7);                 // TextFieldTextInsets : QMUITextField 的内边距，不影响 UITextField
+    QMUICMI.textFieldTintColor = nil;                                           // TextFielMTintColor : QMUITextField、QMUITextView 的 tintColor，不影响 UIKit 的输入框
+    QMUICMI.textFieldTextInsets = UIEdgeInsetsMake(0, 7, 0, 7);                 // TextFielMTextInsets : QMUITextField 的内边距，不影响 UITextField
     
 #pragma mark - NavigationBar
     

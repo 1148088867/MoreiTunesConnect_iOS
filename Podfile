@@ -20,7 +20,6 @@ pod 'JPFPSStatus'
 pod 'YYCategories'
 #pod 'JPush'
 pod 'YYModel'
-pod 'hpple'
 pod 'DWCategoryKit'
 
 # 数据库

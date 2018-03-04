@@ -10,6 +10,4 @@
 
 @interface MTBaseNavigationController : QMUINavigationController
 
-- (UIScreenEdgePanGestureRecognizer *)screenEdgePanGestureRecognizer;
-
 @end

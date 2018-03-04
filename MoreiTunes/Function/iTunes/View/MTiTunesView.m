@@ -49,6 +49,7 @@
     cell.version.text = appInFlightVersionModel.version;
     cell.status.backgroundColor = appInFlightVersionModel.stateColor;
     cell.statusLab.text = appInFlightVersionModel.stateStr;
+//    cell.statusLab.textColor = appInFlightVersionModel.stateColor;
     return cell;
 }
 

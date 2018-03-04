@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MTBaseNavigationController.h"
 #import "MTAccountViewController.h"
+#import <AFNetworkActivityIndicatorManager.h>
 
 @interface AppDelegate ()
 
@@ -34,6 +35,7 @@
                                         @"X-Requested-With":@"XMLHttpRequest",
                                         @"Referer":@"https://idmsa.apple.com/appleauth/auth/signin?widgetKey=e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42&widgetDomain=https://itunesconnect.apple.com:443&font=sf",
                                         }];
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 
 @end

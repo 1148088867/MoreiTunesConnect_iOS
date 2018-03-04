@@ -19,13 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleView.subtitle = @"CoderDwang";
+    self.titleView.style = QMUINavigationTitleViewStyleSubTitleVertical;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     if (IS_DEBUG) {
         [[JPFPSStatus sharedInstance] open];
-    }
-    MTBaseNavigationController *navController = (MTBaseNavigationController *)self.navigationController;
-    if ([navController screenEdgePanGestureRecognizer]) {
-        [self.baseView.panGestureRecognizer requireGestureRecognizerToFail:[navController screenEdgePanGestureRecognizer]];
     }
 }
 

@@ -39,14 +39,13 @@ psx(MTiTunesView, itunesView);
 }
 
 - (void)iTunesConnectLoginNetworking {
-    self.progressHUD.detailsLabel.text = @"账号登录中...";
+    self.progressHUD.label.text = @"账号登录中...";
     [self.progressHUD showAnimated:YES];
     weakOBJ(self);
     [DWNetworking postUrlString:MTiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
                                                        @"password":self.accountModel.password.decryptAESString,
                                                        @"rememberMe":@"true"} resultCallBack:^(id success, NSError *error, BOOL isCache) {
                                                            if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
-                                                               weak_self.progressHUD.detailsLabel.text = @"Apps状态查询中";
                                                                [weak_self iTunesConnectAppsNetworking];
                                                            }else {
                                                                [weak_self dismissProgressHUD];
@@ -57,6 +56,10 @@ psx(MTiTunesView, itunesView);
 }
 
 - (void)iTunesConnectAppsNetworking {
+    self.progressHUD.label.text = @"Apps状态查询中";
+    if (self.progressHUD.isHidden) {
+        [self.progressHUD showAnimated:YES];
+    }
     weakOBJ(self);
     [DWNetworking getUrlString:MTiTunesApps params:nil resultCallBack:^(id success, NSError *error, BOOL isCache) {
         [weak_self dismissProgressHUD];

@@ -23,7 +23,7 @@
 
 ---
 *您的支持就是我更新的动力*
-![WeChat](https://github.com/CoderDwang/MoreiTunes/blob/master/Pay/WeChat.JPG)
-![Ali](https://github.com/CoderDwang/MoreiTunes/blob/master/Pay/Ali.JPG)
+[微信打赏](https://github.com/CoderDwang/MoreiTunes/blob/master/Pay/WeChat.JPG)
+[支付宝打赏](https://github.com/CoderDwang/MoreiTunes/blob/master/Pay/Ali.JPG)
 
 

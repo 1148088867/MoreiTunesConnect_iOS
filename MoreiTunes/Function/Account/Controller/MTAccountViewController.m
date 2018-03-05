@@ -21,7 +21,6 @@ psx(MTAccountView, accountView);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"AccountCenter";
     self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithImage:UIImageMake(@"添加") tintColor:UIColorWhite position:QMUINavigationButtonPositionNone target:self action:@selector(rightBarButtonItemDidClick)];
 }
 

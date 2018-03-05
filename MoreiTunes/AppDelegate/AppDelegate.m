@@ -7,8 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MTBaseNavigationController.h"
-#import "MTAccountViewController.h"
+#import "MTBaseTabBarViewController.h"
 #import <AFNetworkActivityIndicatorManager.h>
 #import <DWNetworking.h>
 
@@ -22,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self networkConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[MTBaseNavigationController alloc] initWithRootViewController:[[MTAccountViewController alloc] init]];
+    self.window.rootViewController = [[MTBaseTabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
 }

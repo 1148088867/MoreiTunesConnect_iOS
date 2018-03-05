@@ -28,6 +28,8 @@
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
+		928CDDFD204D4E0A00544C92 /* MTSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDDFC204D4E0A00544C92 /* MTSetViewController.m */; };
+		928CDE01204D4E3C00544C92 /* MTBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE00204D4E3C00544C92 /* MTBaseTabBarViewController.m */; };
 		92E79EEC200F9F8B002A2257 /* MTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* MTBaseViewController.m */; };
 		92E79EF1200FA10C002A2257 /* MTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* MTBaseNavigationController.m */; };
 		92E79EF6200FA239002A2257 /* MTAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* MTAccountViewController.m */; };
@@ -77,6 +79,10 @@
 		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* MoreiTunes-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunes-README.md"; sourceTree = "<group>"; };
+		928CDDFB204D4E0A00544C92 /* MTSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTSetViewController.h; sourceTree = "<group>"; };
+		928CDDFC204D4E0A00544C92 /* MTSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTSetViewController.m; sourceTree = "<group>"; };
+		928CDDFF204D4E3C00544C92 /* MTBaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseTabBarViewController.h; sourceTree = "<group>"; };
+		928CDE00204D4E3C00544C92 /* MTBaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseTabBarViewController.m; sourceTree = "<group>"; };
 		92E79EE8200F9D82002A2257 /* MoreiTunes.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreiTunes.pch; sourceTree = "<group>"; };
 		92E79EEA200F9F8B002A2257 /* MTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTBaseViewController.h; sourceTree = "<group>"; };
 		92E79EEB200F9F8B002A2257 /* MTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTBaseViewController.m; sourceTree = "<group>"; };
@@ -313,6 +319,7 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				928CDDF9204D4DE900544C92 /* Set */,
 				926EA4AE2015AD3B008F4554 /* iTunes */,
 				920BB6142011FD3D00B24CE1 /* CreateAccount */,
 				92E79EF2200FA21F002A2257 /* Account */,
@@ -323,10 +330,37 @@
 		92745CBF200E509F009DDF39 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				928CDDFE204D4E1900544C92 /* TabBarViewController */,
 				92E79EEE200FA0EC002A2257 /* NavigationController */,
 				92E79EE9200F9F5E002A2257 /* ViewController */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		928CDDF9204D4DE900544C92 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFA204D4DF000544C92 /* Controller */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		928CDDFA204D4DF000544C92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFB204D4E0A00544C92 /* MTSetViewController.h */,
+				928CDDFC204D4E0A00544C92 /* MTSetViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		928CDDFE204D4E1900544C92 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFF204D4E3C00544C92 /* MTBaseTabBarViewController.h */,
+				928CDE00204D4E3C00544C92 /* MTBaseTabBarViewController.m */,
+			);
+			path = TabBarViewController;
 			sourceTree = "<group>";
 		};
 		92C8EB6C201635AC007F2967 /* Library */ = {
@@ -581,6 +615,7 @@
 				9203753D204BB85900E23339 /* MTiTunesView.m in Sources */,
 				920BB6132011FA8C00B24CE1 /* MTSqlManager.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
+				928CDE01204D4E3C00544C92 /* MTBaseTabBarViewController.m in Sources */,
 				9203755B204BD77A00E23339 /* MTiTunesAppsModel.m in Sources */,
 				92E79EEC200F9F8B002A2257 /* MTBaseViewController.m in Sources */,
 				92E79F00200FADF2002A2257 /* MTAccountView.m in Sources */,
@@ -596,6 +631,7 @@
 				926EA4A92014C0F8008F4554 /* UITableViewCell+MTExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* MTAccountCell.m in Sources */,
 				9203757C204C1A5400E23339 /* MTNetwork.m in Sources */,
+				928CDDFD204D4E0A00544C92 /* MTSetViewController.m in Sources */,
 				92E79EF6200FA239002A2257 /* MTAccountViewController.m in Sources */,
 				926EA4B62016180E008F4554 /* NSString+MTExtenison.m in Sources */,
 				920BB6182011FD8900B24CE1 /* MTCreateAccountViewController.m in Sources */,

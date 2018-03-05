@@ -97,10 +97,10 @@
     QMUICMI.tabBarBackgroundImage = nil;                                        // TabBarBackgroundImage : UITabBar 的背景图
     QMUICMI.tabBarBarTintColor = nil;                                           // TabBarBarTintColor : UITabBar 的 barTintColor
     QMUICMI.tabBarShadowImageColor = nil;                                       // TabBarShadowImageColor : UITabBar 的 shadowImage 的颜色，会自动创建一张 1px 高的图片
-    QMUICMI.tabBarTintColor = nil;                                              // TabBarTintColor : UITabBar 的 tintColor
-    QMUICMI.tabBarItemTitleColor = nil;                                         // TabBarItemTitleColor : 未选中的 UITabBarItem 的标题颜色
+    QMUICMI.tabBarTintColor = UIColorBlack;                                              // TabBarTintColor : UITabBar 的 tintColor
+    QMUICMI.tabBarItemTitleColor = UIColorGray;                                         // TabBarItemTitleColor : 未选中的 UITabBarItem 的标题颜色
     QMUICMI.tabBarItemTitleColorSelected = TabBarTintColor;                     // TabBarItemTitleColorSelected : 选中的 UITabBarItem 的标题颜色
-    QMUICMI.tabBarItemTitleFont = nil;                                          // TabBarItemTitleFont : UITabBarItem 的标题字体
+    QMUICMI.tabBarItemTitleFont = UIFontMakeNameWithSize(@"AmericanTypewriter", 10);                                          // TabBarItemTitleFont : UITabBarItem 的标题字体
     
 #pragma mark - Toolbar
     

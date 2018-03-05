@@ -31,6 +31,7 @@
     [name mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(icon.mas_top).offset(5);
         make.left.equalTo(icon.mas_right).offset(15);
+        make.right.equalTo(self.contentView.mas_right).offset(-15);
     }];
     
     QMUILabel *lastDate = [[QMUILabel alloc] init];
@@ -72,7 +73,7 @@
     statusLab.font = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
     [self.contentView addSubview:statusLab];
     [statusLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.bottom.equalTo(status.mas_bottom);
         make.right.equalTo(self.contentView.mas_right).offset(-15);
     }];
     

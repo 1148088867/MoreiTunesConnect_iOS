@@ -20,14 +20,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self networkingConfig];
+    [self networkConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[MTBaseNavigationController alloc] initWithRootViewController:[[MTAccountViewController alloc] init]];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
-- (void)networkingConfig {
+- (void)networkConfig {
     [DWNetworking setConfigRequestType:DWRequestTypeJSON responseType:DWResponseTypeJSON];
     [DWNetworking setHttpHeaderConfig:@{@"Connection":@"keep-alive",
                                         @"X-Apple-Widget-Key":@"e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42",

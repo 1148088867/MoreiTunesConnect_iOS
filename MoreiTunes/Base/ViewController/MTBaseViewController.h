@@ -10,13 +10,10 @@
 
 @interface MTBaseViewController : QMUICommonViewController
 
-/** 进度指示器 */
-@property(nonatomic, strong) MBProgressHUD *progressHUD;
+/** 活动指示器 */
+psx(QMUITips, progressHUD);
 
-/** 关闭进度指示器 */
+/** 关闭活动指示器 */
 - (void)dismissProgressHUD;
-
-/** 设置导航视图透明 */
-- (void)setNavigationBarTransparence;
 
 @end

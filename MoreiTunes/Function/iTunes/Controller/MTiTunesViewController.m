@@ -35,12 +35,11 @@ psx(MTiTunesView, itunesView);
     }];
     itunesView.mj_header.automaticallyChangeAlpha = YES;
     [self iTunesConnectLoginNetworking];
-    
+    itunesView.infoStr = @"没有更多数据了";
 }
 
 - (void)iTunesConnectLoginNetworking {
-    self.progressHUD.label.text = @"账号登录中...";
-    [self.progressHUD showAnimated:YES];
+    [self.progressHUD showLoading:@"账号登录中..."];
     weakOBJ(self);
     [MTNetwork postUrl:MTiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
                                                        @"password":self.accountModel.password.decryptAESString,
@@ -56,10 +55,7 @@ psx(MTiTunesView, itunesView);
 }
 
 - (void)iTunesConnectAppsNetworking {
-    self.progressHUD.label.text = @"Apps状态查询中";
-    if (self.progressHUD.isHidden) {
-        [self.progressHUD showAnimated:YES];
-    }
+    [self.progressHUD showLoading:@"Apps状态查询中"];
     weakOBJ(self);
     [MTNetwork getUrl:MTiTunesApps callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];

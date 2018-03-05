@@ -6,7 +6,6 @@ pod 'YYWebImage'
 pod 'DWNetworking'
 
 # 视图
-pod 'MBProgressHUD'
 pod 'QMUIKit'
 pod 'MJRefresh'
 pod 'IQKeyboardManager'

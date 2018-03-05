@@ -21,6 +21,12 @@
 /** iTunesApps */
 #define MTiTunesApps @"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/manageyourapps/summary/v2"
 
+/** GitHub */
+#define MTGitHub @"https://github.com/CoderDwang/MoreiTunes"
+
+/** QQ群 */
+#define MTQQGroup @"577506623"
+
 /** 数据库操作单例 */
 #define MTSQL [MTSqlManager sharedInstance]
 

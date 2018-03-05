@@ -11,6 +11,6 @@
 @interface MTCreateAccountCell : QMUITableViewCell
 
 /** 信息录入框 */
-@property(nonatomic, strong) QMUITextField *field;
+psx(QMUITextField, field);
 
 @end

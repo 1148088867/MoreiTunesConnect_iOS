@@ -44,9 +44,10 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (MBProgressHUD *)progressHUD {
+- (QMUITips *)progressHUD {
     if (!_progressHUD) {
-        _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        _progressHUD = [[QMUITips alloc] initWithView:self.view];
+        [self.view addSubview:_progressHUD];
     }
     return _progressHUD;
 }
@@ -54,12 +55,6 @@
 - (void)dismissProgressHUD {
     [self.progressHUD hideAnimated:YES];
     self.progressHUD = nil;
-}
-
-- (void)setNavigationBarTransparence {
-    [self.navigationController setNavigationBarHidden:NO];
-    [self.navigationController.navigationBar setTranslucent:YES];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航栏"] forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

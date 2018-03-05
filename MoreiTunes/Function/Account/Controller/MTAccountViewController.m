@@ -38,12 +38,13 @@ psx(MTAccountView, accountView);
         weak_self.accountView.accountModelArrM = nil;
         [weak_self.accountView reloadData];
         [weak_self.progressHUD showAnimated:YES];
-        weak_self.progressHUD.label.text = @"数据检测中...";
+        [weak_self.progressHUD showLoading:@"数据检测中..."];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weak_self.accountView.mj_header endRefreshing];
             [weak_self dismissProgressHUD];
         });
     }];
+    accountView.infoStr = @"没有更多数据了";
 }
 
 - (void)rightBarButtonItemDidClick {

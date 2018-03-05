@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableView (MTExtension)
+@interface QMUITableView (MTExtension)
+
+pcx(NSString, infoStr);
 
 @end

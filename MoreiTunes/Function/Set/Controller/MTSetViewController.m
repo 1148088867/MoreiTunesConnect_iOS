@@ -7,6 +7,7 @@
 //
 
 #import "MTSetViewController.h"
+#import "MTSetView.h"
 
 @interface MTSetViewController ()
 
@@ -16,22 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setUI {
+    MTSetView *setView = [[MTSetView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+    [self.baseView addSubview:setView];
+    [setView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.baseView.mas_top);
+        make.left.right.bottom.equalTo(self.view);
+    }];
+    setView.infoStr = @"MoreiTunes由CoderDwang 制作";
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

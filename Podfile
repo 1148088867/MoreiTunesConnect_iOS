@@ -1,4 +1,4 @@
-target 'MoreiTunes' do
+target 'MoreiTunesConnect_iOS' do
    inhibit_all_warnings! 
 
 # 网络

@@ -1,0 +1,814 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8225751DA5A2665A0D9D3DCF /* libPods-MoreiTunesConnect_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */; };
+		92037533204BB3DB00E23339 /* MTCiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92037532204BB3DB00E23339 /* MTCiTunesViewController.m */; };
+		92037535204BB56800E23339 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037534204BB56800E23339 /* UIKit.framework */; };
+		92037537204BB56D00E23339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037536204BB56D00E23339 /* Foundation.framework */; };
+		92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037538204BB57500E23339 /* libsqlite3.tbd */; };
+		9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203753C204BB85900E23339 /* MTCiTunesView.m */; };
+		9203755B204BD77A00E23339 /* MTCiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */; };
+		9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */; };
+		9203757C204C1A5400E23339 /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203757B204C1A5400E23339 /* MTCNetwork.m */; };
+		920BB6132011FA8C00B24CE1 /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */; };
+		920BB6182011FD8900B24CE1 /* MTCCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */; };
+		920BB61C2011FDC300B24CE1 /* MTCCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* MTCCreateAccountView.m */; };
+		920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */; };
+		926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EA4A42014B779008F4554 /* MobileCoreServices.framework */; };
+		926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */; };
+		926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* MTCAccountCell.m */; };
+		926EA4B62016180E008F4554 /* NSString+MTCExtenison.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4B52016180E008F4554 /* NSString+MTCExtenison.m */; };
+		92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CA4200E4FB3009DDF39 /* AppDelegate.m */; };
+		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
+		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
+		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
+		928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */; };
+		928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */; };
+		928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE04204D6D0F00544C92 /* MTCSetView.m */; };
+		92E79EEC200F9F8B002A2257 /* MTCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* MTCBaseViewController.m */; };
+		92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* MTCBaseNavigationController.m */; };
+		92E79EF6200FA239002A2257 /* MTCAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* MTCAccountViewController.m */; };
+		92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF9200FA29F002A2257 /* QMUIConfigurationTemplate.m */; };
+		92E79EFC200FAA8A002A2257 /* Resources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92E79EFB200FAA8A002A2257 /* Resources.xcassets */; };
+		92E79F00200FADF2002A2257 /* MTCAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EFF200FADF2002A2257 /* MTCAccountView.m */; };
+		92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F04200FAE3E002A2257 /* QMUITableView+MTCExtension.m */; };
+		92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F08200FB562002A2257 /* MTCAccountModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92037531204BB3DB00E23339 /* MTCiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesViewController.h; sourceTree = "<group>"; };
+		92037532204BB3DB00E23339 /* MTCiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesViewController.m; sourceTree = "<group>"; };
+		92037534204BB56800E23339 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		92037536204BB56D00E23339 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		92037538204BB57500E23339 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9203753B204BB85900E23339 /* MTCiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesView.h; sourceTree = "<group>"; };
+		9203753C204BB85900E23339 /* MTCiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesView.m; sourceTree = "<group>"; };
+		92037559204BD77A00E23339 /* MTCiTunesAppsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsModel.h; sourceTree = "<group>"; };
+		9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsModel.m; sourceTree = "<group>"; };
+		9203755D204BDC5A00E23339 /* MTCiTunesAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsCell.h; sourceTree = "<group>"; };
+		9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsCell.m; sourceTree = "<group>"; };
+		9203757A204C1A5400E23339 /* MTCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNetwork.h; sourceTree = "<group>"; };
+		9203757B204C1A5400E23339 /* MTCNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNetwork.m; sourceTree = "<group>"; };
+		920BB5F12011E91A00B24CE1 /* MTCOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCOutPut.h; sourceTree = "<group>"; };
+		920BB6112011FA8C00B24CE1 /* MTCSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSqlManager.h; sourceTree = "<group>"; };
+		920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSqlManager.m; sourceTree = "<group>"; };
+		920BB6162011FD8900B24CE1 /* MTCCreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountViewController.h; sourceTree = "<group>"; };
+		920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountViewController.m; sourceTree = "<group>"; };
+		920BB61A2011FDC300B24CE1 /* MTCCreateAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountView.h; sourceTree = "<group>"; };
+		920BB61B2011FDC300B24CE1 /* MTCCreateAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountView.m; sourceTree = "<group>"; };
+		920BB61E2012015200B24CE1 /* MTCCreateAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountCell.h; sourceTree = "<group>"; };
+		920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountCell.m; sourceTree = "<group>"; };
+		926EA4A42014B779008F4554 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		926EA4A72014C0F8008F4554 /* UITableViewCell+MTCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MTCExtension.h"; sourceTree = "<group>"; };
+		926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MTCExtension.m"; sourceTree = "<group>"; };
+		926EA4AB2014E609008F4554 /* MTCAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCAccountCell.h; sourceTree = "<group>"; };
+		926EA4AC2014E609008F4554 /* MTCAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountCell.m; sourceTree = "<group>"; };
+		926EA4B42016180E008F4554 /* NSString+MTCExtenison.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MTCExtenison.h"; sourceTree = "<group>"; };
+		926EA4B52016180E008F4554 /* NSString+MTCExtenison.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MTCExtenison.m"; sourceTree = "<group>"; };
+		92745CA0200E4FB3009DDF39 /* MoreiTunesConnect_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoreiTunesConnect_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92745CA3200E4FB3009DDF39 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		92745CA4200E4FB3009DDF39 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		92745CAC200E4FB3009DDF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92745CB1200E4FB3009DDF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunesConnect-README.md"; sourceTree = "<group>"; };
+		928CDDFB204D4E0A00544C92 /* MTCSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSetViewController.h; sourceTree = "<group>"; };
+		928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSetViewController.m; sourceTree = "<group>"; };
+		928CDDFF204D4E3C00544C92 /* MTCBaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseTabBarViewController.h; sourceTree = "<group>"; };
+		928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCBaseTabBarViewController.m; sourceTree = "<group>"; };
+		928CDE03204D6D0F00544C92 /* MTCSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSetView.h; sourceTree = "<group>"; };
+		928CDE04204D6D0F00544C92 /* MTCSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSetView.m; sourceTree = "<group>"; };
+		92E79EE8200F9D82002A2257 /* MoreiTunesConnect_iOS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreiTunesConnect_iOS.pch; sourceTree = "<group>"; };
+		92E79EEA200F9F8B002A2257 /* MTCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseViewController.h; sourceTree = "<group>"; };
+		92E79EEB200F9F8B002A2257 /* MTCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCBaseViewController.m; sourceTree = "<group>"; };
+		92E79EED200FA075002A2257 /* MTCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCHeader.h; sourceTree = "<group>"; };
+		92E79EEF200FA10C002A2257 /* MTCBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseNavigationController.h; sourceTree = "<group>"; };
+		92E79EF0200FA10C002A2257 /* MTCBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCBaseNavigationController.m; sourceTree = "<group>"; };
+		92E79EF4200FA239002A2257 /* MTCAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCAccountViewController.h; sourceTree = "<group>"; };
+		92E79EF5200FA239002A2257 /* MTCAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountViewController.m; sourceTree = "<group>"; };
+		92E79EF8200FA29F002A2257 /* QMUIConfigurationTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QMUIConfigurationTemplate.h; sourceTree = "<group>"; };
+		92E79EF9200FA29F002A2257 /* QMUIConfigurationTemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QMUIConfigurationTemplate.m; sourceTree = "<group>"; };
+		92E79EFB200FAA8A002A2257 /* Resources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resources.xcassets; sourceTree = "<group>"; };
+		92E79EFE200FADF2002A2257 /* MTCAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCAccountView.h; sourceTree = "<group>"; };
+		92E79EFF200FADF2002A2257 /* MTCAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountView.m; sourceTree = "<group>"; };
+		92E79F03200FAE3E002A2257 /* QMUITableView+MTCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QMUITableView+MTCExtension.h"; sourceTree = "<group>"; };
+		92E79F04200FAE3E002A2257 /* QMUITableView+MTCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QMUITableView+MTCExtension.m"; sourceTree = "<group>"; };
+		92E79F07200FB562002A2257 /* MTCAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCAccountModel.h; sourceTree = "<group>"; };
+		92E79F08200FB562002A2257 /* MTCAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountModel.m; sourceTree = "<group>"; };
+		A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunesConnect_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92745C9D200E4FB3009DDF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */,
+				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
+				92037535204BB56800E23339 /* UIKit.framework in Frameworks */,
+				926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */,
+				8225751DA5A2665A0D9D3DCF /* libPods-MoreiTunesConnect_iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9203753A204BB84100E23339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9203755C204BDC3C00E23339 /* Cell */,
+				9203753B204BB85900E23339 /* MTCiTunesView.h */,
+				9203753C204BB85900E23339 /* MTCiTunesView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9203753E204BCCD500E23339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92037559204BD77A00E23339 /* MTCiTunesAppsModel.h */,
+				9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9203755C204BDC3C00E23339 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9203755D204BDC5A00E23339 /* MTCiTunesAppsCell.h */,
+				9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92037579204C1A3D00E23339 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9203757A204C1A5400E23339 /* MTCNetwork.h */,
+				9203757B204C1A5400E23339 /* MTCNetwork.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		920BB6102011FA2700B24CE1 /* Sql */ = {
+			isa = PBXGroup;
+			children = (
+				920BB6112011FA8C00B24CE1 /* MTCSqlManager.h */,
+				920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */,
+			);
+			path = Sql;
+			sourceTree = "<group>";
+		};
+		920BB6142011FD3D00B24CE1 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				920BB6192011FDAD00B24CE1 /* View */,
+				920BB6152011FD7700B24CE1 /* Controller */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		920BB6152011FD7700B24CE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				920BB6162011FD8900B24CE1 /* MTCCreateAccountViewController.h */,
+				920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		920BB6192011FDAD00B24CE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920BB61D2012014100B24CE1 /* Cell */,
+				920BB61A2011FDC300B24CE1 /* MTCCreateAccountView.h */,
+				920BB61B2011FDC300B24CE1 /* MTCCreateAccountView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		920BB61D2012014100B24CE1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				920BB61E2012015200B24CE1 /* MTCCreateAccountCell.h */,
+				920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		926EA4A62014C0DC008F4554 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4A72014C0F8008F4554 /* UITableViewCell+MTCExtension.h */,
+				926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		926EA4AA2014E5F8008F4554 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4AB2014E609008F4554 /* MTCAccountCell.h */,
+				926EA4AC2014E609008F4554 /* MTCAccountCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		926EA4AE2015AD3B008F4554 /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				9203753E204BCCD500E23339 /* Model */,
+				9203753A204BB84100E23339 /* View */,
+				926EA4AF2015AD44008F4554 /* Controller */,
+			);
+			path = iTunes;
+			sourceTree = "<group>";
+		};
+		926EA4AF2015AD44008F4554 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92037531204BB3DB00E23339 /* MTCiTunesViewController.h */,
+				92037532204BB3DB00E23339 /* MTCiTunesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		926EA4B3201617ED008F4554 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4B42016180E008F4554 /* NSString+MTCExtenison.h */,
+				926EA4B52016180E008F4554 /* NSString+MTCExtenison.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		92745C97200E4FB3009DDF39 = {
+			isa = PBXGroup;
+			children = (
+				92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */,
+				92745CA2200E4FB3009DDF39 /* MoreiTunesConnect_iOS */,
+				92745CA1200E4FB3009DDF39 /* Products */,
+				E6AF78E04A67B98695A5951C /* Pods */,
+				A08A2458210D091D13055043 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92745CA1200E4FB3009DDF39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92745CA0200E4FB3009DDF39 /* MoreiTunesConnect_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92745CA2200E4FB3009DDF39 /* MoreiTunesConnect_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				92037579204C1A3D00E23339 /* Network */,
+				92745CBF200E509F009DDF39 /* Base */,
+				92745CBE200E506C009DDF39 /* Function */,
+				92745CBA200E4FFC009DDF39 /* Utils */,
+				92745CB9200E4FEE009DDF39 /* AppDelegate */,
+				92745CAC200E4FB3009DDF39 /* Assets.xcassets */,
+			);
+			path = MoreiTunesConnect_iOS;
+			sourceTree = "<group>";
+		};
+		92745CB9200E4FEE009DDF39 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				92745CA3200E4FB3009DDF39 /* AppDelegate.h */,
+				92745CA4200E4FB3009DDF39 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		92745CBA200E4FFC009DDF39 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				920BB6102011FA2700B24CE1 /* Sql */,
+				92E79F01200FADFA002A2257 /* Category */,
+				92E79EF7200FA294002A2257 /* Configuration */,
+				92745CBB200E5005009DDF39 /* Public */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		92745CBB200E5005009DDF39 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				92745CB1200E4FB3009DDF39 /* Info.plist */,
+				92745CB2200E4FB3009DDF39 /* main.m */,
+				92745CBC200E5032009DDF39 /* Launch Screen.storyboard */,
+				920BB5F12011E91A00B24CE1 /* MTCOutPut.h */,
+				92E79EED200FA075002A2257 /* MTCHeader.h */,
+				92E79EE8200F9D82002A2257 /* MoreiTunesConnect_iOS.pch */,
+				92E79EFB200FAA8A002A2257 /* Resources.xcassets */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		92745CBE200E506C009DDF39 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDF9204D4DE900544C92 /* Set */,
+				926EA4AE2015AD3B008F4554 /* iTunes */,
+				920BB6142011FD3D00B24CE1 /* CreateAccount */,
+				92E79EF2200FA21F002A2257 /* Account */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		92745CBF200E509F009DDF39 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFE204D4E1900544C92 /* TabBarViewController */,
+				92E79EEE200FA0EC002A2257 /* NavigationController */,
+				92E79EE9200F9F5E002A2257 /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		928CDDF9204D4DE900544C92 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				928CDE02204D6CA600544C92 /* View */,
+				928CDDFA204D4DF000544C92 /* Controller */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		928CDDFA204D4DF000544C92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFB204D4E0A00544C92 /* MTCSetViewController.h */,
+				928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		928CDDFE204D4E1900544C92 /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				928CDDFF204D4E3C00544C92 /* MTCBaseTabBarViewController.h */,
+				928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		928CDE02204D6CA600544C92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				928CDE03204D6D0F00544C92 /* MTCSetView.h */,
+				928CDE04204D6D0F00544C92 /* MTCSetView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92E79EE9200F9F5E002A2257 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92E79EEA200F9F8B002A2257 /* MTCBaseViewController.h */,
+				92E79EEB200F9F8B002A2257 /* MTCBaseViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		92E79EEE200FA0EC002A2257 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				92E79EEF200FA10C002A2257 /* MTCBaseNavigationController.h */,
+				92E79EF0200FA10C002A2257 /* MTCBaseNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		92E79EF2200FA21F002A2257 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				92E79F06200FB551002A2257 /* Model */,
+				92E79EFD200FADDD002A2257 /* View */,
+				92E79EF3200FA226002A2257 /* Controller */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		92E79EF3200FA226002A2257 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92E79EF4200FA239002A2257 /* MTCAccountViewController.h */,
+				92E79EF5200FA239002A2257 /* MTCAccountViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92E79EF7200FA294002A2257 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				92E79EF8200FA29F002A2257 /* QMUIConfigurationTemplate.h */,
+				92E79EF9200FA29F002A2257 /* QMUIConfigurationTemplate.m */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		92E79EFD200FADDD002A2257 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4AA2014E5F8008F4554 /* Cell */,
+				92E79EFE200FADF2002A2257 /* MTCAccountView.h */,
+				92E79EFF200FADF2002A2257 /* MTCAccountView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92E79F01200FADFA002A2257 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				926EA4B3201617ED008F4554 /* NSString */,
+				926EA4A62014C0DC008F4554 /* UITableViewCell */,
+				92E79F02200FAE13002A2257 /* QMUITableView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		92E79F02200FAE13002A2257 /* QMUITableView */ = {
+			isa = PBXGroup;
+			children = (
+				92E79F03200FAE3E002A2257 /* QMUITableView+MTCExtension.h */,
+				92E79F04200FAE3E002A2257 /* QMUITableView+MTCExtension.m */,
+			);
+			path = QMUITableView;
+			sourceTree = "<group>";
+		};
+		92E79F06200FB551002A2257 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92E79F07200FB562002A2257 /* MTCAccountModel.h */,
+				92E79F08200FB562002A2257 /* MTCAccountModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A08A2458210D091D13055043 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92037538204BB57500E23339 /* libsqlite3.tbd */,
+				92037536204BB56D00E23339 /* Foundation.framework */,
+				92037534204BB56800E23339 /* UIKit.framework */,
+				926EA4A42014B779008F4554 /* MobileCoreServices.framework */,
+				440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */,
+				C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6AF78E04A67B98695A5951C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */,
+				A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92745C9F200E4FB3009DDF39 /* MoreiTunesConnect_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92745CB6200E4FB3009DDF39 /* Build configuration list for PBXNativeTarget "MoreiTunesConnect_iOS" */;
+			buildPhases = (
+				A3E89B9999ECB79FA8D20F83 /* [CP] Check Pods Manifest.lock */,
+				92745C9C200E4FB3009DDF39 /* Sources */,
+				92745C9D200E4FB3009DDF39 /* Frameworks */,
+				92745C9E200E4FB3009DDF39 /* Resources */,
+				1E6F60B97E24B0801AC1B326 /* [CP] Embed Pods Frameworks */,
+				0A8D4E94525C7A7C7C7E6DE7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoreiTunesConnect_iOS;
+			productName = DoubleiTunes;
+			productReference = 92745CA0200E4FB3009DDF39 /* MoreiTunesConnect_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92745C98200E4FB3009DDF39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MTC;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = CoderDwang;
+				TargetAttributes = {
+					92745C9F200E4FB3009DDF39 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 92745C9B200E4FB3009DDF39 /* Build configuration list for PBXProject "MoreiTunesConnect_iOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92745C97200E4FB3009DDF39;
+			productRefGroup = 92745CA1200E4FB3009DDF39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92745C9F200E4FB3009DDF39 /* MoreiTunesConnect_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92745C9E200E4FB3009DDF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E79EFC200FAA8A002A2257 /* Resources.xcassets in Resources */,
+				92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */,
+				92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A8D4E94525C7A7C7C7E6DE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS-resources.sh",
+				"${PODS_ROOT}/DWCategoryKit/DWCategoryKit/Resources.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ISMessages/ISMessages.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ISMessages.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E6F60B97E24B0801AC1B326 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3E89B9999ECB79FA8D20F83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoreiTunesConnect_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92745C9C200E4FB3009DDF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */,
+				920BB6132011FA8C00B24CE1 /* MTCSqlManager.m in Sources */,
+				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
+				928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */,
+				9203755B204BD77A00E23339 /* MTCiTunesAppsModel.m in Sources */,
+				92E79EEC200F9F8B002A2257 /* MTCBaseViewController.m in Sources */,
+				92E79F00200FADF2002A2257 /* MTCAccountView.m in Sources */,
+				9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */,
+				920BB61C2011FDC300B24CE1 /* MTCCreateAccountView.m in Sources */,
+				92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */,
+				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
+				92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */,
+				920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */,
+				92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */,
+				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
+				92037533204BB3DB00E23339 /* MTCiTunesViewController.m in Sources */,
+				926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */,
+				926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */,
+				9203757C204C1A5400E23339 /* MTCNetwork.m in Sources */,
+				928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */,
+				92E79EF6200FA239002A2257 /* MTCAccountViewController.m in Sources */,
+				926EA4B62016180E008F4554 /* NSString+MTCExtenison.m in Sources */,
+				928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */,
+				920BB6182011FD8900B24CE1 /* MTCCreateAccountViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		92745CB4200E4FB3009DDF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		92745CB5200E4FB3009DDF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92745CB7200E4FB3009DDF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B57T6XJU36;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92745CB8200E4FB3009DDF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B57T6XJU36;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92745C9B200E4FB3009DDF39 /* Build configuration list for PBXProject "MoreiTunesConnect_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92745CB4200E4FB3009DDF39 /* Debug */,
+				92745CB5200E4FB3009DDF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92745CB6200E4FB3009DDF39 /* Build configuration list for PBXNativeTarget "MoreiTunesConnect_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92745CB7200E4FB3009DDF39 /* Debug */,
+				92745CB8200E4FB3009DDF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92745C98200E4FB3009DDF39 /* Project object */;
+}

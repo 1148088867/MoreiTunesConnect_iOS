@@ -1,0 +1,22 @@
+//
+//  MoreiTunes.pch
+//  MoreiTunes
+//
+//  Created by Dwang on 2018/1/17.
+//  Copyright © 2018年 CoderDwang. All rights reserved.
+//
+
+#ifndef MoreiTunesConnect_iOS_pch
+#define MoreiTunesConnect_iOS_pch
+
+#ifdef __OBJC__
+
+/** 头文件 */
+#import "MTCHeader.h"
+
+/** 公共输出文件 */
+#import "MTCOutPut.h"
+
+#endif
+
+#endif /* MoreiTunes_pch */

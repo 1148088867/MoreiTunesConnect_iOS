@@ -55,7 +55,7 @@ psx(MTCiTunesView, itunesView);
 }
 
 - (void)iTunesConnectAppsNetworking {
-    [self.progressHUD showLoading:@"Apps状态查询中"];
+    [self.progressHUD showLoading:@"Apps状态查询中..."];
     weakOBJ(self);
     [MTCNetwork getUrl:MTCiTunesApps callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];

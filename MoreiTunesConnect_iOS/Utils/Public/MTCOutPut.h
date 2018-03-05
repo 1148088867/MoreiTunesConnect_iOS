@@ -22,7 +22,7 @@
 #define MTCiTunesApps @"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/manageyourapps/summary/v2"
 
 /** GitHub */
-#define MTCGitHub @"https://github.com/CoderDwang/MoreiTunes"
+#define MTCGitHub @"https://github.com/CoderDwang/MoreiTunesConnect_iOS"
 
 /** QQ群 */
 #define MTCQQGroup @"577506623"

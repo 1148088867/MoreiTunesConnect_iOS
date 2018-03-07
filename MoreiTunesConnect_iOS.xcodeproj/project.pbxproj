@@ -7,19 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8225751DA5A2665A0D9D3DCF /* libPods-MoreiTunesConnect_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */; };
+		38559E383283CE90564F368B /* libPods-MoreiTunesConnect_iOS_Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA06BAC097CD0F7E464CAF45 /* libPods-MoreiTunesConnect_iOS_Extension.a */; };
+		5F148A12A36CB24507D56CB2 /* libPods-MoreiTunesConnect_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFF428F05B8AD44BCE20F02 /* libPods-MoreiTunesConnect_iOS.a */; };
 		92037533204BB3DB00E23339 /* MTCiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92037532204BB3DB00E23339 /* MTCiTunesViewController.m */; };
 		92037535204BB56800E23339 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037534204BB56800E23339 /* UIKit.framework */; };
 		92037537204BB56D00E23339 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037536204BB56D00E23339 /* Foundation.framework */; };
 		92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 92037538204BB57500E23339 /* libsqlite3.tbd */; };
 		9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203753C204BB85900E23339 /* MTCiTunesView.m */; };
-		9203755B204BD77A00E23339 /* MTCiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */; };
 		9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */; };
-		9203757C204C1A5400E23339 /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203757B204C1A5400E23339 /* MTCNetwork.m */; };
-		920BB6132011FA8C00B24CE1 /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */; };
 		920BB6182011FD8900B24CE1 /* MTCCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */; };
 		920BB61C2011FDC300B24CE1 /* MTCCreateAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61B2011FDC300B24CE1 /* MTCCreateAccountView.m */; };
 		920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */; };
+		92267CE7204F854200DF7F71 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92267CE6204F854200DF7F71 /* NotificationCenter.framework */; };
+		92267CEB204F854200DF7F71 /* MTCEiTunesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267CEA204F854200DF7F71 /* MTCEiTunesViewController.m */; };
+		92267CF2204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92267CE5204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92267D20204F897F00DF7F71 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267CFB204F897F00DF7F71 /* NSString+Base64.m */; };
+		92267D21204F897F00DF7F71 /* NSMutableArray+DWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267CFC204F897F00DF7F71 /* NSMutableArray+DWExtension.m */; };
+		92267D22204F897F00DF7F71 /* UIView+DWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267CFE204F897F00DF7F71 /* UIView+DWExtension.m */; };
+		92267D26204F897F00DF7F71 /* NSArray+DWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D0A204F897F00DF7F71 /* NSArray+DWExtension.m */; };
+		92267D27204F897F00DF7F71 /* NSString+DWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D0B204F897F00DF7F71 /* NSString+DWExtension.m */; };
+		92267D29204F897F00DF7F71 /* NSDate+DWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D13204F897F00DF7F71 /* NSDate+DWExtension.m */; };
+		92267D2B204F897F00DF7F71 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 92267D16204F897F00DF7F71 /* Resources.bundle */; };
+		92267D2C204F897F00DF7F71 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D19204F897F00DF7F71 /* NSData+CommonCrypto.m */; };
+		92267D2D204F897F00DF7F71 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D1B204F897F00DF7F71 /* NSArray+Log.m */; };
+		92267D2E204F897F00DF7F71 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D1D204F897F00DF7F71 /* NSData+Base64.m */; };
+		92267D36204FA16500DF7F71 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D34204FA16500DF7F71 /* AESCrypt.m */; };
+		9252DD86204FA68100A85D3E /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD85204FA68100A85D3E /* MTCSqlManager.m */; };
+		9252DD87204FA68100A85D3E /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD85204FA68100A85D3E /* MTCSqlManager.m */; };
+		9252DD8C204FB9A500A85D3E /* MTCSpecialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */; };
+		9252DD8D204FB9A500A85D3E /* MTCSpecialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */; };
+		9252DD90204FC88000A85D3E /* MTCiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD8F204FC88000A85D3E /* MTCiTunesAppsModel.m */; };
+		9252DD91204FC88000A85D3E /* MTCiTunesAppsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD8F204FC88000A85D3E /* MTCiTunesAppsModel.m */; };
+		9252DD94204FC8ED00A85D3E /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD93204FC8ED00A85D3E /* MTCNetwork.m */; };
+		9252DD95204FC8ED00A85D3E /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD93204FC8ED00A85D3E /* MTCNetwork.m */; };
+		9252DD9F204FCFF800A85D3E /* MTCEiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD9E204FCFF800A85D3E /* MTCEiTunesView.m */; };
 		926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EA4A42014B779008F4554 /* MobileCoreServices.framework */; };
 		926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */; };
 		926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* MTCAccountCell.m */; };
@@ -41,8 +62,34 @@
 		92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F08200FB562002A2257 /* MTCAccountModel.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		92267CF0204F854200DF7F71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92745C98200E4FB3009DDF39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92267CE4204F854200DF7F71;
+			remoteInfo = MoreiTunesConnect_iOS_Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92267CCC204F840200DF7F71 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92267CF2204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BC75BF6BC80414663D71F06 /* Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS_Extension/Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig"; sourceTree = "<group>"; };
+		7C37A0D4E8B9E660DB7699E3 /* Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS_Extension/Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		7DFF428F05B8AD44BCE20F02 /* libPods-MoreiTunesConnect_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunesConnect_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92037531204BB3DB00E23339 /* MTCiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesViewController.h; sourceTree = "<group>"; };
 		92037532204BB3DB00E23339 /* MTCiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesViewController.m; sourceTree = "<group>"; };
 		92037534204BB56800E23339 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -50,21 +97,62 @@
 		92037538204BB57500E23339 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9203753B204BB85900E23339 /* MTCiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesView.h; sourceTree = "<group>"; };
 		9203753C204BB85900E23339 /* MTCiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesView.m; sourceTree = "<group>"; };
-		92037559204BD77A00E23339 /* MTCiTunesAppsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsModel.h; sourceTree = "<group>"; };
-		9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsModel.m; sourceTree = "<group>"; };
 		9203755D204BDC5A00E23339 /* MTCiTunesAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsCell.h; sourceTree = "<group>"; };
 		9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsCell.m; sourceTree = "<group>"; };
-		9203757A204C1A5400E23339 /* MTCNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNetwork.h; sourceTree = "<group>"; };
-		9203757B204C1A5400E23339 /* MTCNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNetwork.m; sourceTree = "<group>"; };
 		920BB5F12011E91A00B24CE1 /* MTCOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCOutPut.h; sourceTree = "<group>"; };
-		920BB6112011FA8C00B24CE1 /* MTCSqlManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSqlManager.h; sourceTree = "<group>"; };
-		920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSqlManager.m; sourceTree = "<group>"; };
 		920BB6162011FD8900B24CE1 /* MTCCreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountViewController.h; sourceTree = "<group>"; };
 		920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountViewController.m; sourceTree = "<group>"; };
 		920BB61A2011FDC300B24CE1 /* MTCCreateAccountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountView.h; sourceTree = "<group>"; };
 		920BB61B2011FDC300B24CE1 /* MTCCreateAccountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountView.m; sourceTree = "<group>"; };
 		920BB61E2012015200B24CE1 /* MTCCreateAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountCell.h; sourceTree = "<group>"; };
 		920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountCell.m; sourceTree = "<group>"; };
+		92267CE5204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MoreiTunesConnect_iOS_Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		92267CE6204F854200DF7F71 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		92267CE9204F854200DF7F71 /* MTCEiTunesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEiTunesViewController.h; sourceTree = "<group>"; };
+		92267CEA204F854200DF7F71 /* MTCEiTunesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCEiTunesViewController.m; sourceTree = "<group>"; };
+		92267CEF204F854200DF7F71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92267CF6204F855300DF7F71 /* MoreiTunesConnect_iOS_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoreiTunesConnect_iOS_Extension.entitlements; sourceTree = "<group>"; };
+		92267CF7204F855B00DF7F71 /* MoreiTunesConnect_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MoreiTunesConnect_iOS.entitlements; sourceTree = "<group>"; };
+		92267CFA204F897F00DF7F71 /* DWCategoryKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWCategoryKit.h; sourceTree = "<group>"; };
+		92267CFB204F897F00DF7F71 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		92267CFC204F897F00DF7F71 /* NSMutableArray+DWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+DWExtension.m"; sourceTree = "<group>"; };
+		92267CFE204F897F00DF7F71 /* UIView+DWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DWExtension.m"; sourceTree = "<group>"; };
+		92267D00204F897F00DF7F71 /* Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Frame.h; sourceTree = "<group>"; };
+		92267D02204F897F00DF7F71 /* NSDate+DWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DWExtension.h"; sourceTree = "<group>"; };
+		92267D03204F897F00DF7F71 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		92267D06204F897F00DF7F71 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		92267D07204F897F00DF7F71 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		92267D08204F897F00DF7F71 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		92267D0A204F897F00DF7F71 /* NSArray+DWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DWExtension.m"; sourceTree = "<group>"; };
+		92267D0B204F897F00DF7F71 /* NSString+DWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DWExtension.m"; sourceTree = "<group>"; };
+		92267D0C204F897F00DF7F71 /* DWOUTPUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWOUTPUT.h; sourceTree = "<group>"; };
+		92267D0E204F897F00DF7F71 /* UIView+DWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DWExtension.h"; sourceTree = "<group>"; };
+		92267D0F204F897F00DF7F71 /* NSMutableArray+DWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+DWExtension.h"; sourceTree = "<group>"; };
+		92267D11204F897F00DF7F71 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		92267D12204F897F00DF7F71 /* Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Font.h; sourceTree = "<group>"; };
+		92267D13204F897F00DF7F71 /* NSDate+DWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DWExtension.m"; sourceTree = "<group>"; };
+		92267D15204F897F00DF7F71 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		92267D16204F897F00DF7F71 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		92267D17204F897F00DF7F71 /* NSString+DWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DWExtension.h"; sourceTree = "<group>"; };
+		92267D18204F897F00DF7F71 /* NSArray+DWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DWExtension.h"; sourceTree = "<group>"; };
+		92267D19204F897F00DF7F71 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		92267D1B204F897F00DF7F71 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		92267D1C204F897F00DF7F71 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		92267D1D204F897F00DF7F71 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		92267D32204FA04800DF7F71 /* MoreiTunesConnect_iOS_Extension.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreiTunesConnect_iOS_Extension.pch; sourceTree = "<group>"; };
+		92267D33204FA0BC00DF7F71 /* MTCEHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEHeader.h; sourceTree = "<group>"; };
+		92267D34204FA16500DF7F71 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		92267D35204FA16500DF7F71 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		9252DD84204FA68100A85D3E /* MTCSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCSqlManager.h; path = MoreiTunesConnect_iOS/Utils/MTCSqlManager.h; sourceTree = SOURCE_ROOT; };
+		9252DD85204FA68100A85D3E /* MTCSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCSqlManager.m; path = MoreiTunesConnect_iOS/Utils/MTCSqlManager.m; sourceTree = SOURCE_ROOT; };
+		9252DD8A204FB9A500A85D3E /* MTCSpecialModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSpecialModel.h; sourceTree = "<group>"; };
+		9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSpecialModel.m; sourceTree = "<group>"; };
+		9252DD8E204FC88000A85D3E /* MTCiTunesAppsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsModel.h; sourceTree = "<group>"; };
+		9252DD8F204FC88000A85D3E /* MTCiTunesAppsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsModel.m; sourceTree = "<group>"; };
+		9252DD92204FC8ED00A85D3E /* MTCNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCNetwork.h; sourceTree = "<group>"; };
+		9252DD93204FC8ED00A85D3E /* MTCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCNetwork.m; sourceTree = "<group>"; };
+		9252DD9D204FCFF800A85D3E /* MTCEiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEiTunesView.h; sourceTree = "<group>"; };
+		9252DD9E204FCFF800A85D3E /* MTCEiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCEiTunesView.m; sourceTree = "<group>"; };
 		926EA4A42014B779008F4554 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		926EA4A72014C0F8008F4554 /* UITableViewCell+MTCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MTCExtension.h"; sourceTree = "<group>"; };
 		926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MTCExtension.m"; sourceTree = "<group>"; };
@@ -105,10 +193,19 @@
 		92E79F08200FB562002A2257 /* MTCAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountModel.m; sourceTree = "<group>"; };
 		A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunesConnect_iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA06BAC097CD0F7E464CAF45 /* libPods-MoreiTunesConnect_iOS_Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunesConnect_iOS_Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		92267CE2204F854200DF7F71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92267CE7204F854200DF7F71 /* NotificationCenter.framework in Frameworks */,
+				38559E383283CE90564F368B /* libPods-MoreiTunesConnect_iOS_Extension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92745C9D200E4FB3009DDF39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -117,7 +214,7 @@
 				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
 				92037535204BB56800E23339 /* UIKit.framework in Frameworks */,
 				926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */,
-				8225751DA5A2665A0D9D3DCF /* libPods-MoreiTunesConnect_iOS.a in Frameworks */,
+				5F148A12A36CB24507D56CB2 /* libPods-MoreiTunesConnect_iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +234,8 @@
 		9203753E204BCCD500E23339 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92037559204BD77A00E23339 /* MTCiTunesAppsModel.h */,
-				9203755A204BD77A00E23339 /* MTCiTunesAppsModel.m */,
+				9252DD8E204FC88000A85D3E /* MTCiTunesAppsModel.h */,
+				9252DD8F204FC88000A85D3E /* MTCiTunesAppsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,8 +252,8 @@
 		92037579204C1A3D00E23339 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				9203757A204C1A5400E23339 /* MTCNetwork.h */,
-				9203757B204C1A5400E23339 /* MTCNetwork.m */,
+				9252DD92204FC8ED00A85D3E /* MTCNetwork.h */,
+				9252DD93204FC8ED00A85D3E /* MTCNetwork.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -164,8 +261,8 @@
 		920BB6102011FA2700B24CE1 /* Sql */ = {
 			isa = PBXGroup;
 			children = (
-				920BB6112011FA8C00B24CE1 /* MTCSqlManager.h */,
-				920BB6122011FA8C00B24CE1 /* MTCSqlManager.m */,
+				9252DD84204FA68100A85D3E /* MTCSqlManager.h */,
+				9252DD85204FA68100A85D3E /* MTCSqlManager.m */,
 			);
 			path = Sql;
 			sourceTree = "<group>";
@@ -205,6 +302,122 @@
 				920BB61F2012015200B24CE1 /* MTCCreateAccountCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		92267CE8204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9252DD96204FCF9A00A85D3E /* iTunes */,
+				92267D30204F9FDD00DF7F71 /* Utils */,
+				92267CF8204F897000DF7F71 /* Library */,
+				92267CF6204F855300DF7F71 /* MoreiTunesConnect_iOS_Extension.entitlements */,
+			);
+			path = MoreiTunesConnect_iOS_Extension;
+			sourceTree = "<group>";
+		};
+		92267CF8204F897000DF7F71 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				92267CF9204F897F00DF7F71 /* DWCategoryKit */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		92267CF9204F897F00DF7F71 /* DWCategoryKit */ = {
+			isa = PBXGroup;
+			children = (
+				92267D35204FA16500DF7F71 /* AESCrypt.h */,
+				92267D34204FA16500DF7F71 /* AESCrypt.m */,
+				92267CFA204F897F00DF7F71 /* DWCategoryKit.h */,
+				92267CFB204F897F00DF7F71 /* NSString+Base64.m */,
+				92267CFC204F897F00DF7F71 /* NSMutableArray+DWExtension.m */,
+				92267CFE204F897F00DF7F71 /* UIView+DWExtension.m */,
+				92267D00204F897F00DF7F71 /* Frame.h */,
+				92267D02204F897F00DF7F71 /* NSDate+DWExtension.h */,
+				92267D03204F897F00DF7F71 /* Color.h */,
+				92267D06204F897F00DF7F71 /* NSData+Base64.h */,
+				92267D07204F897F00DF7F71 /* NSArray+Log.h */,
+				92267D08204F897F00DF7F71 /* NSData+CommonCrypto.h */,
+				92267D0A204F897F00DF7F71 /* NSArray+DWExtension.m */,
+				92267D0B204F897F00DF7F71 /* NSString+DWExtension.m */,
+				92267D0C204F897F00DF7F71 /* DWOUTPUT.h */,
+				92267D0E204F897F00DF7F71 /* UIView+DWExtension.h */,
+				92267D0F204F897F00DF7F71 /* NSMutableArray+DWExtension.h */,
+				92267D11204F897F00DF7F71 /* NSString+Base64.h */,
+				92267D12204F897F00DF7F71 /* Font.h */,
+				92267D13204F897F00DF7F71 /* NSDate+DWExtension.m */,
+				92267D15204F897F00DF7F71 /* Property.h */,
+				92267D16204F897F00DF7F71 /* Resources.bundle */,
+				92267D17204F897F00DF7F71 /* NSString+DWExtension.h */,
+				92267D18204F897F00DF7F71 /* NSArray+DWExtension.h */,
+				92267D19204F897F00DF7F71 /* NSData+CommonCrypto.m */,
+				92267D1B204F897F00DF7F71 /* NSArray+Log.m */,
+				92267D1C204F897F00DF7F71 /* Image.h */,
+				92267D1D204F897F00DF7F71 /* NSData+Base64.m */,
+			);
+			path = DWCategoryKit;
+			sourceTree = "<group>";
+		};
+		92267D30204F9FDD00DF7F71 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92267D31204F9FE900DF7F71 /* Public */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		92267D31204F9FE900DF7F71 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				92267CEF204F854200DF7F71 /* Info.plist */,
+				92267D32204FA04800DF7F71 /* MoreiTunesConnect_iOS_Extension.pch */,
+				92267D33204FA0BC00DF7F71 /* MTCEHeader.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		9252DD88204FB97500A85D3E /* Special */ = {
+			isa = PBXGroup;
+			children = (
+				9252DD89204FB99300A85D3E /* Model */,
+			);
+			path = Special;
+			sourceTree = "<group>";
+		};
+		9252DD89204FB99300A85D3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9252DD8A204FB9A500A85D3E /* MTCSpecialModel.h */,
+				9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9252DD96204FCF9A00A85D3E /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				9252DD98204FCFC500A85D3E /* View */,
+				9252DD97204FCFA000A85D3E /* Controller */,
+			);
+			path = iTunes;
+			sourceTree = "<group>";
+		};
+		9252DD97204FCFA000A85D3E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92267CE9204F854200DF7F71 /* MTCEiTunesViewController.h */,
+				92267CEA204F854200DF7F71 /* MTCEiTunesViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9252DD98204FCFC500A85D3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9252DD9D204FCFF800A85D3E /* MTCEiTunesView.h */,
+				9252DD9E204FCFF800A85D3E /* MTCEiTunesView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		926EA4A62014C0DC008F4554 /* UITableViewCell */ = {
@@ -258,6 +471,7 @@
 			children = (
 				92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */,
 				92745CA2200E4FB3009DDF39 /* MoreiTunesConnect_iOS */,
+				92267CE8204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */,
 				92745CA1200E4FB3009DDF39 /* Products */,
 				E6AF78E04A67B98695A5951C /* Pods */,
 				A08A2458210D091D13055043 /* Frameworks */,
@@ -268,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				92745CA0200E4FB3009DDF39 /* MoreiTunesConnect_iOS.app */,
+				92267CE5204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,6 +490,7 @@
 		92745CA2200E4FB3009DDF39 /* MoreiTunesConnect_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				92267CF7204F855B00DF7F71 /* MoreiTunesConnect_iOS.entitlements */,
 				92037579204C1A3D00E23339 /* Network */,
 				92745CBF200E509F009DDF39 /* Base */,
 				92745CBE200E506C009DDF39 /* Function */,
@@ -322,6 +538,7 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				9252DD88204FB97500A85D3E /* Special */,
 				928CDDF9204D4DE900544C92 /* Set */,
 				926EA4AE2015AD3B008F4554 /* iTunes */,
 				920BB6142011FD3D00B24CE1 /* CreateAccount */,
@@ -467,8 +684,9 @@
 				92037536204BB56D00E23339 /* Foundation.framework */,
 				92037534204BB56800E23339 /* UIKit.framework */,
 				926EA4A42014B779008F4554 /* MobileCoreServices.framework */,
-				440A01532F653B0B27580B53 /* libPods-MoreiTunes.a */,
-				C538C2B1A286F8935DD79DB6 /* libPods-MoreiTunesConnect_iOS.a */,
+				92267CE6204F854200DF7F71 /* NotificationCenter.framework */,
+				7DFF428F05B8AD44BCE20F02 /* libPods-MoreiTunesConnect_iOS.a */,
+				EA06BAC097CD0F7E464CAF45 /* libPods-MoreiTunesConnect_iOS_Extension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +696,8 @@
 			children = (
 				A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */,
 				A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */,
+				7C37A0D4E8B9E660DB7699E3 /* Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig */,
+				0BC75BF6BC80414663D71F06 /* Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -485,6 +705,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		92267CE4204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92267CF3204F854200DF7F71 /* Build configuration list for PBXNativeTarget "MoreiTunesConnect_iOS_Extension" */;
+			buildPhases = (
+				DB5E0461BDEB503E6D35526A /* [CP] Check Pods Manifest.lock */,
+				92267CE1204F854200DF7F71 /* Sources */,
+				92267CE2204F854200DF7F71 /* Frameworks */,
+				92267CE3204F854200DF7F71 /* Resources */,
+				A6AD5B95F11DEA40787A5ED9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoreiTunesConnect_iOS_Extension;
+			productName = MoreiTunesConnect_iOS_Extension;
+			productReference = 92267CE5204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		92745C9F200E4FB3009DDF39 /* MoreiTunesConnect_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92745CB6200E4FB3009DDF39 /* Build configuration list for PBXNativeTarget "MoreiTunesConnect_iOS" */;
@@ -495,10 +734,12 @@
 				92745C9E200E4FB3009DDF39 /* Resources */,
 				1E6F60B97E24B0801AC1B326 /* [CP] Embed Pods Frameworks */,
 				0A8D4E94525C7A7C7C7E6DE7 /* [CP] Copy Pods Resources */,
+				92267CCC204F840200DF7F71 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92267CF1204F854200DF7F71 /* PBXTargetDependency */,
 			);
 			name = MoreiTunesConnect_iOS;
 			productName = DoubleiTunes;
@@ -515,9 +756,23 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = CoderDwang;
 				TargetAttributes = {
+					92267CE4204F854200DF7F71 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					92745C9F200E4FB3009DDF39 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -535,11 +790,20 @@
 			projectRoot = "";
 			targets = (
 				92745C9F200E4FB3009DDF39 /* MoreiTunesConnect_iOS */,
+				92267CE4204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		92267CE3204F854200DF7F71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92267D2B204F897F00DF7F71 /* Resources.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92745C9E200E4FB3009DDF39 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -612,18 +876,75 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A6AD5B95F11DEA40787A5ED9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS_Extension/Pods-MoreiTunesConnect_iOS_Extension-resources.sh",
+				"${PODS_ROOT}/DWCategoryKit/DWCategoryKit/Resources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS_Extension/Pods-MoreiTunesConnect_iOS_Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5E0461BDEB503E6D35526A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoreiTunesConnect_iOS_Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		92267CE1204F854200DF7F71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92267D2D204F897F00DF7F71 /* NSArray+Log.m in Sources */,
+				9252DD9F204FCFF800A85D3E /* MTCEiTunesView.m in Sources */,
+				92267D2E204F897F00DF7F71 /* NSData+Base64.m in Sources */,
+				92267D20204F897F00DF7F71 /* NSString+Base64.m in Sources */,
+				92267D2C204F897F00DF7F71 /* NSData+CommonCrypto.m in Sources */,
+				9252DD91204FC88000A85D3E /* MTCiTunesAppsModel.m in Sources */,
+				92267D29204F897F00DF7F71 /* NSDate+DWExtension.m in Sources */,
+				92267D36204FA16500DF7F71 /* AESCrypt.m in Sources */,
+				9252DD8D204FB9A500A85D3E /* MTCSpecialModel.m in Sources */,
+				9252DD87204FA68100A85D3E /* MTCSqlManager.m in Sources */,
+				92267D21204F897F00DF7F71 /* NSMutableArray+DWExtension.m in Sources */,
+				92267D26204F897F00DF7F71 /* NSArray+DWExtension.m in Sources */,
+				92267D27204F897F00DF7F71 /* NSString+DWExtension.m in Sources */,
+				92267CEB204F854200DF7F71 /* MTCEiTunesViewController.m in Sources */,
+				9252DD95204FC8ED00A85D3E /* MTCNetwork.m in Sources */,
+				92267D22204F897F00DF7F71 /* UIView+DWExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92745C9C200E4FB3009DDF39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */,
-				920BB6132011FA8C00B24CE1 /* MTCSqlManager.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
 				928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */,
-				9203755B204BD77A00E23339 /* MTCiTunesAppsModel.m in Sources */,
 				92E79EEC200F9F8B002A2257 /* MTCBaseViewController.m in Sources */,
 				92E79F00200FADF2002A2257 /* MTCAccountView.m in Sources */,
 				9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */,
@@ -634,21 +955,68 @@
 				920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */,
 				92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
+				9252DD8C204FB9A500A85D3E /* MTCSpecialModel.m in Sources */,
+				9252DD90204FC88000A85D3E /* MTCiTunesAppsModel.m in Sources */,
 				92037533204BB3DB00E23339 /* MTCiTunesViewController.m in Sources */,
 				926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */,
-				9203757C204C1A5400E23339 /* MTCNetwork.m in Sources */,
+				9252DD86204FA68100A85D3E /* MTCSqlManager.m in Sources */,
 				928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */,
 				92E79EF6200FA239002A2257 /* MTCAccountViewController.m in Sources */,
 				926EA4B62016180E008F4554 /* NSString+MTCExtenison.m in Sources */,
 				928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */,
+				9252DD94204FC8ED00A85D3E /* MTCNetwork.m in Sources */,
 				920BB6182011FD8900B24CE1 /* MTCCreateAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		92267CF1204F854200DF7F71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92267CE4204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */;
+			targetProxy = 92267CF0204F854200DF7F71 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		92267CF4204F854200DF7F71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C37A0D4E8B9E660DB7699E3 /* Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS_Extension/MoreiTunesConnect_iOS_Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B57T6XJU36;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/MoreiTunesConnect_iOS_Extension.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS.MoreiTunesConnect-iOS-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92267CF5204F854200DF7F71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BC75BF6BC80414663D71F06 /* Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS_Extension/MoreiTunesConnect_iOS_Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B57T6XJU36;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/MoreiTunesConnect_iOS_Extension.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS.MoreiTunesConnect-iOS-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		92745CB4200E4FB3009DDF39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -758,6 +1126,7 @@
 			baseConfigurationReference = A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B57T6XJU36;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
@@ -775,6 +1144,7 @@
 			baseConfigurationReference = A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B57T6XJU36;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
@@ -790,6 +1160,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		92267CF3204F854200DF7F71 /* Build configuration list for PBXNativeTarget "MoreiTunesConnect_iOS_Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92267CF4204F854200DF7F71 /* Debug */,
+				92267CF5204F854200DF7F71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92745C9B200E4FB3009DDF39 /* Build configuration list for PBXProject "MoreiTunesConnect_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

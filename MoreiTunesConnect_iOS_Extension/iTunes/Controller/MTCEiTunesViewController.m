@@ -54,7 +54,7 @@ psx(MTCEiTunesView, iTunesView);
     [iTunesView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    [iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:specialModel.appIconUrl.decryptAESString] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur|YYWebImageOptionShowNetworkActivity|YYWebImageOptionUseNSURLCache];
+    [iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:specialModel.appIconUrl.decryptAESString] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur];
     iTunesView.name.text = specialModel.appName.decryptAESString;
     
     [self iTunesConnectAppsNetworking:specialModel];
@@ -69,7 +69,7 @@ psx(MTCEiTunesView, iTunesView);
                 if ([obj.adamId isEqualToString:specialModel.appid.decryptAESString]) {
                     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:obj.versionSets];
                     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
-                    [weak_self.iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:obj.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur|YYWebImageOptionShowNetworkActivity|YYWebImageOptionUseNSURLCache];
+                    [weak_self.iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:obj.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur];
                     weak_self.iTunesView.name.text = obj.name;
                     weak_self.iTunesView.lastDate.text = obj.lastModifiedDate;
                     weak_self.iTunesView.version.text = appInFlightVersionModel.version;
@@ -90,6 +90,9 @@ psx(MTCEiTunesView, iTunesView);
                                                 @"password":specialModel.password.decryptAESString,
                                                 @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
                                                     if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
+                                                        NSMutableDictionary *appinfo = [specialModel yy_modelToJSONObject];
+                                                        [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
+                                                        [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
                                                         [weak_self iTunesConnectAppsNetworking:specialModel];
                                                     }
                                                 }];

@@ -8,6 +8,7 @@
 
 #import "MTCiTunesViewController.h"
 #import "MTCiTunesView.h"
+#import "MTCSpecialModel.h"
 
 @interface MTCiTunesViewController ()
 
@@ -19,6 +20,7 @@ psx(MTCiTunesView, itunesView);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.titleView.subtitle = self.accountModel.mail.decryptAESString;
 }
 
 - (void)setUI {
@@ -56,8 +58,7 @@ psx(MTCiTunesView, itunesView);
                 if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
                     if (weak_self.updateCooikesData) {
                         MTCAccountModel *accountModel = weak_self.accountModel;
-                        NSData *cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
-                        [accountModel setCookiesData:cookiesData]; weak_self.updateCooikesData(accountModel);
+                        [accountModel setCookiesData:MTCCooikesData]; weak_self.updateCooikesData(accountModel);
                     }
                     [weak_self iTunesConnectAppsNetworking];
                 }else {
@@ -75,6 +76,16 @@ psx(MTCiTunesView, itunesView);
         [weak_self dismissProgressHUD];
         if ([success[@"statusCode"] isEqualToString:@"SUCCESS"] && !error) {
             weak_self.itunesView.iTunesAppsArr = [NSArray yy_modelArrayWithClass:[MTCiTunesAppsModel class] json:success[@"data"][@"summaries"]];
+            MTCSpecialModel *specialModel = [MTCSpecialModel yy_modelWithJSON:[MTCUserDefaults objectForKey:@"appinfo"]];
+            if (specialModel.appid.length && [specialModel.email.decryptAESString isEqualToString:weak_self.accountModel.mail.decryptAESString]) {
+                [weak_self.itunesView.iTunesAppsArr enumerateObjectsUsingBlock:^(MTCiTunesAppsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    if ([obj.adamId isEqualToString:specialModel.appid.decryptAESString]) {
+                        NSMutableDictionary *appinfo = [specialModel yy_modelToJSONObject];
+                        [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
+                        [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
+                    }
+                }];
+            }
             [weak_self.itunesView.mj_header endRefreshing];
             [weak_self.itunesView reloadData];
         }else {

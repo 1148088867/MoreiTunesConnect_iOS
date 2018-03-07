@@ -18,14 +18,18 @@
 
 @implementation MTCBaseViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)didInitialized {
+    [super didInitialized];
     self.titleView.subtitle = @"CoderDwang";
     self.titleView.style = QMUINavigationTitleViewStyleSubTitleVertical;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     if (IS_DEBUG) {
         [[JPFPSStatus sharedInstance] open];
     }
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (void)dealloc {

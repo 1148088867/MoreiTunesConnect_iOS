@@ -34,7 +34,7 @@
 #define MTCUserDefaults [[NSUserDefaults alloc] initWithSuiteName:@"group.MoreiTunesConnect_iOS"]
 
 /** 获取cooikes */
-#define MTCCooikes [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL: [NSURL URLWithString:MTCiTunesLogin]]
+#define MTCCooikesData [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]]
 
 /** 数据库操作单例 */
 #define MTCSQL [MTCSqlManager sharedInstance]

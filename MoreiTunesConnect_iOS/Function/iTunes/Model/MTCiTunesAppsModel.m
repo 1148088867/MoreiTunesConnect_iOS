@@ -68,13 +68,13 @@
     if ([_state isEqualToString:@"inReview"] ||
         [_state isEqualToString:@"waitingForReview"] ||
         [_state isEqualToString:@"prepareForUpload"]) {
-        return [UIColor yellowColor];
+        return UIColorMakeRGB(255, 207, 71);
     }else if ([_state isEqualToString:@"devRejected"] ||
               [_state isEqualToString:@"rejected"] ||
               [_state isEqualToString:@"metadataRejected"]) {
-        return [UIColor redColor];
+        return UIColorMakeRGB(250, 58, 58);
     }else if ([_state isEqualToString:@"readyForSale"]) {
-        return [UIColor greenColor];
+        return UIColorMakeRGB(159, 214, 97);
     }
     return UIColorRandom;
 }

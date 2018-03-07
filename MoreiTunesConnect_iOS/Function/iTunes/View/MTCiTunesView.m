@@ -44,7 +44,7 @@
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
-    [cell.icon yy_setImageWithURL:[NSURL URLWithString:appModel.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur|YYWebImageOptionShowNetworkActivity|YYWebImageOptionUseNSURLCache];
+    [cell.icon yy_setImageWithURL:[NSURL URLWithString:appModel.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur];
     cell.name.text = appModel.name;
     cell.lastDate.text = appModel.lastModifiedDate;
     cell.version.text = appInFlightVersionModel.version;
@@ -66,8 +66,7 @@
     weakOBJ(appModel);
     UITableViewRowAction *SPECIAL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"SPECIAL" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         NSMutableDictionary *appinfo = [NSMutableDictionary dictionary];
-        NSData *cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
-        [appinfo setObject:cookiesData forKey:@"cookiesData"];
+        [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
         [appinfo setObject:weak_appModel.adamId.encryptAESString forKey:@"appid"];
         [appinfo setObject:weak_appModel.name.encryptAESString forKey:@"appName"];
         [appinfo setObject:weak_appModel.iconUrl.encryptAESString forKey:@"appIconUrl"];

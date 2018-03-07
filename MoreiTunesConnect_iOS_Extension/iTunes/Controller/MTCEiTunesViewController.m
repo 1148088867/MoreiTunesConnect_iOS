@@ -135,7 +135,7 @@ psx(UIActivityIndicatorView, activity);
 
 - (UIActivityIndicatorView *)activity {
     if (!_activity) {
-        _activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        _activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
         [self.view addSubview:_activity];
         [_activity mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(self.view);

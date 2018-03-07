@@ -65,6 +65,7 @@
 
 - (void)dismissProgressHUD {
     [self.progressHUD hideAnimated:YES];
+    [self.progressHUD removeFromSuperview];
     self.progressHUD = nil;
 }
 

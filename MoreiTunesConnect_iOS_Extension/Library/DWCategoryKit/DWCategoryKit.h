@@ -13,10 +13,6 @@
 
 #import "NSString+DWExtension.h"
 
-#import "UITableView+DWExtension.h"
-
-#import "UICollectionView+DWExtension.h"
-
 #import "NSArray+DWExtension.h"
 
 #import "NSMutableArray+DWExtension.h"
@@ -26,8 +22,6 @@
 #import "UIView+DWExtension.h"
 
 #import "UIImage+DWExtenison.h"
-
-#import "UIViewController+DWExtension.h"
 
 #import "NSString+Base64.h"
 

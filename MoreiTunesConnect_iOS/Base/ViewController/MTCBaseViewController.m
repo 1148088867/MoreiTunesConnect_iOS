@@ -10,6 +10,7 @@
 #import <IQKeyboardManager.h>
 #import <JPFPSStatus.h>
 #import "MTCBaseNavigationController.h"
+#import <DWNetworking.h>
 
 @interface MTCBaseViewController ()
 
@@ -31,6 +32,12 @@
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];
     [self removeFromParentViewController];
+    [DWNetworking cancelAllTask];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [DWNetworking cancelAllTask];
 }
 
 - (void)didReceiveMemoryWarning {

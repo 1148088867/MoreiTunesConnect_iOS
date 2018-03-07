@@ -22,4 +22,7 @@ pcx(NSString, note);
 /** 编辑账号时间⌚️ */
 pcx(NSString, addTime);
 
+/** Cookie(记录登录成功后的cooike，减少请求login接口的次数，节约查询时间，生命周期为app的一次使用周期) */
+psx(NSData, cookiesData);
+
 @end

@@ -9,6 +9,7 @@
 #import "MTCiTunesView.h"
 #import "MTCiTunesAppsCell.h"
 #import <YYWebImage.h>
+#import "MTCSpecialModel.h"
 
 @interface MTCiTunesView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -39,7 +40,7 @@
     if (!cell) {
         cell = [[MTCiTunesAppsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.userInteractionEnabled = NO;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
@@ -49,8 +50,33 @@
     cell.version.text = appInFlightVersionModel.version;
     cell.status.backgroundColor = appInFlightVersionModel.stateColor;
     cell.statusLab.text = appInFlightVersionModel.stateStr;
-//    cell.statusLab.textColor = appInFlightVersionModel.stateColor;
     return cell;
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
+    MTCSpecialModel *specialModel = [MTCSpecialModel yy_modelWithJSON:[MTCUserDefaults objectForKey:@"appinfo"]];
+    if ([appModel.adamId isEqualToString:specialModel.appid.decryptAESString]) {
+        UITableViewRowAction *CANCEL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"CANCEL" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+            [MTCUserDefaults removeObjectForKey:@"appinfo"];
+            [MTCUserDefaults synchronize];
+        }];
+        return @[CANCEL];
+    }
+    weakOBJ(appModel);
+    UITableViewRowAction *SPECIAL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"SPECIAL" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        NSMutableDictionary *appinfo = [NSMutableDictionary dictionary];
+        NSData *cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
+        [appinfo setObject:cookiesData forKey:@"cookiesData"];
+        [appinfo setObject:weak_appModel.adamId.encryptAESString forKey:@"appid"];
+        [appinfo setObject:weak_appModel.name.encryptAESString forKey:@"appName"];
+        [appinfo setObject:weak_appModel.iconUrl.encryptAESString forKey:@"appIconUrl"];
+        [appinfo setObject:[NSDate dateCurrentTimeWithFormat:MTCTimeFormat] forKey:@"SPECIALTime"];
+        [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
+        [MTCUserDefaults synchronize];
+    }];
+    
+    return @[SPECIAL];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

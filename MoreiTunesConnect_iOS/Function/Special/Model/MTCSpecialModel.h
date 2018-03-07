@@ -10,4 +10,25 @@
 
 @interface MTCSpecialModel : NSObject
 
+/** app唯一标示 */
+pcx(NSString, appid);
+
+/** app名称 */
+pcx(NSString, appName);
+
+/** appLogo */
+pcx(NSString, appIconUrl);
+
+/** 关注时间 */
+pcx(NSString, SPECIALTime);
+
+/** 邮箱 */
+pcx(NSString, email);
+
+/** 密码 */
+pcx(NSString, password);
+
+/** Cookie */
+psx(NSData, cookiesData);
+
 @end

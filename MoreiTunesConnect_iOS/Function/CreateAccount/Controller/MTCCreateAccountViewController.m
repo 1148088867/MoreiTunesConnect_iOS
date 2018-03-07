@@ -77,14 +77,13 @@ psx(MTCCreateAccountView, createAccountView);
     if (hasText) {
         NSMutableDictionary *account = [NSMutableDictionary dictionary];
         weakOBJ(account);
-        [account setObject:[NSDate dateCurrentTimeWithFormat:@"yyyy-MM-dd HH:mm:ss"] forKey:@"addTime"];
+        [account setObject:[NSDate dateCurrentTimeWithFormat:MTCTimeFormat] forKey:@"addTime"];
         [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             QMUITextField *field = [weak_self.createAccountView viewWithTag:idx+100];
             [weak_account setObject:[field.text stringByReplacingOccurrencesOfString:@" " withString:@""].encryptAESString forKey:obj];
         }];
         [MTCSQL.store putObject:account withId:account[@"addTime"] intoTable:MTCAccountTableName];
         if (self.accountModel) {
-            NSLog(@"%@", self.accountModel.addTime);
             [MTCSQL.store deleteObjectById:self.accountModel.addTime fromTable:MTCAccountTableName];
         }
         if (self.createAccountSuccess) {

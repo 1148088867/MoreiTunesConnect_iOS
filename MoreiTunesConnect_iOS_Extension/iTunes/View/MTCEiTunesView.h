@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTCiTunesView : UIView
+@interface MTCEiTunesView : UIView
 
 /** logo */
 psx(UIImageView, icon);

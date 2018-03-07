@@ -48,6 +48,10 @@
     MTCiTunesViewController *iTunesViewController = [[MTCiTunesViewController alloc] init];
     iTunesViewController.title = @"iTunes Connect";
     iTunesViewController.accountModel = self.accountModelArrM[indexPath.row];
+    weakOBJ(self);
+    iTunesViewController.updateCooikesData = ^(MTCAccountModel *accountModel) {
+        [weak_self.accountModelArrM replaceObjectAtIndex:indexPath.row withObject:accountModel];
+    };
     [self.viewController.navigationController pushViewController:iTunesViewController animated:YES];
 }
 
@@ -93,11 +97,11 @@
                     [alert showWithAnimated:YES];
                     return ;
                 }
-                NSString *key = [NSString stringWithFormat:@"%@%@", [NSDate dateCurrentTimeWithFormat:@"YYYY-MM-dd HH:mm:ss"], [NSString repeat:idx]];
+                NSString *key = [NSString stringWithFormat:@"%@%@", [NSDate dateCurrentTimeWithFormat:MTCTimeFormat], [NSString repeat:idx]];
                 MTCAccountModel *accountModel = [[MTCAccountModel alloc] init];
                 accountModel.mail = infoStr.firstObject.encryptAESString;
                 accountModel.password = infoStr[1].encryptAESString;
-                accountModel.addTime = [NSDate dateCurrentTimeWithFormat:@"YYYY-MM-dd HH:mm:ss"];
+                accountModel.addTime = [NSDate dateCurrentTimeWithFormat:MTCTimeFormat];
                 if (infoStr.count == 3 && infoStr.lastObject.length) {
                     accountModel.note = infoStr.lastObject.encryptAESString;
                 }else {

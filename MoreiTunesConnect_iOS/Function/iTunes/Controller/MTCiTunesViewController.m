@@ -34,7 +34,16 @@ psx(MTCiTunesView, itunesView);
         [weak_self iTunesConnectAppsNetworking];
     }];
     itunesView.mj_header.automaticallyChangeAlpha = YES;
-    [self iTunesConnectLoginNetworking];
+    if (self.accountModel.cookiesData) {
+        NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:self.accountModel.cookiesData];
+        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        for (NSHTTPCookie *cookie in cookies){
+            [cookieStorage setCookie:cookie];
+        }
+        [self iTunesConnectAppsNetworking];
+    }else {
+        [self iTunesConnectLoginNetworking];
+    }
     itunesView.infoStr = @"没有更多数据了";
 }
 
@@ -42,16 +51,21 @@ psx(MTCiTunesView, itunesView);
     [self.progressHUD showLoading:@"账号登录中..."];
     weakOBJ(self);
     [MTCNetwork postUrl:MTCiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
-                                                       @"password":self.accountModel.password.decryptAESString,
-                                                       @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
-                                                           if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
-                                                               [weak_self iTunesConnectAppsNetworking];
-                                                           }else {
-                                                               [weak_self dismissProgressHUD];
-                                                               [ISMessages showCardAlertWithTitle:@"登录失败" message:@"由于未知原因，导致登录失败，请检查信息后重新登录。" duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
-                                                               [weak_self.navigationController popViewControllerAnimated:YES];
-                                                           }
-                                                       }];
+                 @"password":self.accountModel.password.decryptAESString,
+                 @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
+                if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
+                    if (weak_self.updateCooikesData) {
+                        MTCAccountModel *accountModel = weak_self.accountModel;
+                        NSData *cookiesData = [NSKeyedArchiver archivedDataWithRootObject: [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]];
+                        [accountModel setCookiesData:cookiesData]; weak_self.updateCooikesData(accountModel);
+                    }
+                    [weak_self iTunesConnectAppsNetworking];
+                }else {
+                    [weak_self dismissProgressHUD];
+                    [ISMessages showCardAlertWithTitle:@"登录失败" message:@"由于未知原因，导致登录失败，请检查信息后重新登录。" duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
+                    [weak_self.navigationController popViewControllerAnimated:YES];
+                }
+            }];
 }
 
 - (void)iTunesConnectAppsNetworking {
@@ -70,3 +84,4 @@ psx(MTCiTunesView, itunesView);
 }
 
 @end
+

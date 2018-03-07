@@ -25,9 +25,6 @@
 /** 是否为空 */
 @property(nonatomic, assign, readonly) BOOL isEmpty;
 
-/** 拨打电话 */
-@property(nonatomic, assign) BOOL callPhone;
-
 /** AES加密 */
 @property(nonatomic, copy, readonly) NSString *encryptAESString;
 

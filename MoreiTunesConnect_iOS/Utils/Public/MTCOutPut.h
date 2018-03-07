@@ -9,6 +9,9 @@
 #ifndef MTCOutPut_h
 #define MTCOutPut_h
 
+/** 日期格式 */
+#define MTCTimeFormat @"YYYY-MM-dd HH:mm:ss"
+
 /** 账号数据库名称 */
 #define MTCAccountDBName @"CoderDwangAccountDBName"
 
@@ -26,6 +29,12 @@
 
 /** QQ群 */
 #define MTCQQGroup @"577506623"
+
+/** 偏好设置 */
+#define MTCUserDefaults [[NSUserDefaults alloc] initWithSuiteName:@"group.MoreiTunesConnect_iOS"]
+
+/** 获取cooikes */
+#define MTCCooikes [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL: [NSURL URLWithString:MTCiTunesLogin]]
 
 /** 数据库操作单例 */
 #define MTCSQL [MTCSqlManager sharedInstance]

@@ -14,4 +14,7 @@
 /** 账号信息 */
 psx(MTCAccountModel, accountModel);
 
+/** 更新账号中的cooike */
+pblockx(void, updateCooikesData, MTCAccountModel *accountModel);
+
 @end

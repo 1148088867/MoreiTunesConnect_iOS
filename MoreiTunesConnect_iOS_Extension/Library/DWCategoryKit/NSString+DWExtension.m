@@ -25,7 +25,6 @@ static NSString *const kAESPassword = @"NSString+Extension&CoderDwang";
 @dynamic decryptBase64String;
 @dynamic getUserDefaultsINFO;
 @dynamic removeUserDefaultsINFO;
-@dynamic callPhone;
 @dynamic md5String;
 
 - (BOOL)isMobNumber {
@@ -113,14 +112,6 @@ static NSString *const kAESPassword = @"NSString+Extension&CoderDwang";
     if (removeUserDefaultsINFO) {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:self];
         [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-
-- (void)setCallPhone:(BOOL)callPhone {
-    if (callPhone) {
-        if (self.isMobNumber) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", self]]];
-        }
     }
 }
 

@@ -33,6 +33,10 @@
     return @"刚刚";
 }
 
+- (NSString *)iconUrl {
+    return _iconUrl?_iconUrl:@"";
+}
+
 @end
 
 @implementation MTCiTunesAppVersionModel
@@ -64,13 +68,13 @@
     if ([_state isEqualToString:@"inReview"] ||
         [_state isEqualToString:@"waitingForReview"] ||
         [_state isEqualToString:@"prepareForUpload"]) {
-        return UIColorYellow;
+        return [UIColor yellowColor];
     }else if ([_state isEqualToString:@"devRejected"] ||
               [_state isEqualToString:@"rejected"] ||
               [_state isEqualToString:@"metadataRejected"]) {
-        return UIColorRed;
+        return [UIColor redColor];
     }else if ([_state isEqualToString:@"readyForSale"]) {
-        return UIColorGreen;
+        return [UIColor greenColor];
     }
     return UIColorRandom;
 }

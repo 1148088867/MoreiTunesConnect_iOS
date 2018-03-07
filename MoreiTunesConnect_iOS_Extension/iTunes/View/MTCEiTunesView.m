@@ -6,9 +6,9 @@
 //  Copyright © 2018年 CoderDwang. All rights reserved.
 //
 
-#import "MTCiTunesView.h"
+#import "MTCEiTunesView.h"
 
-@implementation MTCiTunesView
+@implementation MTCEiTunesView
 
 - (void)loadView {
     UIImageView *icon = [[UIImageView alloc] init];

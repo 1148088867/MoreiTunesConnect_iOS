@@ -16,11 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-}
-
-- (UIViewController *)childViewControllerForStatusBarStyle{
-    return self.topViewController;
+    
 }
 
 @end

@@ -21,6 +21,7 @@
 - (void)didInitialized {
     [super didInitialized];
     self.titleView.subtitle = @"CoderDwang";
+    self.titleView.verticalSubtitleFont = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
     self.titleView.style = QMUINavigationTitleViewStyleSubTitleVertical;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     if (IS_DEBUG) {
@@ -49,10 +50,6 @@
     if( self.view.window == nil && [self isViewLoaded]) {
         self.view = nil;
     }
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
 }
 
 - (QMUITips *)progressHUD {

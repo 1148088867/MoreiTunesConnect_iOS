@@ -11,7 +11,7 @@
 @interface MTCSetView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
 /** 数据源 */
-@property(nonatomic, strong) NSArray<NSArray<NSString *> *> *setArr;
+psx(NSArray<NSArray<NSString *> *>, setArr);
 
 @end
 

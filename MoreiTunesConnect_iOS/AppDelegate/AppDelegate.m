@@ -10,6 +10,7 @@
 #import "MTCBaseTabBarViewController.h"
 #import <AFNetworkActivityIndicatorManager.h>
 #import <DWNetworking.h>
+#import <JSPatchPlatform/JSPatch.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self networkConfig];
+    [self JSPConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[MTCBaseTabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
@@ -27,15 +29,14 @@
 }
 
 - (void)networkConfig {
-    [DWNetworking setConfigRequestType:DWRequestTypeJSON responseType:DWResponseTypeJSON];
-    [DWNetworking setHttpHeaderConfig:@{@"Connection":@"keep-alive",
-                                        @"X-Apple-Widget-Key":@"e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42",
-                                        @"Content-Type":@"application/json",
-                                        @"Accept":@"application/json, text/javascript, */*; q=0.01",
-                                        @"X-Requested-With":@"XMLHttpRequest",
-                                        @"Referer":@"https://idmsa.apple.com/appleauth/auth/signin?widgetKey=e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42&widgetDomain=https://itunesconnect.apple.com:443&font=sf",
-                                        }];
+    MTCNetworkConfig
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+}
+
+- (void)JSPConfig {
+    [JSPatch startWithAppKey:@"fcb8e656e6b7f455"];
+    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyAguJxAJqcKYrBiHbnKN\n5Z3E8AiD9PMu0BmcQNXaPY0MZIAiyYEZ88DO99QzA9URSVVV8hWF82WngTFhxyRx\nNDRq+FDj62Hzv6yF/NdWCY28TZeJ+/V0OW4TeEjGMqTe3eDty0VzPhbaBFpaFsu5\nsl1Nx/WHLHe1ydR4hKvh+p2Un30+ZmuXZbtIPTgpxqHe2Ag9EteNAVay9uxIQmTg\nGb6mBo8x2cCAI+/mZtP6SwXgvnV8pK54jo6r+GPYCkUFKEXAemHg5qftCfS73+2k\nV5K3BHlbihPXxFGxiLrV0KlFF5R+ap1p2IFY+0WX6x3IzHCcxbFOBDU0j6IDEG7/\n+wIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch sync];
 }
 
 @end

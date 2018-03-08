@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class MTCiTunesAppVersionModel;
+@class MTCiTunesAppDeliverableVersion;
 @class MTCiTunesAppInFlightVersion;
 
 @interface MTCiTunesAppsModel : NSObject
@@ -36,6 +37,10 @@ psx(NSArray<MTCiTunesAppVersionModel *>, versionSets);
 
 @interface MTCiTunesAppVersionModel : NSObject
 
+/** 在销售版本 */
+psx(MTCiTunesAppDeliverableVersion, deliverableVersion);
+
+/** 在审核版本 */
 psx(MTCiTunesAppInFlightVersion, inFlightVersion);
 
 @end
@@ -56,3 +61,19 @@ psx(UIColor, stateColor);
 
 @end
 
+
+@interface MTCiTunesAppDeliverableVersion : NSObject
+
+/** 状态 */
+pcx(NSString, state);
+
+/** 版本号 */
+pcx(NSString, version);
+
+/** 状态对应中文 */
+pcx(NSString, stateStr);
+
+/** 状态对应颜色 */
+psx(UIColor, stateColor);
+
+@end

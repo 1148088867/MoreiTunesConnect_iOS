@@ -44,12 +44,13 @@
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
+    MTCiTunesAppDeliverableVersion *appDeliverableVersionModel = appVersionModel.firstObject.deliverableVersion;
     [cell.icon yy_setImageWithURL:[NSURL URLWithString:appModel.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur];
     cell.name.text = appModel.name;
     cell.lastDate.text = appModel.lastModifiedDate;
-    cell.version.text = appInFlightVersionModel.version;
-    cell.status.backgroundColor = appInFlightVersionModel.stateColor;
-    cell.statusLab.text = appInFlightVersionModel.stateStr;
+    cell.version.text = appInFlightVersionModel.version?appInFlightVersionModel.version:appDeliverableVersionModel.version;
+    cell.status.backgroundColor = appInFlightVersionModel.stateColor?appInFlightVersionModel.stateColor:appDeliverableVersionModel.stateColor;
+    cell.statusLab.text = appInFlightVersionModel.stateStr?appInFlightVersionModel.stateStr:appDeliverableVersionModel.stateStr;
     return cell;
 }
 

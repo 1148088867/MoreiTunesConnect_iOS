@@ -12,6 +12,7 @@
 #import <YYWebImage.h>
 #import "MTCiTunesAppsModel.h"
 #import "MTCEiTunesView.h"
+#import <DWNetworking.h>
 
 @interface MTCEiTunesViewController () <NCWidgetProviding>
 
@@ -27,6 +28,7 @@ psx(UIActivityIndicatorView, activity);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MTCNetworkConfig
     if (self.specialModel.appid.length) {
         [self loadAppView];
     }else {
@@ -80,12 +82,13 @@ psx(UIActivityIndicatorView, activity);
                     [weak_self stopAnimating];
                     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:obj.versionSets];
                     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
+                    MTCiTunesAppDeliverableVersion *appDeliverableVersionModel = appVersionModel.firstObject.deliverableVersion;
                     [weak_self.iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:obj.iconUrl] options:YYWebImageOptionProgressive|YYWebImageOptionProgressiveBlur];
                     weak_self.iTunesView.name.text = obj.name;
                     weak_self.iTunesView.lastDate.text = obj.lastModifiedDate;
-                    weak_self.iTunesView.version.text = appInFlightVersionModel.version;
-                    weak_self.iTunesView.status.backgroundColor = appInFlightVersionModel.stateColor;
-                    weak_self.iTunesView.statusLab.text = appInFlightVersionModel.stateStr;
+                    weak_self.iTunesView.version.text = appInFlightVersionModel.version?appInFlightVersionModel.version:appDeliverableVersionModel.version;
+                    weak_self.iTunesView.status.backgroundColor = appInFlightVersionModel.stateColor?appInFlightVersionModel.stateColor:appDeliverableVersionModel.stateColor;
+                    weak_self.iTunesView.statusLab.text = appInFlightVersionModel.stateStr?appInFlightVersionModel.stateStr:appDeliverableVersionModel.stateStr;
                     *stop = YES;
                 }
             }];

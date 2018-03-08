@@ -41,6 +41,9 @@
 		9252DD94204FC8ED00A85D3E /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD93204FC8ED00A85D3E /* MTCNetwork.m */; };
 		9252DD95204FC8ED00A85D3E /* MTCNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD93204FC8ED00A85D3E /* MTCNetwork.m */; };
 		9252DD9F204FCFF800A85D3E /* MTCEiTunesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD9E204FCFF800A85D3E /* MTCEiTunesView.m */; };
+		925DBAAB205158DE0048F767 /* JSPatchPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925DBAAA205158DD0048F767 /* JSPatchPlatform.framework */; };
+		925DBAAD205159080048F767 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 925DBAAC205159080048F767 /* libz.tbd */; };
+		925DBAAF2051590E0048F767 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925DBAAE2051590E0048F767 /* JavaScriptCore.framework */; };
 		926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926EA4A42014B779008F4554 /* MobileCoreServices.framework */; };
 		926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */; };
 		926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 926EA4AC2014E609008F4554 /* MTCAccountCell.m */; };
@@ -153,6 +156,9 @@
 		9252DD93204FC8ED00A85D3E /* MTCNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCNetwork.m; sourceTree = "<group>"; };
 		9252DD9D204FCFF800A85D3E /* MTCEiTunesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEiTunesView.h; sourceTree = "<group>"; };
 		9252DD9E204FCFF800A85D3E /* MTCEiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCEiTunesView.m; sourceTree = "<group>"; };
+		925DBAAA205158DD0048F767 /* JSPatchPlatform.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatchPlatform.framework; sourceTree = "<group>"; };
+		925DBAAC205159080048F767 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		925DBAAE2051590E0048F767 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		926EA4A42014B779008F4554 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		926EA4A72014C0F8008F4554 /* UITableViewCell+MTCExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+MTCExtension.h"; sourceTree = "<group>"; };
 		926EA4A82014C0F8008F4554 /* UITableViewCell+MTCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+MTCExtension.m"; sourceTree = "<group>"; };
@@ -210,9 +216,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				925DBAAD205159080048F767 /* libz.tbd in Frameworks */,
 				92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */,
-				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
 				92037535204BB56800E23339 /* UIKit.framework in Frameworks */,
+				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
+				925DBAAF2051590E0048F767 /* JavaScriptCore.framework in Frameworks */,
+				925DBAAB205158DE0048F767 /* JSPatchPlatform.framework in Frameworks */,
 				926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */,
 				5F148A12A36CB24507D56CB2 /* libPods-MoreiTunesConnect_iOS.a in Frameworks */,
 			);
@@ -420,6 +429,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		925DBAA8205158AB0048F767 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				925DBAA9205158DD0048F767 /* JSPatchPlatform */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		925DBAA9205158DD0048F767 /* JSPatchPlatform */ = {
+			isa = PBXGroup;
+			children = (
+				925DBAAA205158DD0048F767 /* JSPatchPlatform.framework */,
+			);
+			path = JSPatchPlatform;
+			sourceTree = "<group>";
+		};
 		926EA4A62014C0DC008F4554 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				92267CF7204F855B00DF7F71 /* MoreiTunesConnect_iOS.entitlements */,
+				925DBAA8205158AB0048F767 /* Library */,
 				92037579204C1A3D00E23339 /* Network */,
 				92745CBF200E509F009DDF39 /* Base */,
 				92745CBE200E506C009DDF39 /* Function */,
@@ -680,6 +706,8 @@
 		A08A2458210D091D13055043 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				925DBAAE2051590E0048F767 /* JavaScriptCore.framework */,
+				925DBAAC205159080048F767 /* libz.tbd */,
 				92037538204BB57500E23339 /* libsqlite3.tbd */,
 				92037536204BB56D00E23339 /* Foundation.framework */,
 				92037534204BB56800E23339 /* UIKit.framework */,
@@ -1129,6 +1157,10 @@
 				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B57T6XJU36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/JSPatchPlatform",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1147,6 +1179,10 @@
 				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B57T6XJU36;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/JSPatchPlatform",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Utils/Public/$(PROJECT_NAME).pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

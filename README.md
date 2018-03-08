@@ -23,7 +23,9 @@
 
 ---
 *您的支持就是我更新的动力*
-[微信打赏](hhttps://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/WeChat.JPG)
-[支付宝打赏]https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/Ali.JPG)
+
+[微信打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/WeChat.JPG)
+
+[支付宝打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/Ali.JPG)
 
 

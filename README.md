@@ -8,9 +8,9 @@
 - 下载代码之后请勿修改版本号，以免无法收到MoreiTunesConnect_iOS更新提示
 - ios交流群
 
-    ![群二维码](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/群二维码.png)
+    ![群二维码](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/群二维码.png)
 
-![预览图](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/预览.gif)
+![预览图](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/预览.gif)
 
 
 ---
@@ -23,7 +23,7 @@
 
 ---
 *您的支持就是我更新的动力*
-[微信打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Pay/WeChat.JPG)
-[支付宝打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Pay/Ali.JPG)
+[微信打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Pay/Picture/WeChat.JPG)
+[支付宝打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/Ali.JPG)
 
 

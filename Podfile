@@ -1,18 +1,18 @@
 def deful_pods
     inhibit_all_warnings!
-    #     自动布局
+    # 自动布局
     pod 'Masonry'
     
-    #     sql数据库
+    # sql数据库
     pod 'YTKKeyValueStore'
     
-    #     扩展
+    # 扩展
     pod 'YYCategories'
     
-    #     数据转模型
+    # 数据转模型
     pod 'YYModel'
     
-    #     网络
+    # 网络
     pod 'DWNetworking'
     pod 'YYWebImage'
     
@@ -32,10 +32,10 @@ target 'MoreiTunesConnect_iOS' do
     pod 'JPFPSStatus'
     
     #pod 'JPush'
-    #     扩展
+    # 扩展
     pod 'DWCategoryKit'
     
-    #   通用
+    # 通用
     deful_pods
     
 end

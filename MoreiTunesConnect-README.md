@@ -1,4 +1,4 @@
-#  MoreiTunes文件说明
+#  MoreiTunesConnect_iOS文件说明
 
 
 ## Tip

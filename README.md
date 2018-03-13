@@ -9,6 +9,10 @@
 - ios交流群
 
     ![群二维码](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/群二维码.png)
+    
+- 预览
+
+    ![预览](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/预览图.gif)
 
 
 ---

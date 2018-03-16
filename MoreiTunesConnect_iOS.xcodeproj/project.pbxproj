@@ -52,6 +52,7 @@
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
+		927A12AC205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md in Resources */ = {isa = PBXBuildFile; fileRef = 927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */; };
 		928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */; };
 		928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */; };
 		928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE04204D6D0F00544C92 /* MTCSetView.m */; };
@@ -174,6 +175,7 @@
 		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunesConnect-README.md"; sourceTree = "<group>"; };
+		927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MoreiTunesConnect_iOS_Extension.md; sourceTree = "<group>"; };
 		928CDDFB204D4E0A00544C92 /* MTCSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSetViewController.h; sourceTree = "<group>"; };
 		928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSetViewController.m; sourceTree = "<group>"; };
 		928CDDFF204D4E3C00544C92 /* MTCBaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseTabBarViewController.h; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				92267D30204F9FDD00DF7F71 /* Utils */,
 				92267CF8204F897000DF7F71 /* Library */,
 				92267CF6204F855300DF7F71 /* MoreiTunesConnect_iOS_Extension.entitlements */,
+				927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */,
 			);
 			path = MoreiTunesConnect_iOS_Extension;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927A12AC205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md in Resources */,
 				92267D2B204F897F00DF7F71 /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

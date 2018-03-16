@@ -28,8 +28,8 @@ psx(UIActivityIndicatorView, activity);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    MTCNetworkConfig
     if (self.specialModel.appid.length) {
+        MTCNetworkConfig
         [self loadAppView];
     }else {
         UILabel *noData = [[UILabel alloc] init];
@@ -44,7 +44,7 @@ psx(UIActivityIndicatorView, activity);
 }
 
 - (void)loadAppView {
-    
+
     if(self.specialModel.cookiesData) {
         NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData:self.specialModel.cookiesData];
         NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
@@ -93,27 +93,9 @@ psx(UIActivityIndicatorView, activity);
                 }
             }];
         }else {
-            [weak_self iTunesConnectLoginNetworking];
+            weak_self.iTunesView.name.text = @"授权到期，请重新添加";
         }
     }];
-}
-
-- (void)iTunesConnectLoginNetworking {
-    weakOBJ(self);
-    [MTCNetwork postUrl:MTCiTunesLogin params:@{@"accountName":self.specialModel.email.decryptAESString,
-                                                @"password":self.specialModel.password.decryptAESString,
-                                                @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
-                                                    if ([success[@"authType"] isEqualToString:@"sa"] && !error) {
-                                                        NSMutableDictionary *appinfo = [self.specialModel yy_modelToJSONObject];
-                                                        [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
-                                                        [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
-                                                        [weak_self iTunesConnectAppsNetworking];
-                                                    }else {
-                                                        weak_self.iTunesView.name.text = @"登录失败,请前往App内检查。";
-                                                        weak_self.iTunesView.name.textColor = [UIColor redColor];
-                                                        [weak_self stopAnimating];
-                                                    }
-                                                }];
 }
 
 - (void)widgetActiveDisplayModeDidChange:(NCWidgetDisplayMode)activeDisplayMode withMaximumSize:(CGSize)maxSize NS_AVAILABLE_IOS(10_0) {

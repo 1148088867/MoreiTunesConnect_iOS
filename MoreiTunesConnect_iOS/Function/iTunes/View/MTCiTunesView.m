@@ -10,6 +10,7 @@
 #import "MTCiTunesAppsCell.h"
 #import <YYWebImage.h>
 #import "MTCSpecialModel.h"
+#import "MTCResolutionCenterViewController.h"
 
 @interface MTCiTunesView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -40,7 +41,8 @@
     if (!cell) {
         cell = [[MTCiTunesAppsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
@@ -81,7 +83,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView qmui_clearsSelection];
-    
+    MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
+    MTCResolutionCenterViewController *resolutionCenter = [[MTCResolutionCenterViewController alloc] init];
+    resolutionCenter.title = appModel.name;
+    resolutionCenter.titleView.subtitle = appModel.adamId;
+    resolutionCenter.appid = appModel.adamId;
+    [self.viewController.navigationController pushViewController:resolutionCenter animated:YES];
 }
 
 - (NSArray *)iTunesAppsArr {

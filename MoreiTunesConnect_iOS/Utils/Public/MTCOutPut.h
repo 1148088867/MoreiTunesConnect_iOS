@@ -18,11 +18,17 @@
 /** 数据库表名称 */
 #define MTCAccountTableName @"CoderDwangAccountTableName"
 
+/** 有道云翻译app key */
+#define MTCYDYFYKey @"5b7874b733c329cd"
+
 /** iTunes登录 */
 #define MTCiTunesLogin @"https://idmsa.apple.com/appleauth/auth/signin"
 
 /** iTunesApps */
 #define MTCiTunesApps @"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/manageyourapps/summary/v2"
+
+/** iTunes解决中心 */
+#define MTCiTunesResolutionCenter(appid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/platforms/ios/resolutionCenter", appid]
 
 /** GitHub */
 #define MTCGitHub @"https://github.com/CoderDwang/MoreiTunesConnect_iOS"
@@ -38,6 +44,9 @@
 
 /** 数据库操作单例 */
 #define MTCSQL [MTCSqlManager sharedInstance]
+
+/** 获取基础控制器 */
+#define MTCBaseController ((MTCBaseViewController *)self.viewController)
 
 /** 设置请求头 */
 #define MTCNetworkConfig [DWNetworking setConfigRequestType:DWRequestTypeJSON responseType:DWResponseTypeJSON];\

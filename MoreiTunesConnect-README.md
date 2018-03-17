@@ -14,3 +14,4 @@
 - CreateAccount 新建账户
 - iTunes    iTunes Connect
 - Set           设置
+- ResolutionCenter  解决中心

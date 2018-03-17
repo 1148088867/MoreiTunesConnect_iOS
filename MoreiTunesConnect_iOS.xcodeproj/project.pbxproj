@@ -53,9 +53,17 @@
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
 		927A12AC205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md in Resources */ = {isa = PBXBuildFile; fileRef = 927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */; };
+		927A12BC205BF667003DAC3E /* MTCResolutionCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A12BB205BF667003DAC3E /* MTCResolutionCenterViewController.m */; };
+		927A12BF205BF898003DAC3E /* MTCResolutionCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A12BE205BF898003DAC3E /* MTCResolutionCenterView.m */; };
+		927A12C2205BF8A5003DAC3E /* MTCResolutionCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A12C1205BF8A5003DAC3E /* MTCResolutionCenterModel.m */; };
 		928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */; };
 		928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */; };
 		928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 928CDE04204D6D0F00544C92 /* MTCSetView.m */; };
+		92B7021F205D376E007B94C6 /* libonline.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B7021C205D376E007B94C6 /* libonline.a */; };
+		92B70220205D376E007B94C6 /* libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B7021E205D376E007B94C6 /* libbase.a */; };
+		92B70222205D37B4007B94C6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B70221205D37B4007B94C6 /* CoreTelephony.framework */; };
+		92B70224205D37BD007B94C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B70223205D37BD007B94C6 /* SystemConfiguration.framework */; };
+		92B70226205D38DD007B94C6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B70225205D38DD007B94C6 /* AdSupport.framework */; };
 		92E79EEC200F9F8B002A2257 /* MTCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EEB200F9F8B002A2257 /* MTCBaseViewController.m */; };
 		92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF0200FA10C002A2257 /* MTCBaseNavigationController.m */; };
 		92E79EF6200FA239002A2257 /* MTCAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EF5200FA239002A2257 /* MTCAccountViewController.m */; };
@@ -176,12 +184,24 @@
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunesConnect-README.md"; sourceTree = "<group>"; };
 		927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MoreiTunesConnect_iOS_Extension.md; sourceTree = "<group>"; };
+		927A12BA205BF667003DAC3E /* MTCResolutionCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCResolutionCenterViewController.h; sourceTree = "<group>"; };
+		927A12BB205BF667003DAC3E /* MTCResolutionCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCResolutionCenterViewController.m; sourceTree = "<group>"; };
+		927A12BD205BF898003DAC3E /* MTCResolutionCenterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCResolutionCenterView.h; sourceTree = "<group>"; };
+		927A12BE205BF898003DAC3E /* MTCResolutionCenterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCResolutionCenterView.m; sourceTree = "<group>"; };
+		927A12C0205BF8A5003DAC3E /* MTCResolutionCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCResolutionCenterModel.h; sourceTree = "<group>"; };
+		927A12C1205BF8A5003DAC3E /* MTCResolutionCenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCResolutionCenterModel.m; sourceTree = "<group>"; };
 		928CDDFB204D4E0A00544C92 /* MTCSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSetViewController.h; sourceTree = "<group>"; };
 		928CDDFC204D4E0A00544C92 /* MTCSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSetViewController.m; sourceTree = "<group>"; };
 		928CDDFF204D4E3C00544C92 /* MTCBaseTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseTabBarViewController.h; sourceTree = "<group>"; };
 		928CDE00204D4E3C00544C92 /* MTCBaseTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCBaseTabBarViewController.m; sourceTree = "<group>"; };
 		928CDE03204D6D0F00544C92 /* MTCSetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSetView.h; sourceTree = "<group>"; };
 		928CDE04204D6D0F00544C92 /* MTCSetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSetView.m; sourceTree = "<group>"; };
+		92B7021C205D376E007B94C6 /* libonline.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libonline.a; sourceTree = "<group>"; };
+		92B7021D205D376E007B94C6 /* FanYiSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanYiSDK.h; sourceTree = "<group>"; };
+		92B7021E205D376E007B94C6 /* libbase.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libbase.a; sourceTree = "<group>"; };
+		92B70221205D37B4007B94C6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		92B70223205D37BD007B94C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		92B70225205D38DD007B94C6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		92E79EE8200F9D82002A2257 /* MoreiTunesConnect_iOS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreiTunesConnect_iOS.pch; sourceTree = "<group>"; };
 		92E79EEA200F9F8B002A2257 /* MTCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCBaseViewController.h; sourceTree = "<group>"; };
 		92E79EEB200F9F8B002A2257 /* MTCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCBaseViewController.m; sourceTree = "<group>"; };
@@ -219,12 +239,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				925DBAAD205159080048F767 /* libz.tbd in Frameworks */,
+				92B70220205D376E007B94C6 /* libbase.a in Frameworks */,
+				92B7021F205D376E007B94C6 /* libonline.a in Frameworks */,
 				92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */,
 				92037535204BB56800E23339 /* UIKit.framework in Frameworks */,
+				92B70226205D38DD007B94C6 /* AdSupport.framework in Frameworks */,
 				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
+				92B70222205D37B4007B94C6 /* CoreTelephony.framework in Frameworks */,
 				925DBAAF2051590E0048F767 /* JavaScriptCore.framework in Frameworks */,
 				925DBAAB205158DE0048F767 /* JSPatchPlatform.framework in Frameworks */,
 				926EA4A52014B779008F4554 /* MobileCoreServices.framework in Frameworks */,
+				92B70224205D37BD007B94C6 /* SystemConfiguration.framework in Frameworks */,
 				5F148A12A36CB24507D56CB2 /* libPods-MoreiTunesConnect_iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +460,7 @@
 		925DBAA8205158AB0048F767 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				92B7021B205D376E007B94C6 /* YDYFYSDK */,
 				925DBAA9205158DD0048F767 /* JSPatchPlatform */,
 			);
 			path = Library;
@@ -567,6 +593,7 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				927A12AD205BAEC6003DAC3E /* ResolutionCenter */,
 				9252DD88204FB97500A85D3E /* Special */,
 				928CDDF9204D4DE900544C92 /* Set */,
 				926EA4AE2015AD3B008F4554 /* iTunes */,
@@ -584,6 +611,43 @@
 				92E79EE9200F9F5E002A2257 /* ViewController */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		927A12AD205BAEC6003DAC3E /* ResolutionCenter */ = {
+			isa = PBXGroup;
+			children = (
+				927A12B6205BB517003DAC3E /* Model */,
+				927A12AF205BAEDC003DAC3E /* View */,
+				927A12AE205BAED6003DAC3E /* Controller */,
+			);
+			path = ResolutionCenter;
+			sourceTree = "<group>";
+		};
+		927A12AE205BAED6003DAC3E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				927A12BA205BF667003DAC3E /* MTCResolutionCenterViewController.h */,
+				927A12BB205BF667003DAC3E /* MTCResolutionCenterViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		927A12AF205BAEDC003DAC3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				927A12BD205BF898003DAC3E /* MTCResolutionCenterView.h */,
+				927A12BE205BF898003DAC3E /* MTCResolutionCenterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		927A12B6205BB517003DAC3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				927A12C0205BF8A5003DAC3E /* MTCResolutionCenterModel.h */,
+				927A12C1205BF8A5003DAC3E /* MTCResolutionCenterModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		928CDDF9204D4DE900544C92 /* Set */ = {
@@ -620,6 +684,16 @@
 				928CDE04204D6D0F00544C92 /* MTCSetView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		92B7021B205D376E007B94C6 /* YDYFYSDK */ = {
+			isa = PBXGroup;
+			children = (
+				92B7021C205D376E007B94C6 /* libonline.a */,
+				92B7021E205D376E007B94C6 /* libbase.a */,
+				92B7021D205D376E007B94C6 /* FanYiSDK.h */,
+			);
+			path = YDYFYSDK;
 			sourceTree = "<group>";
 		};
 		92E79EE9200F9F5E002A2257 /* ViewController */ = {
@@ -709,6 +783,9 @@
 		A08A2458210D091D13055043 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92B70225205D38DD007B94C6 /* AdSupport.framework */,
+				92B70223205D37BD007B94C6 /* SystemConfiguration.framework */,
+				92B70221205D37B4007B94C6 /* CoreTelephony.framework */,
 				925DBAAE2051590E0048F767 /* JavaScriptCore.framework */,
 				925DBAAC205159080048F767 /* libz.tbd */,
 				92037538204BB57500E23339 /* libsqlite3.tbd */,
@@ -974,6 +1051,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927A12BF205BF898003DAC3E /* MTCResolutionCenterView.m in Sources */,
 				9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
 				928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */,
@@ -984,6 +1062,8 @@
 				92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
 				92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */,
+				927A12C2205BF8A5003DAC3E /* MTCResolutionCenterModel.m in Sources */,
+				927A12BC205BF667003DAC3E /* MTCResolutionCenterViewController.m in Sources */,
 				920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */,
 				92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
@@ -1169,6 +1249,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/YDYFYSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1191,6 +1275,10 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/YDYFYSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cd.MoreiTunesConnect-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

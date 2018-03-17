@@ -23,6 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self networkConfig];
     [self JSPConfig];
+//    [JSPatch testscjsinbund];
     [self YDYFYConfig];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [[MTCBaseTabBarViewController alloc] init];

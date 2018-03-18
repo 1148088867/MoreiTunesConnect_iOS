@@ -25,7 +25,7 @@
     [self JSPConfig];
 //    [JSPatch testscjsinbund];
     [self YDYFYConfig];
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     self.window.rootViewController = [[MTCBaseTabBarViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;

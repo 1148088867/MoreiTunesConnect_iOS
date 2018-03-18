@@ -66,7 +66,7 @@
     weakOBJ(self);
     QMUIAlertController *alert = [[QMUIAlertController alloc] initWithTitle:@"提示" message:@"请选择所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"翻译当前信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self translationMsg:messageModel.body];
+        [weak_self translationMsg:messageModel.body indexPath:indexPath];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"截取反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [MTCBaseController.progressHUD showLoading:@"请稍后..."];
@@ -77,11 +77,11 @@
         [weak_self copyMsg:[weak_self filterHTML:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"]]];
     }]];
     
-    [alert addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(QMUIAlertAction *action) {}]];
+    [alert addCancelAction];
     [alert showWithAnimated:YES];
 }
 
-- (void)translationMsg:(NSString *)msg {
+- (void)translationMsg:(NSString *)msg indexPath:(NSIndexPath *)idx {
     [MTCBaseController.progressHUD showLoading:@"翻译中..."];
     YDTranslateRequest *translateRequest  = [YDTranslateRequest request];
     YDTranslateParameters *parameters = [YDTranslateParameters targeting];
@@ -95,10 +95,16 @@
         NSString *translation = [weak_self filterHTML:[[[response.translation.firstObject stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"]];
         if (!error && !translation.isEmpty) {
             QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"翻译信息" message:translation preferredStyle:QMUIAlertControllerStyleAlert];
-            [alert addAction:[QMUIAlertAction actionWithTitle:@"复制" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
+            [alert addAction:[QMUIAlertAction actionWithTitle:@"复制翻译内容" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
                 [weak_self copyMsg:translation];
             }]];
-            [alert addAction:[QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:^(QMUIAlertAction *action) {}]];
+            [alert addAction:[QMUIAlertAction actionWithTitle:@"替换Cell内容" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
+                NSString *html = response.translation.firstObject;
+                QMUITableViewCell *cell = [weak_self cellForRowAtIndexPath:idx];
+                cell.textLabel.attributedText = [[NSAttributedString alloc] initWithData:[[html stringByReplacingOccurrencesOfString:@" " withString:@""] dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
+                cell.textLabel.numberOfLines = 0;
+            }]];
+            [alert addCancelAction];
             [alert showWithAnimated:YES];
         }else {
             [ISMessages showCardAlertWithTitle:@"翻译失败" message:error.description duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];

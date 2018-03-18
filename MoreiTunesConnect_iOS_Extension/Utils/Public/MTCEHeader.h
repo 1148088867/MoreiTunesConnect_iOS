@@ -9,6 +9,9 @@
 #ifndef MTCEHeader_h
 #define MTCEHeader_h
 
+/** HOST */
+#import "MTCHOST.h"
+
 /** 网络 */
 #import <YYModel.h>
 #import "MTCNetwork.h"

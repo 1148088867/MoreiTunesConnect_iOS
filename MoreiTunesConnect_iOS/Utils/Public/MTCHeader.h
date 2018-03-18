@@ -15,6 +15,8 @@
 #import "MTCSqlManager.h"
 #import "MTCAccountModel.h"
 #import "NSString+MTCExtenison.h"
+#import "MTCHOST.h"
+#import "MTCKEY.h"
 
 /** UI */
 #import <UIKit/UIKit.h>

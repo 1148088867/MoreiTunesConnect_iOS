@@ -111,6 +111,8 @@
 		9203753C204BB85900E23339 /* MTCiTunesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesView.m; sourceTree = "<group>"; };
 		9203755D204BDC5A00E23339 /* MTCiTunesAppsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsCell.h; sourceTree = "<group>"; };
 		9203755E204BDC5A00E23339 /* MTCiTunesAppsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCiTunesAppsCell.m; sourceTree = "<group>"; };
+		920A848B205D6608002CFC21 /* MTCKEY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCKEY.h; sourceTree = "<group>"; };
+		920A848C205D66A0002CFC21 /* MTCHOST.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCHOST.h; sourceTree = "<group>"; };
 		920BB5F12011E91A00B24CE1 /* MTCOutPut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCOutPut.h; sourceTree = "<group>"; };
 		920BB6162011FD8900B24CE1 /* MTCCreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCCreateAccountViewController.h; sourceTree = "<group>"; };
 		920BB6172011FD8900B24CE1 /* MTCCreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCCreateAccountViewController.m; sourceTree = "<group>"; };
@@ -584,6 +586,8 @@
 				92745CBC200E5032009DDF39 /* Launch Screen.storyboard */,
 				920BB5F12011E91A00B24CE1 /* MTCOutPut.h */,
 				92E79EED200FA075002A2257 /* MTCHeader.h */,
+				920A848C205D66A0002CFC21 /* MTCHOST.h */,
+				920A848B205D6608002CFC21 /* MTCKEY.h */,
 				92E79EE8200F9D82002A2257 /* MoreiTunesConnect_iOS.pch */,
 				92E79EFB200FAA8A002A2257 /* Resources.xcassets */,
 			);

@@ -34,11 +34,6 @@ target 'MoreiTunesConnect_iOS' do
     # 扩展
     pod 'DWCategoryKit'
     
-    # 微信分享
-#    pod 'WechatOpenSDK_NoPay'
-
-    
-    
     # 通用
     deful_pods
     

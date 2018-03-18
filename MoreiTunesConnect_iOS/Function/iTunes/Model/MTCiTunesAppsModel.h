@@ -48,7 +48,7 @@ psx(MTCiTunesAppInFlightVersion, inFlightVersion);
 @interface MTCiTunesAppInFlightVersion : NSObject
 
 /** 问题数 */
-pcx(NSString, issuesCount);
+pax(NSInteger, issuesCount);
 
 /** 支持的设备 */
 psx(NSArray <NSString *>, supportedHardware);
@@ -71,7 +71,7 @@ psx(UIColor, stateColor);
 @interface MTCiTunesAppDeliverableVersion : NSObject
 
 /** 问题数 */
-pcx(NSString, issuesCount);
+pax(NSInteger, issuesCount);
 
 /** 支持的设备 */
 psx(NSArray <NSString *>, supportedHardware);

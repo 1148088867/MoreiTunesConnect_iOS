@@ -18,4 +18,9 @@
 
 @implementation MTCResolutionCenterMessagesModel
 
+- (NSString *)date {
+    NSString *string = [NSString stringWithFormat:@"%f", [_date integerValue]/1000.0];
+    return [NSDate dateTimeStamp:string withFormat:@"yyyy-MM-dd HH:mm"];
+}
+
 @end

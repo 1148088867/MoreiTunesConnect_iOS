@@ -7,6 +7,7 @@
 //
 
 #import "MTCSetView.h"
+#import <Social/Social.h>
 
 @interface MTCSetView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -60,6 +61,15 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView qmui_clearsSelection];
     NSString *infoStr = self.setArr[indexPath.section][indexPath.row];
+    if ([infoStr isEqualToString:@"分享"]) {
+        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MTCBaseController dismissProgressHUD];
+        });
+        NSArray *activityItems = @[@"欢迎使用MoreiTunesConnect_iOS", UIImageMake(@"logo"), [NSURL URLWithString:MTCGitHub]];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        [self.viewController presentViewController:activityController animated:YES completion:nil];
+    }
     if ([infoStr isEqualToString:@"关于"]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCGitHub]];
     }
@@ -67,7 +77,7 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
 
 - (NSArray<NSArray<NSString *> *> *)setArr {
     if (!_setArr) {
-        _setArr = @[@[@"关于"]];
+        _setArr = @[@[@"分享"], @[@"关于"]];
     }
     return _setArr;
 }

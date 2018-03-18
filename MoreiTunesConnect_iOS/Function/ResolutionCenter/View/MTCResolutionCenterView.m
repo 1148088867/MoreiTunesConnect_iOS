@@ -64,14 +64,12 @@
     [tableView qmui_clearsSelection];
     MTCResolutionCenterMessagesModel *messageModel = [MTCResolutionCenterMessagesModel yy_modelWithJSON:self.resolutionCenterArr[indexPath.section].messages[indexPath.row]];
     weakOBJ(self);
-    QMUIAlertController *alert = [[QMUIAlertController alloc] initWithTitle:@"提示" message:@"请选择所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
+    QMUIAlertController *alert = [[QMUIAlertController alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"此条信息为%@于%@发出\n\n请选择所要进行的操作", messageModel.appleMsg?@"Apple审核团队":@"开发者", messageModel.date] preferredStyle:QMUIAlertControllerStyleActionSheet];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"翻译当前信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [weak_self translationMsg:messageModel.body indexPath:indexPath];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"截取反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
-        QMUITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        UIImageWriteToSavedPhotosAlbum([cell qmui_snapshotLayerImage], self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+        [weak_self snipImg:[[tableView cellForRowAtIndexPath:indexPath] qmui_snapshotLayerImage]];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"复制反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [weak_self copyMsg:[weak_self filterHTML:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"]]];
@@ -110,6 +108,26 @@
             [ISMessages showCardAlertWithTitle:@"翻译失败" message:error.description duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
         }
     }];
+}
+
+- (void)snipImg:(UIImage *)img {
+    weakOBJ(self);
+    QMUIAlertController *screenhotAlert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择对截取内容所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
+    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"分享至好友" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
+        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [MTCBaseController dismissProgressHUD];
+        });
+        NSArray *activityItems = @[img];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        [weak_self.viewController presentViewController:activityController animated:YES completion:nil];
+    }]];
+    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"保存至相册" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
+        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
+        UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+    }]];
+    [screenhotAlert addCancelAction];
+    [screenhotAlert showWithAnimated:YES];
 }
 
 - (void)copyMsg:(NSString *)msg {

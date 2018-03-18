@@ -25,7 +25,6 @@ target 'MoreiTunesConnect_iOS' do
     pod 'QMUIKit'
     pod 'MJRefresh'
     pod 'IQKeyboardManager'
-    pod 'Masonry'
     pod 'ISMessages'
     
     # FPS检测
@@ -36,7 +35,9 @@ target 'MoreiTunesConnect_iOS' do
     pod 'DWCategoryKit'
     
     # 微信分享
-    pod 'WechatOpenSDK_NoPay'
+#    pod 'WechatOpenSDK_NoPay'
+
+    
     
     # 通用
     deful_pods

@@ -232,7 +232,6 @@ PODS:
     - QMUIKit/QMUIComponents/QMUITableViewHeaderFooterView
     - QMUIKit/QMUICore
   - QMUIKit/QMUIResources (2.4.0)
-  - WechatOpenSDK_NoPay (1.8.0)
   - YTKKeyValueStore (0.1.2):
     - FMDB (~> 2.0)
   - YYCache (1.0.4)
@@ -256,7 +255,6 @@ DEPENDENCIES:
   - Masonry
   - MJRefresh
   - QMUIKit
-  - WechatOpenSDK_NoPay
   - YTKKeyValueStore
   - YYCategories
   - YYModel
@@ -273,7 +271,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   QMUIKit: dce5ccbcdd512c25e4d3d8d859efba4ee9c141f9
-  WechatOpenSDK_NoPay: 27366a152202a6a7c8a15fad4d07261e87fb2389
   YTKKeyValueStore: 4d002941540dd5108fa23009b71e0f2f937f7a0f
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
@@ -281,6 +278,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 337624d461c0d335b3c6773a16df0efd71ff1ae1
+PODFILE CHECKSUM: 6e77b385d2abe9f77f2a461a06fd8b626dfaa3b7
 
 COCOAPODS: 1.4.0

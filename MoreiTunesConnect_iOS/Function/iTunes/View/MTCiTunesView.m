@@ -42,7 +42,6 @@
         cell = [[MTCiTunesAppsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
     NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
     MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;

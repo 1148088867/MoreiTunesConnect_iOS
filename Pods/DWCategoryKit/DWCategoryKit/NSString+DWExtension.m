@@ -26,6 +26,7 @@ static NSString *const kAESPassword = @"NSString+Extension&CoderDwang";
 @dynamic getUserDefaultsINFO;
 @dynamic removeUserDefaultsINFO;
 @dynamic callPhone;
+@dynamic filterHTML;
 @dynamic md5String;
 
 - (BOOL)isMobNumber {
@@ -85,6 +86,18 @@ static NSString *const kAESPassword = @"NSString+Extension&CoderDwang";
         return YES;
     }
     return NO;
+}
+
+- (NSString *)filterHTML {
+    NSString *html = self;
+    NSScanner *scanner = [NSScanner scannerWithString:html];
+    NSString *text = nil;
+    while([scanner isAtEnd]==NO) {
+        [scanner scanUpToString:@"<" intoString:nil];
+        [scanner scanUpToString:@">" intoString:&text];
+        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
+    }
+    return html;
 }
 
 - (NSString *)encryptAESString {

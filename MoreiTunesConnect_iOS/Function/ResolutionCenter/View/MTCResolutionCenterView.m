@@ -72,7 +72,7 @@
         [weak_self snipImg:[[tableView cellForRowAtIndexPath:indexPath] qmui_snapshotLayerImage]];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"复制反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self copyMsg:[weak_self filterHTML:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"]]];
+        [weak_self copyMsg:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"].filterHTML];
     }]];
     
     [alert addCancelAction];
@@ -90,7 +90,7 @@
     weakOBJ(self);
     [translateRequest lookup:msg WithCompletionHandler:^(YDTranslateRequest *request, YDTranslate *response, NSError *error) {
         [MTCBaseController dismissProgressHUD];
-        NSString *translation = [weak_self filterHTML:[[[response.translation.firstObject stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"]];
+        NSString *translation = [[[response.translation.firstObject stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"].filterHTML;
         if (!error && !translation.isEmpty) {
             QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"翻译信息" message:translation preferredStyle:QMUIAlertControllerStyleAlert];
             [alert addAction:[QMUIAlertAction actionWithTitle:@"复制翻译内容" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
@@ -133,10 +133,9 @@
 - (void)copyMsg:(NSString *)msg {
     [UIPasteboard generalPasteboard].string = msg;
     [MTCBaseController.progressHUD showLoading:@"请稍后..."];
-    weakOBJ(self);
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MTCBaseController dismissProgressHUD];
-        if ([[UIPasteboard generalPasteboard].string isEqualToString:[weak_self filterHTML:msg]]) {
+        if ([[UIPasteboard generalPasteboard].string isEqualToString:msg.filterHTML]) {
             [ISMessages showCardAlertWithTitle:@"复制成功" message:[NSString stringWithFormat:@"您已成功将反馈信息复制至系统粘贴板"] duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeSuccess alertPosition:ISAlertPositionTop didHide:nil];
         }else {
             [ISMessages showCardAlertWithTitle:@"复制失败" message:[NSString stringWithFormat:@"由于未知原因导致复制失败，请尝试重新复制"] duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeSuccess alertPosition:ISAlertPositionTop didHide:nil];
@@ -151,17 +150,6 @@
     }else {
         [ISMessages showCardAlertWithTitle:@"存储失败" message:error.description duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
     }
-}
-
-- (NSString *)filterHTML:(NSString *)html {
-    NSScanner * scanner = [NSScanner scannerWithString:html];
-    NSString * text = nil;
-    while([scanner isAtEnd]==NO) {
-        [scanner scanUpToString:@"<" intoString:nil];
-        [scanner scanUpToString:@">" intoString:&text];
-        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
-    }
-    return html;
 }
 
 - (NSArray<MTCResolutionCenterModel *> *)resolutionCenterArr {

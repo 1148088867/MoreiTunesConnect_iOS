@@ -1,6 +1,6 @@
 [![CocoaPods](http://img.shields.io/cocoapods/v/DWCategoryKit.svg?style=flat)](http://cocoapods.org/?q=DWCategoryKit)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/p/DWCategoryKit.svg?style=flat)](http://cocoapods.org/?q=DWCategoryKit)&nbsp;
-[![License](https://img.shields.io/cocoapods/l/DWCategoryKit.svg?style=flat)](http://cocoapods.org/pods/DWCategoryKit) 
+[![License](https://img.shields.io/cocoapods/l/DWCategoryKit.svg?style=flat)](https://github.com/CoderDwang/DWCategoryKit/blob/master/LICENSE) 
 [![GitHub stars](https://img.shields.io/github/stars/coderdwang/DWCategoryKit.svg)](https://github.com/asiosldh/DWCategoryKit/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/coderdwang/DWCategoryKit.svg)](https://github.com/asiosldh/DWCategoryKit/forkgazers)
 # DWCategoryKit

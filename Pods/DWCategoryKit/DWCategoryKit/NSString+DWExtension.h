@@ -25,6 +25,9 @@
 /** 是否为空 */
 @property(nonatomic, assign, readonly) BOOL isEmpty;
 
+/** 过滤html标签 */
+@property(nonatomic, copy, readonly) NSString *filterHTML;
+
 /** 拨打电话 */
 @property(nonatomic, assign) BOOL callPhone;
 

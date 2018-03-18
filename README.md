@@ -1,16 +1,15 @@
 # MoreiTunesConnect_iOS
 
 # 新增
+- 2018-03-18
+    - 翻译后的内容可以替换原Cell内容
+    - 截取的反馈内容可以直接分享给好友(使用系统```UIActivityViewController```实现)
+    
 - 2018-03-17
     - 查看[苹果](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2F&rv=1)反馈信息 
     - [翻译](http://ai.youdao.com)反馈内容(使用```有道智云SDK```实现)
     - 快速复制至粘贴板
     - 截取反馈内容视图
-
-- 2018-03-18
-    - 翻译后的内容可以替换原Cell内容
-    - 截取的反馈内容可以直接分享给好友(使用系统```UIActivityViewController```实现)
-    
     
 ----
 - 多账号管理
@@ -57,7 +56,7 @@
     - [支付宝打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/Ali.JPG)
 
 ---
-*您的支持就是我更新的动力，感觉不错帮我点一下```star```吧*
+*您的支持就是我更新的动力，感觉不错点```Star```支持一下吧*
 
 
 

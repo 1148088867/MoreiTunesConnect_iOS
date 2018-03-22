@@ -1,5 +1,6 @@
 def deful_pods
     inhibit_all_warnings!
+    
     # 自动布局
     pod 'Masonry'
     
@@ -19,13 +20,16 @@ def deful_pods
 end
 
 target 'MoreiTunesConnect_iOS' do
-    inhibit_all_warnings!
+    
+    # 通用
+    deful_pods
     
     # 视图
     pod 'QMUIKit'
     pod 'MJRefresh'
     pod 'IQKeyboardManager'
     pod 'ISMessages'
+	pod 'KSPhotoBrowser'
     
     # FPS检测
     pod 'JPFPSStatus'
@@ -33,9 +37,6 @@ target 'MoreiTunesConnect_iOS' do
     #pod 'JPush'
     # 扩展
     pod 'DWCategoryKit'
-    
-    # 通用
-    deful_pods
     
 end
 

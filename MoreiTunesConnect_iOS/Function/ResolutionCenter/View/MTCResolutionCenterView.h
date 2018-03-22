@@ -14,4 +14,7 @@
 /** 数据源 */
 psx(NSArray<MTCResolutionCenterModel *>, resolutionCenterArr);
 
+/** 前往kv控制器 */
+pblockx(void, kpViewController, NSString *versionid);
+
 @end

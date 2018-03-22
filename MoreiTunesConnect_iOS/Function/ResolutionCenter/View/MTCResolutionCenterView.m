@@ -74,6 +74,11 @@
     [alert addAction:[QMUIAlertAction actionWithTitle:@"复制反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [weak_self copyMsg:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"].filterHTML];
     }]];
+    [alert addAction:[QMUIAlertAction actionWithTitle:@"前往查看关键词&预览图" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
+        if (weak_self.kpViewController) {
+            weak_self.kpViewController(weak_self.resolutionCenterArr[indexPath.section].versionId);
+        }
+    }]];
     
     [alert addCancelAction];
     [alert showWithAnimated:YES];

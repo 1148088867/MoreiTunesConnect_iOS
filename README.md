@@ -1,6 +1,10 @@
 # MoreiTunesConnect_iOS
 
 # 新增
+- 2018-03-22
+    - 增加查看当前App关键词、版本更新日志、预览图
+   
+
 - 2018-03-18
     - 翻译后的内容可以替换原Cell内容
     - 截取的反馈内容可以直接分享给好友(使用系统```UIActivityViewController```实现)
@@ -49,6 +53,7 @@
     - [DWCategoryKit](https://github.com/CoderDwang/DWCategoryKit)
     - [DWNetworking](https://github.com/CoderDwang/DWNetworking)
     - [ISMessages](https://github.com/ilyainyushin/ISMessages)
+    - [KSPhotoBrowser](https://github.com/skx926/KSPhotoBrowser)
     - [JPFPSStatus](https://github.com/joggerplus/JPFPSStatus)
 
 - 打赏

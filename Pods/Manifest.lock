@@ -24,6 +24,8 @@ PODS:
   - IQKeyboardManager (5.0.8)
   - ISMessages (1.2)
   - JPFPSStatus (0.1.1)
+  - KSPhotoBrowser (0.1.6):
+    - YYWebImage (~> 1.0.5)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.3)
   - QMUIKit (2.4.0):
@@ -252,6 +254,7 @@ DEPENDENCIES:
   - IQKeyboardManager
   - ISMessages
   - JPFPSStatus
+  - KSPhotoBrowser
   - Masonry
   - MJRefresh
   - QMUIKit
@@ -268,6 +271,7 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   ISMessages: d39098b48672813d69d30f44da06260b9920fed4
   JPFPSStatus: 03f32aa3d4d7d0c5bf56f6f3e7cf8b7280a5f52c
+  KSPhotoBrowser: 6955ac1847676a2a5f2d6bf8b6b39ee567c37e0e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   QMUIKit: dce5ccbcdd512c25e4d3d8d859efba4ee9c141f9
@@ -278,6 +282,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 9e6f6ebf0fe9c0efaea2725ca9630be9a5c83899
+PODFILE CHECKSUM: a4ea9c9b783818777ea4dba1eb4168e55f43eaaa
 
 COCOAPODS: 1.4.0

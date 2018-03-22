@@ -8,6 +8,7 @@
 
 #import "MTCResolutionCenterViewController.h"
 #import "MTCResolutionCenterView.h"
+#import "MTCKPViewController.h"
 
 @interface MTCResolutionCenterViewController ()
 
@@ -30,7 +31,15 @@ psx(MTCResolutionCenterView, resolutionCenter);
         make.top.equalTo(self.baseView.mas_top);
         make.left.right.bottom.equalTo(self.view);
     }];
-    
+    weakOBJ(self);
+    resolutionCenter.kpViewController = ^(NSString *versionid) {
+        MTCKPViewController *kp = [[MTCKPViewController alloc] init];
+        kp.title = weak_self.title;
+        kp.titleView.subtitle = versionid;
+        kp.appid = weak_self.titleView.subtitle;
+        kp.versionid = versionid;
+        [weak_self.navigationController pushViewController:kp animated:YES];
+    };
     [self resolutionCenterNetworking];
 }
 

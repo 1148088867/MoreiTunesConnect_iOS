@@ -18,8 +18,8 @@
 /** iTunes解决中心 */
 #define MTCiTunesResolutionCenter(appid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/platforms/ios/resolutionCenter", appid]
 
-/** iTunes版本审核 */
-#define MTCiTunesAppVerison(appid, versionid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/platforms/ios/versions/%@", appid, versionid]
+/** iTunes中版本信息 */
+#define MTCiTunesAppKP(appid, versionid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/platforms/ios/versions/%@", appid, versionid]
 
 /** iTunes预览图下载 */
 #define MTCiTunesAppPreview(imgUrl, size) [NSString stringWithFormat:@"https://is1-ssl.mzstatic.com/image/thumb/%@/%@x%@bb.jpg", imgUrl, size, size]

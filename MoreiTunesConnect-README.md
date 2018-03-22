@@ -15,3 +15,4 @@
 - iTunes    iTunes Connect
 - Set           设置
 - ResolutionCenter  解决中心
+- Keyword&Preview   关键词&预览图

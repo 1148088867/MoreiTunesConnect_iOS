@@ -75,6 +75,12 @@
 		92E79F00200FADF2002A2257 /* MTCAccountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79EFF200FADF2002A2257 /* MTCAccountView.m */; };
 		92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F04200FAE3E002A2257 /* QMUITableView+MTCExtension.m */; };
 		92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E79F08200FB562002A2257 /* MTCAccountModel.m */; };
+		92F6A39820653A2B00984307 /* MTCNotFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A39720653A2B00984307 /* MTCNotFocusModel.m */; };
+		92F6A39C20653A8900984307 /* MTCNotFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A39B20653A8900984307 /* MTCNotFocusViewController.m */; };
+		92F6A39E206543A800984307 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F6A39D206543A800984307 /* Social.framework */; };
+		92F6A3A2206543D500984307 /* MTCNotFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A3A1206543D500984307 /* MTCNotFocusView.m */; };
+		92F6A3A62065497400984307 /* MTCNotFocusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A3A52065497400984307 /* MTCNotFocusCell.m */; };
+		92F6A3A920655BD700984307 /* MTCActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6A3A820655BD700984307 /* MTCActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +236,17 @@
 		92E79F04200FAE3E002A2257 /* QMUITableView+MTCExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "QMUITableView+MTCExtension.m"; sourceTree = "<group>"; };
 		92E79F07200FB562002A2257 /* MTCAccountModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCAccountModel.h; sourceTree = "<group>"; };
 		92E79F08200FB562002A2257 /* MTCAccountModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCAccountModel.m; sourceTree = "<group>"; };
+		92F6A39620653A2B00984307 /* MTCNotFocusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNotFocusModel.h; sourceTree = "<group>"; };
+		92F6A39720653A2B00984307 /* MTCNotFocusModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNotFocusModel.m; sourceTree = "<group>"; };
+		92F6A39A20653A8900984307 /* MTCNotFocusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNotFocusViewController.h; sourceTree = "<group>"; };
+		92F6A39B20653A8900984307 /* MTCNotFocusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNotFocusViewController.m; sourceTree = "<group>"; };
+		92F6A39D206543A800984307 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		92F6A3A0206543D500984307 /* MTCNotFocusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNotFocusView.h; sourceTree = "<group>"; };
+		92F6A3A1206543D500984307 /* MTCNotFocusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNotFocusView.m; sourceTree = "<group>"; };
+		92F6A3A42065497400984307 /* MTCNotFocusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCNotFocusCell.h; sourceTree = "<group>"; };
+		92F6A3A52065497400984307 /* MTCNotFocusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCNotFocusCell.m; sourceTree = "<group>"; };
+		92F6A3A720655BD700984307 /* MTCActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCActivityViewController.h; sourceTree = "<group>"; };
+		92F6A3A820655BD700984307 /* MTCActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCActivityViewController.m; sourceTree = "<group>"; };
 		A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoreiTunesConnect_iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EA06BAC097CD0F7E464CAF45 /* libPods-MoreiTunesConnect_iOS_Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoreiTunesConnect_iOS_Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +271,7 @@
 				92B7021F205D376E007B94C6 /* libonline.a in Frameworks */,
 				92037539204BB57500E23339 /* libsqlite3.tbd in Frameworks */,
 				92037535204BB56800E23339 /* UIKit.framework in Frameworks */,
+				92F6A39E206543A800984307 /* Social.framework in Frameworks */,
 				92B70226205D38DD007B94C6 /* AdSupport.framework in Frameworks */,
 				92037537204BB56D00E23339 /* Foundation.framework in Frameworks */,
 				92B70222205D37B4007B94C6 /* CoreTelephony.framework in Frameworks */,
@@ -643,6 +661,7 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				92F6A394206539EA00984307 /* NotFocus */,
 				920A8490205FAD0E002CFC21 /* Keyword&Preview */,
 				927A12AD205BAEC6003DAC3E /* ResolutionCenter */,
 				9252DD88204FB97500A85D3E /* Special */,
@@ -657,6 +676,7 @@
 		92745CBF200E509F009DDF39 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				92F6A3AA20655C5A00984307 /* ActivityViewController */,
 				928CDDFE204D4E1900544C92 /* TabBarViewController */,
 				92E79EEE200FA0EC002A2257 /* NavigationController */,
 				92E79EE9200F9F5E002A2257 /* ViewController */,
@@ -831,9 +851,66 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		92F6A394206539EA00984307 /* NotFocus */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A39F206543BF00984307 /* View */,
+				92F6A39920653A7600984307 /* Controller */,
+				92F6A39520653A1300984307 /* Model */,
+			);
+			path = NotFocus;
+			sourceTree = "<group>";
+		};
+		92F6A39520653A1300984307 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A39620653A2B00984307 /* MTCNotFocusModel.h */,
+				92F6A39720653A2B00984307 /* MTCNotFocusModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92F6A39920653A7600984307 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A39A20653A8900984307 /* MTCNotFocusViewController.h */,
+				92F6A39B20653A8900984307 /* MTCNotFocusViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		92F6A39F206543BF00984307 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A3A32065495700984307 /* Cell */,
+				92F6A3A0206543D500984307 /* MTCNotFocusView.h */,
+				92F6A3A1206543D500984307 /* MTCNotFocusView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92F6A3A32065495700984307 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A3A42065497400984307 /* MTCNotFocusCell.h */,
+				92F6A3A52065497400984307 /* MTCNotFocusCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		92F6A3AA20655C5A00984307 /* ActivityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				92F6A3A720655BD700984307 /* MTCActivityViewController.h */,
+				92F6A3A820655BD700984307 /* MTCActivityViewController.m */,
+			);
+			path = ActivityViewController;
+			sourceTree = "<group>";
+		};
 		A08A2458210D091D13055043 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				92F6A39D206543A800984307 /* Social.framework */,
 				92B70225205D38DD007B94C6 /* AdSupport.framework */,
 				92B70223205D37BD007B94C6 /* SystemConfiguration.framework */,
 				92B70221205D37B4007B94C6 /* CoreTelephony.framework */,
@@ -1111,6 +1188,8 @@
 				9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */,
 				920A8494205FAD6E002CFC21 /* MTCKPViewController.m in Sources */,
 				920BB61C2011FDC300B24CE1 /* MTCCreateAccountView.m in Sources */,
+				92F6A39C20653A8900984307 /* MTCNotFocusViewController.m in Sources */,
+				92F6A3A920655BD700984307 /* MTCActivityViewController.m in Sources */,
 				92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
 				92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */,
@@ -1118,6 +1197,7 @@
 				927A12BC205BF667003DAC3E /* MTCResolutionCenterViewController.m in Sources */,
 				920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */,
 				92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */,
+				92F6A39820653A2B00984307 /* MTCNotFocusModel.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
 				920A8499205FC20F002CFC21 /* MTCKPModel.m in Sources */,
 				9252DD8C204FB9A500A85D3E /* MTCSpecialModel.m in Sources */,
@@ -1125,6 +1205,7 @@
 				92037533204BB3DB00E23339 /* MTCiTunesViewController.m in Sources */,
 				926EA4A92014C0F8008F4554 /* UITableViewCell+MTCExtension.m in Sources */,
 				926EA4AD2014E609008F4554 /* MTCAccountCell.m in Sources */,
+				92F6A3A62065497400984307 /* MTCNotFocusCell.m in Sources */,
 				9252DD86204FA68100A85D3E /* MTCSqlManager.m in Sources */,
 				928CDDFD204D4E0A00544C92 /* MTCSetViewController.m in Sources */,
 				928369A4206296A7005E6A5C /* MTCKPView.m in Sources */,
@@ -1133,6 +1214,7 @@
 				928CDE05204D6D0F00544C92 /* MTCSetView.m in Sources */,
 				9252DD94204FC8ED00A85D3E /* MTCNetwork.m in Sources */,
 				920BB6182011FD8900B24CE1 /* MTCCreateAccountViewController.m in Sources */,
+				92F6A3A2206543D500984307 /* MTCNotFocusView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

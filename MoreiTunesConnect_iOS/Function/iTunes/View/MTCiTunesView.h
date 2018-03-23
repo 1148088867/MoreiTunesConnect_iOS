@@ -12,6 +12,6 @@
 @interface MTCiTunesView : QMUITableView
 
 /** app信息数组 */
-psx(NSArray<MTCiTunesAppsModel *>, iTunesAppsArr);
+psx(NSMutableArray<MTCiTunesAppsModel *>, iTunesAppsArr);
 
 @end

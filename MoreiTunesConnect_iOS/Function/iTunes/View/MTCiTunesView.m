@@ -9,7 +9,7 @@
 #import "MTCiTunesView.h"
 #import "MTCiTunesAppsCell.h"
 #import <YYWebImage.h>
-#import "MTCSpecialModel.h"
+//#import "MTCSpecialModel.h"
 #import "MTCResolutionCenterViewController.h"
 
 @interface MTCiTunesView ()<QMUITableViewDelegate, QMUITableViewDataSource>
@@ -21,10 +21,6 @@
 - (void)loadView {
     self.dataSource = self;
     self.delegate = self;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -56,29 +52,51 @@
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
-    MTCSpecialModel *specialModel = [MTCSpecialModel yy_modelWithJSON:[MTCUserDefaults objectForKey:@"appinfo"]];
-    if ([appModel.adamId isEqualToString:specialModel.appid.decryptAESString]) {
-        UITableViewRowAction *CANCEL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"CANCEL" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-            [MTCUserDefaults removeObjectForKey:@"appinfo"];
-            [MTCUserDefaults synchronize];
-        }];
-        return @[CANCEL];
-    }
-    weakOBJ(appModel);
-    UITableViewRowAction *SPECIAL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"SPECIAL" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        NSMutableDictionary *appinfo = [NSMutableDictionary dictionary];
-        [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
-        [appinfo setObject:weak_appModel.adamId.encryptAESString forKey:@"appid"];
-        [appinfo setObject:weak_appModel.name.encryptAESString forKey:@"appName"];
-        [appinfo setObject:weak_appModel.iconUrl.encryptAESString forKey:@"appIconUrl"];
-        [appinfo setObject:[NSDate dateCurrentTimeWithFormat:MTCTimeFormat] forKey:@"SPECIALTime"];
-        [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
-        [MTCUserDefaults synchronize];
+    weakOBJ(self);
+    UITableViewRowAction *notFocus = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"NotFocus" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+        MTCiTunesAppsModel *appModel = weak_self.iTunesAppsArr[indexPath.row];
+        NSMutableDictionary *appINFO = [NSMutableDictionary dictionary];
+        [appINFO setObject:appModel.adamId.encryptAESString forKey:@"appid"];
+        [appINFO setObject:appModel.iconUrl forKey:@"appIconUrl"];
+        [appINFO setObject:appModel.name forKey:@"appName"];
+        [appINFO setObject:MTCTime forKey:@"nfTime"];
+        [MTCSQL.nfStore putObject:appINFO withId:appINFO[@"nfTime"] intoTable:MTCNOTFOCUSTABLENAME];
+        [weak_self.iTunesAppsArr removeObjectAtIndex:indexPath.row];
+        if (weak_self.iTunesAppsArr.count) {
+            [tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationFade];
+        }else {
+            [tableView reloadData];
+        }
     }];
-    
-    return @[SPECIAL];
+    return @[notFocus];
 }
+
+/*
+ - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+ MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
+ MTCSpecialModel *specialModel = [MTCSpecialModel yy_modelWithJSON:[MTCUserDefaults objectForKey:@"appinfo"]];
+ if ([appModel.adamId isEqualToString:specialModel.appid.decryptAESString]) {
+ UITableViewRowAction *CANCEL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"CANCEL" handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+ [MTCUserDefaults removeObjectForKey:@"appinfo"];
+ [MTCUserDefaults synchronize];
+ }];
+ return @[CANCEL];
+ }
+ weakOBJ(appModel);
+ UITableViewRowAction *SPECIAL = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"SPECIAL" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+ NSMutableDictionary *appinfo = [NSMutableDictionary dictionary];
+ [appinfo setObject:MTCCooikesData forKey:@"cookiesData"];
+ [appinfo setObject:weak_appModel.adamId.encryptAESString forKey:@"appid"];
+ [appinfo setObject:weak_appModel.name.encryptAESString forKey:@"appName"];
+ [appinfo setObject:weak_appModel.iconUrl.encryptAESString forKey:@"appIconUrl"];
+ [appinfo setObject:MTCTime forKey:@"SPECIALTime"];
+ [MTCUserDefaults setObject:appinfo forKey:@"appinfo"];
+ [MTCUserDefaults synchronize];
+ }];
+ 
+ return @[SPECIAL];
+ }
+ */
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView qmui_clearsSelection];
@@ -90,11 +108,12 @@
     [self.viewController.navigationController pushViewController:resolutionCenter animated:YES];
 }
 
-- (NSArray *)iTunesAppsArr {
+- (NSMutableArray *)iTunesAppsArr {
     if (!_iTunesAppsArr) {
-        _iTunesAppsArr = [NSArray array];
+        _iTunesAppsArr = [NSMutableArray array];
     }
     return _iTunesAppsArr;
 }
 
 @end
+

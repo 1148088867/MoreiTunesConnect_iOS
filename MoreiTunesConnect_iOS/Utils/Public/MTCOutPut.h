@@ -12,14 +12,26 @@
 /** 日期格式 */
 #define MTCTimeFormat @"YYYY-MM-dd HH:mm:ss"
 
-/** 账号数据库名称 */
-#define MTCAccountDBName @"CoderDwangAccountDBName"
+/** 获取当前时间 */
+#define MTCTime [NSDate dateCurrentTimeWithFormat:MTCTimeFormat]
 
-/** 数据库表名称 */
-#define MTCAccountTableName @"CoderDwangAccountTableName"
+/** 账号数据库名称 */
+#define MTCACCOUNTDBNANE @"CoderDwangAccountDBName"
+
+/** 账号数据库表名称 */
+#define MTCACCOUNTTABLENAME @"CoderDwangAccountTableName"
+
+/** 隐藏的App数据库名称 */
+#define MTCNOTFOCUSDBNAME @"CoderDwangNotFocusDBName"
+
+/** 隐藏的App数据库表名称 */
+#define MTCNOTFOCUSTABLENAME @"CoderDwangNotFocusTableName"
 
 /** GitHub */
 #define MTCGitHub @"https://github.com/CoderDwang/MoreiTunesConnect_iOS"
+
+/** 中国独立开发者项目列表 */
+#define MTCIndependentDevelopersGitHub @"https://github.com/1c7/chinese-independent-developer"
 
 /** QQ群 */
 #define MTCQQGroup @"577506623"
@@ -34,7 +46,7 @@
 #define MTCSQL [MTCSqlManager sharedInstance]
 
 /** 获取基础控制器 */
-#define MTCBaseController ((MTCBaseViewController *)self.viewController)
+#define MTCBaseController(obj) ((MTCBaseViewController *)obj.viewController)
 
 /** 设置请求头 */
 #define MTCNetworkConfig [DWNetworking setConfigRequestType:DWRequestTypeJSON responseType:DWResponseTypeJSON];\

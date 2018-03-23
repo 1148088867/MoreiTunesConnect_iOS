@@ -9,10 +9,14 @@
 #import "MTCiTunesViewController.h"
 #import "MTCiTunesView.h"
 #import "MTCSpecialModel.h"
+#import "MTCNotFocusModel.h"
 
 @interface MTCiTunesViewController ()
 
 psx(MTCiTunesView, itunesView);
+
+/** 隐藏App模型 */
+psrx(NSArray<NSString *>, notFocusArr);
 
 @end
 
@@ -75,7 +79,16 @@ psx(MTCiTunesView, itunesView);
     [MTCNetwork getUrl:MTCiTunesApps callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];
         if ([success[@"statusCode"] isEqualToString:@"SUCCESS"] && !error) {
-            weak_self.itunesView.iTunesAppsArr = [NSArray yy_modelArrayWithClass:[MTCiTunesAppsModel class] json:success[@"data"][@"summaries"]];
+            [self.itunesView.iTunesAppsArr removeAllObjects];
+            NSArray <MTCiTunesAppsModel *>*iTunesApps = [NSArray yy_modelArrayWithClass:[MTCiTunesAppsModel class] json:success[@"data"][@"summaries"]];
+            [iTunesApps enumerateObjectsUsingBlock:^(MTCiTunesAppsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (![weak_self.notFocusArr containsObject:obj.adamId]) {
+                    [weak_self.itunesView.iTunesAppsArr addObject:obj];
+                }
+            }];
+//            weak_self.itunesView.iTunesAppsArr = [NSArray yy_modelArrayWithClass:[MTCiTunesAppsModel class] json:success[@"data"][@"summaries"]];
+            
+            /*
             MTCSpecialModel *specialModel = [MTCSpecialModel yy_modelWithJSON:[MTCUserDefaults objectForKey:@"appinfo"]];
             if (specialModel.appid.length && [specialModel.email.decryptAESString isEqualToString:weak_self.accountModel.mail.decryptAESString]) {
                 [weak_self.itunesView.iTunesAppsArr enumerateObjectsUsingBlock:^(MTCiTunesAppsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -86,12 +99,25 @@ psx(MTCiTunesView, itunesView);
                     }
                 }];
             }
+             */
             [weak_self.itunesView.mj_header endRefreshing];
             [weak_self.itunesView reloadData];
         }else {
             [ISMessages showCardAlertWithTitle:@"获取信息失败" message:@"由于未知原因，导致信息获取失败，请稍后再试。" duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
         }
     }];
+}
+
+- (NSArray<NSString *> *)notFocusArr {
+    NSMutableArray <MTCNotFocusModel *>*nfModelArr = [NSMutableArray array];
+    NSMutableArray <NSString *>*notFocusArr = [NSMutableArray array];
+    [MTCSQL.nfKeyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [nfModelArr addObject:[MTCNotFocusModel yy_modelWithJSON:obj.itemObject]];
+    }];
+    [nfModelArr enumerateObjectsUsingBlock:^(MTCNotFocusModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [notFocusArr addObject:obj.appid.decryptAESString];
+    }];
+    return notFocusArr;
 }
 
 @end

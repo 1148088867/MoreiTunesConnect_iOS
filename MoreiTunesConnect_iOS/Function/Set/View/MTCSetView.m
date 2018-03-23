@@ -7,7 +7,7 @@
 //
 
 #import "MTCSetView.h"
-#import <Social/Social.h>
+#import "MTCNotFocusViewController.h"
 
 @interface MTCSetView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -47,7 +47,7 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
     static NSString *identifier = @"cell";
     QMUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[QMUITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[QMUITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }else {
         while (cell.contentView.subviews.lastObject) {
             [cell.contentView.subviews.lastObject removeFromSuperview];
@@ -61,23 +61,28 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView qmui_clearsSelection];
     NSString *infoStr = self.setArr[indexPath.section][indexPath.row];
+    if ([infoStr isEqualToString:@"未显示的内容"]) {
+        [self.viewController.navigationController pushViewController:[[MTCNotFocusViewController alloc] init] animated:YES];
+    }
     if ([infoStr isEqualToString:@"分享"]) {
-        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [MTCBaseController dismissProgressHUD];
-        });
-        NSArray *activityItems = @[@"欢迎使用MoreiTunesConnect_iOS", UIImageMake(@"logo"), [NSURL URLWithString:MTCGitHub]];
-        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-        [self.viewController presentViewController:activityController animated:YES completion:nil];
+        [MTCBaseController(self) showActivityViewControllerWithItems:@[@"欢迎使用MoreiTunesConnect_iOS", UIImageMake(@"logo"), [NSURL URLWithString:MTCGitHub]] obj:MTCBaseController(self)];
     }
     if ([infoStr isEqualToString:@"关于"]) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCGitHub]];
+        QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择所要查看的信息" preferredStyle:0];
+        [alert addAction:[QMUIAlertAction actionWithTitle:@"关于MoreiTunesConnect_iOS" style:0 handler:^(QMUIAlertAction *action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCGitHub]];
+        }]];
+        [alert addAction:[QMUIAlertAction actionWithTitle:@"关于中国独立开发者项目" style:0 handler:^(QMUIAlertAction *action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCIndependentDevelopersGitHub]];
+        }]];
+        [alert addCancelAction];
+        [alert showWithAnimated:YES];
     }
 }
 
 - (NSArray<NSArray<NSString *> *> *)setArr {
     if (!_setArr) {
-        _setArr = @[@[@"分享"], @[@"关于"]];
+        _setArr = @[@[@"未显示的内容"], @[@"分享"], @[@"关于"]];
     }
     return _setArr;
 }

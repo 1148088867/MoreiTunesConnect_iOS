@@ -13,8 +13,12 @@
 
 + (instancetype)sharedInstance;
 
-psx(YTKKeyValueStore, store);
+/** 账号 */
+psx(YTKKeyValueStore, accountStore);
+psrx(NSArray<YTKKeyValueItem *>, accountKeyValueItems);
 
-psrx(NSArray<YTKKeyValueItem *>, keyValueItems);
+/** 不关注的App */
+psx(YTKKeyValueStore, nfStore);
+psrx(NSArray<YTKKeyValueItem *>, nfKeyValueItems);
 
 @end

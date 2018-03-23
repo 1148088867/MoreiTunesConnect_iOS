@@ -85,7 +85,7 @@
 }
 
 - (void)translationMsg:(NSString *)msg indexPath:(NSIndexPath *)idx {
-    [MTCBaseController.progressHUD showLoading:@"翻译中..."];
+    [MTCBaseController(self).progressHUD showLoading:@"翻译中..."];
     YDTranslateRequest *translateRequest  = [YDTranslateRequest request];
     YDTranslateParameters *parameters = [YDTranslateParameters targeting];
     parameters.source = @"youdaosw";
@@ -94,7 +94,7 @@
     translateRequest.translateParameters = parameters;
     weakOBJ(self);
     [translateRequest lookup:msg WithCompletionHandler:^(YDTranslateRequest *request, YDTranslate *response, NSError *error) {
-        [MTCBaseController dismissProgressHUD];
+        [MTCBaseController(weak_self) dismissProgressHUD];
         NSString *translation = [[[response.translation.firstObject stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"].filterHTML;
         if (!error && !translation.isEmpty) {
             QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"翻译信息" message:translation preferredStyle:QMUIAlertControllerStyleAlert];
@@ -119,16 +119,10 @@
     weakOBJ(self);
     QMUIAlertController *screenhotAlert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择对截取内容所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
     [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"分享至好友" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [MTCBaseController dismissProgressHUD];
-        });
-        NSArray *activityItems = @[img];
-        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-        [weak_self.viewController presentViewController:activityController animated:YES completion:nil];
+        [MTCBaseController(weak_self) showActivityViewControllerWithItems:@[img] obj:MTCBaseController(weak_self)];
     }]];
     [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"保存至相册" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [MTCBaseController.progressHUD showLoading:@"请稍后..."];
+        [MTCBaseController(weak_self).progressHUD showLoading:@"请稍后..."];
         UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
     }]];
     [screenhotAlert addCancelAction];
@@ -136,10 +130,11 @@
 }
 
 - (void)copyMsg:(NSString *)msg {
+    weakOBJ(self);
     [UIPasteboard generalPasteboard].string = msg;
-    [MTCBaseController.progressHUD showLoading:@"请稍后..."];
+    [MTCBaseController(self).progressHUD showLoading:@"请稍后..."];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [MTCBaseController dismissProgressHUD];
+        [MTCBaseController(weak_self) dismissProgressHUD];
         if ([[UIPasteboard generalPasteboard].string isEqualToString:msg.filterHTML]) {
             [ISMessages showCardAlertWithTitle:@"复制成功" message:[NSString stringWithFormat:@"您已成功将反馈信息复制至系统粘贴板"] duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeSuccess alertPosition:ISAlertPositionTop didHide:nil];
         }else {
@@ -149,7 +144,7 @@
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    [MTCBaseController dismissProgressHUD];
+    [MTCBaseController(self) dismissProgressHUD];
     if (!error) {
         [ISMessages showCardAlertWithTitle:@"存储成功" message:[NSString stringWithFormat:@"您已成功将反馈信息截图保存至系统相册"] duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeSuccess alertPosition:ISAlertPositionTop didHide:nil];
     }else {

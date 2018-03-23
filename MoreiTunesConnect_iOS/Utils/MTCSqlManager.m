@@ -23,16 +23,29 @@
     return [self sharedInstance];
 }
 
-- (YTKKeyValueStore *)store {
-    if (!_store) {
-        _store = [[YTKKeyValueStore alloc] initDBWithName:MTCAccountDBName];
-        [_store createTableWithName:MTCAccountTableName];
+- (YTKKeyValueStore *)accountStore {
+    if (!_accountStore) {
+        _accountStore = [[YTKKeyValueStore alloc] initDBWithName:MTCACCOUNTDBNANE];
+        [_accountStore createTableWithName:MTCACCOUNTTABLENAME];
     }
-    return _store;
+    return _accountStore;
 }
 
-- (NSArray <YTKKeyValueItem *>*)keyValueItems {
-    return [self.store getAllItemsFromTable:MTCAccountTableName];
+- (NSArray <YTKKeyValueItem *>*)accountKeyValueItems {
+    return [self.accountStore getAllItemsFromTable:MTCACCOUNTTABLENAME];
+}
+
+
+- (YTKKeyValueStore *)nfStore {
+    if (!_nfStore) {
+        _nfStore = [[YTKKeyValueStore alloc] initDBWithName:MTCNOTFOCUSDBNAME];
+        [_nfStore createTableWithName:MTCNOTFOCUSTABLENAME];
+    }
+    return _nfStore;
+}
+
+- (NSArray<YTKKeyValueItem *> *)nfKeyValueItems {
+    return [self.nfStore getAllItemsFromTable:MTCNOTFOCUSTABLENAME];
 }
 
 @end

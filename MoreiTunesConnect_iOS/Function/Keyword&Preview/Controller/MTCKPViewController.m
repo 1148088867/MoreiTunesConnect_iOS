@@ -87,13 +87,7 @@ psx(MTCKPView, kpView);
     weakOBJ(self);
     QMUIAlertController *screenhotAlert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择对截取内容所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
     [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"分享至好友" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self.progressHUD showLoading:@"请稍后..."];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weak_self dismissProgressHUD];
-        });
-        NSArray *activityItems = @[img];
-        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
-        [weak_self presentViewController:activityController animated:YES completion:nil];
+        [weak_self showActivityViewControllerWithItems:@[img] obj:weak_self];
     }]];
     [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"保存至相册" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [weak_self.progressHUD showLoading:@"请稍后..."];

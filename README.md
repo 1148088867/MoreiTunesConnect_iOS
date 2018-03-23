@@ -1,9 +1,14 @@
 # MoreiTunesConnect_iOS
 
-# 新增
+# 版本记录&更新日志
+- 2018-03-24 ```v1.3```
+    - 增加屏蔽不需要关注的App(```在App状态查询列表直接对想要隐藏的App左滑即可，在设置中可以使其再次显示```)
+    - 为无法显示logo的App设置随机背景色
+    - 暂时移除```Today Extension```的使用
+
 - 2018-03-22
     - 增加查看当前App关键词、版本更新日志、预览图
-   
+    - 预览图大图查看，长按即可分享或保存(使用系统```UIActivityViewController```实现)
 
 - 2018-03-18
     - 翻译后的内容可以替换原Cell内容
@@ -24,11 +29,11 @@
 - 下载代码之后请勿修改版本号，以免无法收到```MoreiTunesConnect_iOS```更新提示
 - ios交流群
 
-    ![群二维码](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/群二维码.png)
+    ![群二维码](./Picture/群二维码.png)
     
 - 预览
 
-    ![预览](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/预览图.gif)
+    ![预览](./Picture/预览图.gif)
 
 
 ---
@@ -57,8 +62,8 @@
     - [JPFPSStatus](https://github.com/joggerplus/JPFPSStatus)
 
 - 打赏
-    - [微信打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/WeChat.JPG)
-    - [支付宝打赏](https://github.com/CoderDwang/MoreiTunesConnect_iOS/blob/master/Picture/Pay/Ali.JPG)
+    - [微信打赏](./Picture/Pay/WeChat.JPG)
+    - [支付宝打赏](./Picture/Pay/Ali.JPG)
 
 ---
 *您的支持就是我更新的动力，感觉不错点```Star```支持一下吧*

@@ -7,10 +7,11 @@
 //
 
 #import "MTCBaseViewController.h"
-#import <IQKeyboardManager.h>
-#import <JPFPSStatus.h>
 #import "MTCBaseNavigationController.h"
+#import <Social/Social.h>
 #import <DWNetworking.h>
+#import <JPFPSStatus.h>
+#import "MTCActivityViewController.h"
 
 @interface MTCBaseViewController ()
 
@@ -20,29 +21,18 @@
 
 - (void)didInitialized {
     [super didInitialized];
+    if (IS_DEBUG)[self JPFPSConfig];
     self.titleView.subtitle = @"CoderDwang";
-    self.titleView.verticalSubtitleFont = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
     self.titleView.style = QMUINavigationTitleViewStyleSubTitleVertical;
-    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
-    if (IS_DEBUG) {
-        [[JPFPSStatus sharedInstance] open];
-    }
+    self.titleView.verticalSubtitleFont = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
-- (void)dealloc {
-    [self willMoveToParentViewController:nil];
-    [self.view removeFromSuperview];
-    [self removeFromParentViewController];
-    [DWNetworking cancelAllTask];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [DWNetworking cancelAllTask];
+- (void)JPFPSConfig {
+    [[JPFPSStatus sharedInstance] open];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +54,22 @@
     [self.progressHUD hideAnimated:YES];
     [self.progressHUD removeFromSuperview];
     self.progressHUD = nil;
+}
+
+- (void)showActivityViewControllerWithItems:(NSArray *)activityItems obj:(id)obj{
+    [[obj progressHUD] showLoading:@"请稍候..."];
+    MTCActivityViewController *activityViewController = [[MTCActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewController.dismissHUD = ^{
+        [obj dismissProgressHUD];
+    };
+    [obj presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (void)dealloc {
+    [self willMoveToParentViewController:nil];
+    [self.view removeFromSuperview];
+    [self removeFromParentViewController];
+    [DWNetworking cancelAllTask];
 }
 
 @end

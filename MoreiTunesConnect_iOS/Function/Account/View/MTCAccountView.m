@@ -69,8 +69,8 @@
         };
     }];
     UITableViewRowAction *remove = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        YTKKeyValueItem *item = MTCSQL.keyValueItems[self.accountModelArrM.count-(indexPath.row+1)];
-        [MTCSQL.store deleteObjectById:item.itemId fromTable:MTCAccountTableName];
+        YTKKeyValueItem *item = MTCSQL.accountKeyValueItems[self.accountModelArrM.count-(indexPath.row+1)];
+        [MTCSQL.accountStore deleteObjectById:item.itemId fromTable:MTCACCOUNTTABLENAME];
         [weak_self.accountModelArrM removeObjectAtIndex:indexPath.row];
         if (weak_self.accountModelArrM.count) {
             [tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationFade];
@@ -97,21 +97,21 @@
                     [alert showWithAnimated:YES];
                     return ;
                 }
-                NSString *key = [NSString stringWithFormat:@"%@%@", [NSDate dateCurrentTimeWithFormat:MTCTimeFormat], [NSString repeat:idx]];
+                NSString *key = [NSString stringWithFormat:@"%@%@", MTCTime, [NSString repeat:idx]];
                 MTCAccountModel *accountModel = [[MTCAccountModel alloc] init];
                 accountModel.mail = infoStr.firstObject.encryptAESString;
                 accountModel.password = infoStr[1].encryptAESString;
-                accountModel.addTime = [NSDate dateCurrentTimeWithFormat:MTCTimeFormat];
+                accountModel.addTime = MTCTime;
                 if (infoStr.count == 3 && infoStr.lastObject.length) {
                     accountModel.note = infoStr.lastObject.encryptAESString;
                 }else {
                     accountModel.note = key.encryptAESString;
                 }
-                [MTCSQL.store putObject:accountModel.yy_modelToJSONObject withId:key intoTable:MTCAccountTableName];
+                [MTCSQL.accountStore putObject:accountModel.yy_modelToJSONObject withId:key intoTable:MTCACCOUNTTABLENAME];
                 paste.string = @"";
             }];
         }
-        [MTCSQL.keyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [MTCSQL.accountKeyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [_accountModelArrM insertObject:[MTCAccountModel yy_modelWithJSON:obj.itemObject] atIndex:0];
         }];
     }

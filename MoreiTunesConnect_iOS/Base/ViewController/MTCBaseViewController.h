@@ -16,4 +16,7 @@ psx(QMUITips, progressHUD);
 /** 关闭活动指示器 */
 - (void)dismissProgressHUD;
 
+/** 显示系统分享组件 */
+- (void)showActivityViewControllerWithItems:(NSArray *)activityItems obj:(id)obj;
+
 @end

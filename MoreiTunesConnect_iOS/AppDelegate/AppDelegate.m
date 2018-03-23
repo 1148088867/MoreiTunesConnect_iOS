@@ -7,11 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "FanYiSDK.h"
+#import <DWNetworking.h>
+#import <IQKeyboardManager.h>
+#import <JSPatchPlatform/JSPatch.h>
 #import "MTCBaseTabBarViewController.h"
 #import <AFNetworkActivityIndicatorManager.h>
-#import <DWNetworking.h>
-#import <JSPatchPlatform/JSPatch.h>
-#import "FanYiSDK.h"
 
 @interface AppDelegate ()
 
@@ -21,30 +22,41 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self networkConfig];
-    [self JSPConfig];
-//    [JSPatch testscjsinbund];
-    [self YDYFYConfig];
-    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
-    self.window.rootViewController = [[MTCBaseTabBarViewController alloc] init];
-    [self.window makeKeyAndVisible];
+    [self setupAllConfig];
     return YES;
 }
 
-- (void)networkConfig {
-    MTCNetworkConfig
-    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+- (void)setupAllConfig {
+    [self JSPConfig];
+    [self YDYFYConfig];
+    [self NetworkConfig];
+    [self IQKeyboardConfig];
+    [self RootViewControllerConfig];
 }
 
 - (void)JSPConfig {
-    [JSPatch startWithAppKey:@"fcb8e656e6b7f455"];
-    [JSPatch setupRSAPublicKey:@"-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyAguJxAJqcKYrBiHbnKN\n5Z3E8AiD9PMu0BmcQNXaPY0MZIAiyYEZ88DO99QzA9URSVVV8hWF82WngTFhxyRx\nNDRq+FDj62Hzv6yF/NdWCY28TZeJ+/V0OW4TeEjGMqTe3eDty0VzPhbaBFpaFsu5\nsl1Nx/WHLHe1ydR4hKvh+p2Un30+ZmuXZbtIPTgpxqHe2Ag9EteNAVay9uxIQmTg\nGb6mBo8x2cCAI+/mZtP6SwXgvnV8pK54jo6r+GPYCkUFKEXAemHg5qftCfS73+2k\nV5K3BHlbihPXxFGxiLrV0KlFF5R+ap1p2IFY+0WX6x3IzHCcxbFOBDU0j6IDEG7/\n+wIDAQAB\n-----END PUBLIC KEY-----"];
+    [JSPatch startWithAppKey:MTCJSPKey];
+    [JSPatch setupRSAPublicKey:MTCJSPPUBLICKey];
     [JSPatch sync];
 }
 
 - (void)YDYFYConfig {
-    YDTranslateInstance *yd = [YDTranslateInstance sharedInstance];
-    yd.appKey = MTCYDYFYKey;
+    [[YDTranslateInstance sharedInstance] setAppKey:MTCYDYFYKey];
+}
+
+- (void)NetworkConfig {
+    MTCNetworkConfig
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+}
+
+- (void)IQKeyboardConfig {
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+}
+
+- (void)RootViewControllerConfig {
+    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
+    self.window.rootViewController = [[MTCBaseTabBarViewController alloc] init];
+    [self.window makeKeyAndVisible];
 }
 
 @end

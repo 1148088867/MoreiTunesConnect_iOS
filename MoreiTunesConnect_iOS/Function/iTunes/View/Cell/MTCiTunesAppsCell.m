@@ -12,6 +12,7 @@
 
 - (void)setCellINFO {
     UIImageView *icon = [[UIImageView alloc] init];
+    icon.backgroundColor = UIColorRandom;
     selfClass(icon);
     [self.contentView addSubview:icon];
     [icon mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -77,17 +77,17 @@ psx(MTCCreateAccountView, createAccountView);
     if (hasText) {
         NSMutableDictionary *account = [NSMutableDictionary dictionary];
         weakOBJ(account);
-        [account setObject:[NSDate dateCurrentTimeWithFormat:MTCTimeFormat] forKey:@"addTime"];
+        [account setObject:MTCTime forKey:@"addTime"];
         [keys enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             QMUITextField *field = [weak_self.createAccountView viewWithTag:idx+100];
             [weak_account setObject:[field.text stringByReplacingOccurrencesOfString:@" " withString:@""].encryptAESString forKey:obj];
         }];
-        [MTCSQL.store putObject:account withId:account[@"addTime"] intoTable:MTCAccountTableName];
+        [MTCSQL.accountStore putObject:account withId:account[@"addTime"] intoTable:MTCACCOUNTTABLENAME];
         if (self.accountModel) {
-            [MTCSQL.store deleteObjectById:self.accountModel.addTime fromTable:MTCAccountTableName];
+            [MTCSQL.accountStore deleteObjectById:self.accountModel.addTime fromTable:MTCACCOUNTTABLENAME];
         }
         if (self.createAccountSuccess) {
-            self.createAccountSuccess([MTCAccountModel yy_modelWithJSON:MTCSQL.keyValueItems.lastObject.itemObject]);
+            self.createAccountSuccess([MTCAccountModel yy_modelWithJSON:MTCSQL.accountKeyValueItems.lastObject.itemObject]);
             [self.navigationController popViewControllerAnimated:YES];
         }
     }

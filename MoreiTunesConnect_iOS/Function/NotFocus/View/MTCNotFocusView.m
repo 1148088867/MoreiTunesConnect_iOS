@@ -38,6 +38,7 @@ psx(NSMutableArray<MTCNotFocusModel *>, notFocusModelArrM);
     if (!cell) {
         cell = [[MTCNotFocusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     MTCNotFocusModel *nfModel = self.notFocusModelArrM[indexPath.row];
     [cell.icon yy_setImageWithURL:[NSURL URLWithString:nfModel.appIconUrl] options:YYWebImageOptionProgressive];
     cell.name.text = nfModel.appName;

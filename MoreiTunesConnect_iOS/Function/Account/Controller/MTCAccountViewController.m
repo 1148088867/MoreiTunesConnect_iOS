@@ -50,12 +50,21 @@ psx(MTCAccountView, accountView);
 - (void)rightBarButtonItemDidClick {
     MTCCreateAccountViewController *createAccount = [[MTCCreateAccountViewController alloc] init];
     createAccount.title = @"CreateAccount";
+    [self setAnimatedWithTransition];
     [self.navigationController pushViewController:createAccount animated:YES];
     weakOBJ(self);
     createAccount.createAccountSuccess = ^(MTCAccountModel *accountModel) {
         [weak_self.accountView.accountModelArrM insertObject:accountModel atIndex:0];
         [weak_self.accountView reloadData];
     };
+}
+
+- (void)setAnimatedWithTransition {
+    CATransition *animation = [CATransition animation];
+    animation.duration = 1.25f;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.type = @"rippleEffect";
+    [self.navigationController.view.layer addAnimation:animation forKey:nil];
 }
 
 @end

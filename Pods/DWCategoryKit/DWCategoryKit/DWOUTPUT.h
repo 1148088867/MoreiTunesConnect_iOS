@@ -18,10 +18,10 @@
 /** 获取iOS版本号 */
 #define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
-/** weakOBJ */
+/** 处理Block循环引用 */
+#define weakify(obj)    autoreleasepool{} __weak __typeof(obj) weak##obj = obj;
+#define strongify(obj)  autoreleasepool{} __strong __typeof(obj) obj = weak##obj;
 #define weakOBJ(obj)  __weak typeof(obj) weak_##obj = obj;
-
-/** strongOBJ */
 #define strongOBJ(obj)  __strong typeof(obj) strong_##obj = weak##obj;
 
 #import "Property.h"

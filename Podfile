@@ -32,8 +32,8 @@ target 'MoreiTunesConnect_iOS' do
 	pod 'KSPhotoBrowser'
     
     # FPS检测
-    pod 'JPFPSStatus'
-    
+#    pod 'JPFPSStatus'
+
     #pod 'JPush'
     # 扩展
     pod 'DWCategoryKit'

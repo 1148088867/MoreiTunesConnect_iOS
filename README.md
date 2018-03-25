@@ -1,19 +1,31 @@
 # MoreiTunesConnect_iOS
 
 # 版本记录&更新日志
+- 2018-03-25 ```v1.4```
+    - 使用```私有属性(_isTransitioning)```实现全屏返回功能
+    - 为所有控制器增加晃动截图功能
+
+---
+    
 - 2018-03-24 ```v1.3```
     - 增加屏蔽不需要关注的App(```在App状态查询列表直接对想要隐藏的App左滑即可，在设置中可以使其再次显示```)
     - 为无法显示logo的App设置随机背景色
     - 暂时移除```Today Extension```的使用
 
+---
+
 - 2018-03-22
     - 增加查看当前App关键词、版本更新日志、预览图
     - 预览图大图查看，长按即可分享或保存(使用系统```UIActivityViewController```实现)
+
+---
 
 - 2018-03-18
     - 翻译后的内容可以替换原Cell内容
     - 截取的反馈内容可以直接分享给好友(使用系统```UIActivityViewController```实现)
     
+---
+
 - 2018-03-17
     - 查看[苹果](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2F&rv=1)反馈信息 
     - [翻译](http://ai.youdao.com)反馈内容(使用```有道智云SDK```实现)
@@ -21,6 +33,7 @@
     - 截取反馈内容视图
     
 ----
+
 - 多账号管理
 - 随时查看App状态
 - 本地信息AES加密
@@ -59,7 +72,8 @@
     - [DWNetworking](https://github.com/CoderDwang/DWNetworking)
     - [ISMessages](https://github.com/ilyainyushin/ISMessages)
     - [KSPhotoBrowser](https://github.com/skx926/KSPhotoBrowser)
-    - [JPFPSStatus](https://github.com/joggerplus/JPFPSStatus)
+
+~~[JPFPSStatus](https://github.com/joggerplus/JPFPSStatus)~~
 
 - 打赏
     - [微信打赏](./Picture/Pay/WeChat.JPG)

@@ -10,7 +10,6 @@
 #import "MTCBaseNavigationController.h"
 #import <Social/Social.h>
 #import <DWNetworking.h>
-#import <JPFPSStatus.h>
 #import "MTCActivityViewController.h"
 
 @interface MTCBaseViewController ()
@@ -21,7 +20,6 @@
 
 - (void)didInitialized {
     [super didInitialized];
-    if (IS_DEBUG)[self JPFPSConfig];
     self.titleView.subtitle = @"CoderDwang";
     self.titleView.style = QMUINavigationTitleViewStyleSubTitleVertical;
     self.titleView.verticalSubtitleFont = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
@@ -29,10 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-- (void)JPFPSConfig {
-    [[JPFPSStatus sharedInstance] open];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +57,12 @@
         [obj dismissProgressHUD];
     };
     [obj presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        [self showActivityViewControllerWithItems:@[[self.view qmui_snapshotLayerImage]] obj:self];
+    }
 }
 
 - (void)dealloc {

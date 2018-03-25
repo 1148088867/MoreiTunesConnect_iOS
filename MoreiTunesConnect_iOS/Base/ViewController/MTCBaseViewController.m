@@ -65,6 +65,14 @@
     }
 }
 
+- (void)setAnimatedWithTransitionType:(NSString *)type {
+    CATransition *animation = [CATransition animation];
+    animation.duration = 1.25f;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    [animation setType:type];
+    [self.navigationController.view.layer addAnimation:animation forKey:nil];
+}
+
 - (void)dealloc {
     [self willMoveToParentViewController:nil];
     [self.view removeFromSuperview];

@@ -19,4 +19,7 @@ psx(QMUITips, progressHUD);
 /** 显示系统分享组件 */
 - (void)showActivityViewControllerWithItems:(NSArray *)activityItems obj:(id)obj;
 
+/** 设置push动画 */
+- (void)setAnimatedWithTransitionType:(NSString *)type;
+
 @end

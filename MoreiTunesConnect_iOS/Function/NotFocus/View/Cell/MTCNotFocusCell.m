@@ -11,6 +11,22 @@
 @implementation MTCNotFocusCell
 
 - (void)setCellINFO {
+    self.layer.transform = CATransform3DMakeScale(.01, .01, .01);
+    [UIView animateWithDuration:1.5f animations:^{
+        self.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0);
+    }];
+    
+//    CATransform3D transform = CATransform3DIdentity;
+//    transform = CATransform3DRotate(transform, .01, .01, .01, 1);//渐变
+//    transform = CATransform3DTranslate(transform, -200, 0, 0);//左边水平移动
+//    transform = CATransform3DScale(transform, 0, 0, 0);//由小变大
+//    self.layer.transform = transform;
+//    self.layer.opacity = 0.0;
+//    [UIView animateWithDuration:1.25f animations:^{
+//        self.layer.transform = CATransform3DIdentity;
+//        self.layer.opacity = 1;
+//    }];
+    
     UIImageView *icon = [[UIImageView alloc] init];
     icon.backgroundColor = UIColorRandom;
     selfClass(icon);

@@ -62,6 +62,7 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
     [tableView qmui_clearsSelection];
     NSString *infoStr = self.setArr[indexPath.section][indexPath.row];
     if ([infoStr isEqualToString:@"未显示的内容"]) {
+        [MTCBaseController(self) setAnimatedWithTransitionType:@"rippleEffect"];
         [self.viewController.navigationController pushViewController:[[MTCNotFocusViewController alloc] init] animated:YES];
     }
     if ([infoStr isEqualToString:@"分享"]) {

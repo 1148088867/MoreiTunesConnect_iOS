@@ -51,11 +51,11 @@
         make.right.equalTo(self.contentView.mas_right).offset(-15);
     }];
     
-    QMUILabel *hiddenTime = [[QMUILabel alloc] init];
-    selfClass(hiddenTime);
-    hiddenTime.font = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
-    [self.contentView addSubview:hiddenTime];
-    [hiddenTime mas_makeConstraints:^(MASConstraintMaker *make) {
+    QMUILabel *attribution = [[QMUILabel alloc] init];
+    selfClass(attribution);
+    attribution.font = UIFontMakeNameWithSize(@"AmericanTypewriter", 12);
+    [self.contentView addSubview:attribution];
+    [attribution mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(icon.mas_bottom);
         make.right.equalTo(self.contentView.mas_right).offset(-15);
     }];

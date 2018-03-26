@@ -10,4 +10,6 @@
 
 @interface MTCNotFocusView : QMUITableView
 
+pblockx(void, notFocusCount, void);
+
 @end

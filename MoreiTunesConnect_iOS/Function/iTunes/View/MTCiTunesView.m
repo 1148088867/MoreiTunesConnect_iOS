@@ -57,6 +57,7 @@
         MTCiTunesAppsModel *appModel = weak_self.iTunesAppsArr[indexPath.row];
         NSMutableDictionary *appINFO = [NSMutableDictionary dictionary];
         [appINFO setObject:appModel.adamId.encryptAESString forKey:@"appid"];
+        [appINFO setObject:MTCBaseController(weak_self).titleView.subtitle forKey:@"attribution"];
         [appINFO setObject:appModel.iconUrl forKey:@"appIconUrl"];
         [appINFO setObject:appModel.name forKey:@"appName"];
         [appINFO setObject:MTCTime forKey:@"nfTime"];

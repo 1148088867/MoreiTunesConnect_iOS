@@ -25,7 +25,7 @@ psrx(NSArray<NSString *>, notFocusArr);
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.titleView.subtitle = self.accountModel.mail.decryptAESString;
-    self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithType:0 title:@"编辑" tintColor:UIColorWhite position:0 target:self action:@selector(rightBarButtonItemDidClick)];
+//    self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithType:0 title:@"编辑" tintColor:UIColorWhite position:0 target:self action:@selector(rightBarButtonItemDidClick)];
 }
 
 - (void)setUI {

@@ -42,7 +42,7 @@ psx(NSMutableArray<MTCNotFocusModel *>, notFocusModelArrM);
     MTCNotFocusModel *nfModel = self.notFocusModelArrM[indexPath.row];
     [cell.icon yy_setImageWithURL:[NSURL URLWithString:nfModel.appIconUrl] options:YYWebImageOptionProgressive];
     cell.name.text = nfModel.appName;
-    cell.hiddenTime.text = nfModel.nfTime;
+    cell.attribution.text = nfModel.attribution;
     return cell;
 }
 
@@ -61,6 +61,9 @@ psx(NSMutableArray<MTCNotFocusModel *>, notFocusModelArrM);
             [tableView deleteRowAtIndexPath:indexPath withRowAnimation:UITableViewRowAnimationFade];
         }else {
             [tableView reloadData];
+        }
+        if (weak_self.notFocusCount) {
+            weak_self.notFocusCount();
         }
     }];
     return @[remove];

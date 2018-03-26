@@ -20,7 +20,7 @@ psx(MTCNotFocusView, notFocusView);
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"未显示的内容";
-    self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithType:0 title:@"编辑" tintColor:UIColorWhite position:0 target:self action:@selector(rightBarButtonItemDidClick)];
+//    self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithType:0 title:@"编辑" tintColor:UIColorWhite position:0 target:self action:@selector(rightBarButtonItemDidClick)];
 }
 
 - (void)setUI {
@@ -31,7 +31,15 @@ psx(MTCNotFocusView, notFocusView);
         make.top.equalTo(self.baseView.mas_top);
         make.left.right.bottom.equalTo(self.view);
     }];
-    notFocusView.infoStr = [NSString stringWithFormat:@"当前共有%ld条内容", MTCSQL.nfKeyValueItems.count];
+    [self updateInfoStr];
+    weakOBJ(self);
+    notFocusView.notFocusCount = ^{
+        [weak_self updateInfoStr];
+    };
+}
+
+- (void)updateInfoStr {
+    self.notFocusView.infoStr = [NSString stringWithFormat:@"当前共有%ld条内容", MTCSQL.nfKeyValueItems.count];
 }
 
 - (void)rightBarButtonItemDidClick {

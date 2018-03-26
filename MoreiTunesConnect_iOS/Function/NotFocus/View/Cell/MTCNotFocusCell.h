@@ -16,7 +16,7 @@ psx(UIImageView, icon);
 /** 名称 */
 psx(QMUILabel, name);
 
-/** 隐藏时间 */
-psx(QMUILabel, hiddenTime);
+/** 归属账号 */
+psx(QMUILabel, attribution);
 
 @end

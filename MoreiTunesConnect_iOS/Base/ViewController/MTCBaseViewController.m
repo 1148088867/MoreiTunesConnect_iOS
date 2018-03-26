@@ -61,7 +61,7 @@
 
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
-        [self showActivityViewControllerWithItems:@[[self.view qmui_snapshotLayerImage]] obj:self];
+        [self showActivityViewControllerWithItems:@[[[UIApplication sharedApplication].keyWindow qmui_snapshotLayerImage]] obj:self];
     }
 }
 

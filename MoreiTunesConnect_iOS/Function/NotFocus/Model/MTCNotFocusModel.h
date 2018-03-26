@@ -22,4 +22,7 @@ pcx(NSString, appIconUrl);
 /** 关注时间 */
 pcx(NSString, nfTime);
 
+/** 归属账号 */
+pcx(NSString, attribution);
+
 @end

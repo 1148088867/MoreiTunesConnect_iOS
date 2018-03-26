@@ -39,7 +39,6 @@ psx(MTCKPView, kpView);
     [MTCNetwork getUrl:MTCiTunesAppKP(self.appid, self.versionid) callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];
         if (!error && [success[@"statusCode"] isEqualToString:@"SUCCESS"]) {
-            weak_self.navigationItem.rightBarButtonItem = [QMUINavigationButton barButtonItemWithType:QMUINavigationButtonTypeNormal title:@"截取" tintColor:UIColorWhite position:QMUINavigationButtonPositionNone target:weak_self action:@selector(rightBarButtonItemDidClick)];
             MTCKPModel *kpModel = [MTCKPModel yy_modelWithJSON:success[@"data"]];
             MTCKPDetailsModel *kpDetailModel = [MTCKPDetailsModel yy_modelWithJSON:kpModel.details.value[0]];
             weak_self.titleView.subtitle = kpModel.copyright.value;
@@ -77,33 +76,6 @@ psx(MTCKPView, kpView);
     CGSize floatLayoutViewSize = [self.kpView.floatLayoutView sizeThatFits:CGSizeMake(contentWidth, CGFLOAT_MAX)];
     self.kpView.floatLayoutView.frame = CGRectMake(padding.left, padding.top, contentWidth, floatLayoutViewSize.height);
     [self.kpView reloadData];
-}
-
-- (void)rightBarButtonItemDidClick {
-    [self snipImg:[self.kpView qmui_snapshotLayerImage]];
-}
-
-- (void)snipImg:(UIImage *)img {
-    weakOBJ(self);
-    QMUIAlertController *screenhotAlert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择对截取内容所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
-    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"分享至好友" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self showActivityViewControllerWithItems:@[img] obj:weak_self];
-    }]];
-    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"保存至相册" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self.progressHUD showLoading:@"请稍后..."];
-        UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
-    }]];
-    [screenhotAlert addCancelAction];
-    [screenhotAlert showWithAnimated:YES];
-}
-
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
-    [self dismissProgressHUD];
-    if (!error) {
-        [ISMessages showCardAlertWithTitle:@"存储成功" message:[NSString stringWithFormat:@"您已成功将反馈信息截图保存至系统相册"] duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeSuccess alertPosition:ISAlertPositionTop didHide:nil];
-    }else {
-        [ISMessages showCardAlertWithTitle:@"存储失败" message:error.description duration:2.25 hideOnSwipe:NO hideOnTap:NO alertType:ISAlertTypeError alertPosition:ISAlertPositionTop didHide:nil];
-    }
 }
 
 @end

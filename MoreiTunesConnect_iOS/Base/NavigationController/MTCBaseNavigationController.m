@@ -19,28 +19,24 @@
 }
 
 - (void)setUI {
-    [self setupSlideGesture];
+    //暂时抛弃全屏返回手势，因为和cell的滑动事件有冲突
+//    [self setupSlideGesture];
 }
 
 - (void)setupSlideGesture {
-    UIGestureRecognizer *gesture = self.interactivePopGestureRecognizer;
-    gesture.enabled = NO;
-    UIView *gestureView = gesture.view;
-    UIPanGestureRecognizer *popRecognizer = [[UIPanGestureRecognizer alloc]init];
-    popRecognizer.delegate = self;
-    popRecognizer.maximumNumberOfTouches = 1;
-    [gestureView addGestureRecognizer:popRecognizer];
-    NSMutableArray *_targets = [gesture valueForKey:@"_targets"];
-    id gestureRecognizerTarget = [_targets firstObject];
-    id navigationInteractiveTransition = [gestureRecognizerTarget valueForKey:@"_target"];
-    SEL handleTransition = NSSelectorFromString(@"handleNavigationTransition:");
-    [popRecognizer addTarget:navigationInteractiveTransition action:handleTransition];
+    id target = self.interactivePopGestureRecognizer.delegate;
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:target action:NSSelectorFromString(@"handleNavigationTransition:")];
+    pan.delegate = self;
+    [self.view addGestureRecognizer:pan];
+    self.interactivePopGestureRecognizer.enabled = NO;
 }
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    //使用了私有属性
-    return self.viewControllers.count !=1 &&
-    ![[self valueForKey:@"_isTransitioning"] boolValue];
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (self.childViewControllers.count == 1) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

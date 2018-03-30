@@ -170,8 +170,8 @@
 		92267D33204FA0BC00DF7F71 /* MTCEHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEHeader.h; sourceTree = "<group>"; };
 		92267D34204FA16500DF7F71 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
 		92267D35204FA16500DF7F71 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
-		9252DD84204FA68100A85D3E /* MTCSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCSqlManager.h; path = MoreiTunesConnect_iOS/Utils/MTCSqlManager.h; sourceTree = SOURCE_ROOT; };
-		9252DD85204FA68100A85D3E /* MTCSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCSqlManager.m; path = MoreiTunesConnect_iOS/Utils/MTCSqlManager.m; sourceTree = SOURCE_ROOT; };
+		9252DD84204FA68100A85D3E /* MTCSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCSqlManager.h; path = MoreiTunesConnect_iOS/Utils/Sql/MTCSqlManager.h; sourceTree = SOURCE_ROOT; };
+		9252DD85204FA68100A85D3E /* MTCSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCSqlManager.m; path = MoreiTunesConnect_iOS/Utils/Sql/MTCSqlManager.m; sourceTree = SOURCE_ROOT; };
 		9252DD8A204FB9A500A85D3E /* MTCSpecialModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSpecialModel.h; sourceTree = "<group>"; };
 		9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCSpecialModel.m; sourceTree = "<group>"; };
 		9252DD8E204FC88000A85D3E /* MTCiTunesAppsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCiTunesAppsModel.h; sourceTree = "<group>"; };
@@ -1070,6 +1070,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MoreiTunesConnect_iOS/Pods-MoreiTunesConnect_iOS-resources.sh",
 				"${PODS_ROOT}/DWCategoryKit/DWCategoryKit/Resources.bundle",
+				"${PODS_ROOT}/DWUNlock/DWUNlock/Resources.bundle",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ISMessages/ISMessages.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",

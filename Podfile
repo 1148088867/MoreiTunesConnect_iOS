@@ -38,6 +38,9 @@ target 'MoreiTunesConnect_iOS' do
     # 扩展
     pod 'DWCategoryKit'
     
+    # 安全
+    pod 'DWUNlock'
+    
 end
 
 target 'MoreiTunesConnect_iOS_Extension' do

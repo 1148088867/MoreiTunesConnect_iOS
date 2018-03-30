@@ -32,6 +32,10 @@
     return 200;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return CGFLOAT_MIN;
 }
@@ -69,7 +73,7 @@
         [weak_self translationMsg:messageModel.body indexPath:indexPath];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"截取反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [weak_self snipImg:[[tableView cellForRowAtIndexPath:indexPath] qmui_snapshotLayerImage]];
+         [MTCBaseController(weak_self) showActivityViewControllerWithItems:@[[[tableView cellForRowAtIndexPath:indexPath] qmui_snapshotLayerImage]] obj:MTCBaseController(weak_self)];
     }]];
     [alert addAction:[QMUIAlertAction actionWithTitle:@"复制反馈信息" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
         [weak_self copyMsg:[[[messageModel.body stringByReplacingOccurrencesOfString:@" " withString:@""] stringByReplacingOccurrencesOfString:@"<br/>" withString:@"\n"] stringByReplacingOccurrencesOfString:@"<BR/>" withString:@"\n"].filterHTML];
@@ -115,20 +119,6 @@
     }];
 }
 
-- (void)snipImg:(UIImage *)img {
-    weakOBJ(self);
-    QMUIAlertController *screenhotAlert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择对截取内容所要进行的操作" preferredStyle:QMUIAlertControllerStyleActionSheet];
-    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"分享至好友" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [MTCBaseController(weak_self) showActivityViewControllerWithItems:@[img] obj:MTCBaseController(weak_self)];
-    }]];
-    [screenhotAlert addAction:[QMUIAlertAction actionWithTitle:@"保存至相册" style:QMUIAlertActionStyleDefault handler:^(QMUIAlertAction *action) {
-        [MTCBaseController(weak_self).progressHUD showLoading:@"请稍后..."];
-        UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
-    }]];
-    [screenhotAlert addCancelAction];
-    [screenhotAlert showWithAnimated:YES];
-}
-
 - (void)copyMsg:(NSString *)msg {
     weakOBJ(self);
     [UIPasteboard generalPasteboard].string = msg;
@@ -160,3 +150,4 @@
 }
 
 @end
+

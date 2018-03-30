@@ -32,7 +32,7 @@ static DWNetworkRequestType _networkingRequestType = DWRequestTypePlainText;
 static DWNetworkResponseType _networkingResponseType = DWResponseTypeJSON;
 
 /** 设置缓存文件夹 */
-static NSString *kNetworkingCache = @"kNetworkingCacheYYPath";
+static NSString *kNetworkingCache = @"kCoderDwangNetworkingCacheYYPath";
 
 @implementation DWNetworking
 

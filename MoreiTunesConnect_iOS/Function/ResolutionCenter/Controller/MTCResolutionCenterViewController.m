@@ -20,7 +20,6 @@ psx(MTCResolutionCenterView, resolutionCenter);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 }
 
 - (void)setUI {

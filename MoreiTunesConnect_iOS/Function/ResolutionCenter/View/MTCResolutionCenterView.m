@@ -56,11 +56,13 @@
     static NSString *identifier = @"cell";
     QMUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[QMUITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[QMUITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     MTCResolutionCenterMessagesModel *messageModel = [MTCResolutionCenterMessagesModel yy_modelWithJSON:self.resolutionCenterArr[indexPath.section].messages[indexPath.row]];
     cell.textLabel.attributedText = [[NSAttributedString alloc] initWithData:[messageModel.body dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     cell.textLabel.numberOfLines = 0;
+    cell.detailTextLabel.text = messageModel.date;
+    cell.detailTextLabel.textColor = UIColorGray;
     return cell;
 }
 

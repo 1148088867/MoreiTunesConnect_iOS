@@ -406,13 +406,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		921DAA88206628D700B6657F /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Animation;
-			sourceTree = "<group>";
-		};
 		92267CE8204F854200DF7F71 /* MoreiTunesConnect_iOS_Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,7 +634,6 @@
 		92745CBA200E4FFC009DDF39 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				921DAA88206628D700B6657F /* Animation */,
 				920BB6102011FA2700B24CE1 /* Sql */,
 				92E79F01200FADFA002A2257 /* Category */,
 				92E79EF7200FA294002A2257 /* Configuration */,

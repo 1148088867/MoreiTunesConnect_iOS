@@ -41,6 +41,7 @@ psx(NSArray<NSDictionary *>, createAccountInfoArr);
     if ([placeholder isEqualToString:@"请输入Apple ID"]) {
         cell.field.keyboardType = UIKeyboardTypeEmailAddress;
         cell.field.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+        [cell.field becomeFirstResponder];
     }else if ([placeholder isEqualToString:@"请输入登录密码"]) {
         cell.field.secureTextEntry = YES;
     }else {

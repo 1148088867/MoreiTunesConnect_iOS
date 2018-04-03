@@ -34,6 +34,7 @@
 		92267D2D204F897F00DF7F71 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D1B204F897F00DF7F71 /* NSArray+Log.m */; };
 		92267D2E204F897F00DF7F71 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D1D204F897F00DF7F71 /* NSData+Base64.m */; };
 		92267D36204FA16500DF7F71 /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 92267D34204FA16500DF7F71 /* AESCrypt.m */; };
+		922B0550207319B9002D5928 /* MTCStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 922B054F207319B9002D5928 /* MTCStatusCell.m */; };
 		9252DD86204FA68100A85D3E /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD85204FA68100A85D3E /* MTCSqlManager.m */; };
 		9252DD87204FA68100A85D3E /* MTCSqlManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD85204FA68100A85D3E /* MTCSqlManager.m */; };
 		9252DD8C204FB9A500A85D3E /* MTCSpecialModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9252DD8B204FB9A500A85D3E /* MTCSpecialModel.m */; };
@@ -54,6 +55,10 @@
 		92745CAD200E4FB3009DDF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92745CAC200E4FB3009DDF39 /* Assets.xcassets */; };
 		92745CB3200E4FB3009DDF39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 92745CB2200E4FB3009DDF39 /* main.m */; };
 		92745CBD200E5032009DDF39 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92745CBC200E5032009DDF39 /* Launch Screen.storyboard */; };
+		9279AF9D2072312900C073CA /* MTCStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279AF9C2072312900C073CA /* MTCStatusViewController.m */; };
+		9279AFA1207238EE00C073CA /* MTCStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279AFA0207238EE00C073CA /* MTCStatusModel.m */; };
+		9279AFA620724D7800C073CA /* MTCWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279AFA520724D7800C073CA /* MTCWKWebViewController.m */; };
+		9279AFA920725B1E00C073CA /* MTCStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9279AFA820725B1E00C073CA /* MTCStatusView.m */; };
 		927A12AC205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md in Resources */ = {isa = PBXBuildFile; fileRef = 927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */; };
 		927A12BC205BF667003DAC3E /* MTCResolutionCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A12BB205BF667003DAC3E /* MTCResolutionCenterViewController.m */; };
 		927A12BF205BF898003DAC3E /* MTCResolutionCenterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 927A12BE205BF898003DAC3E /* MTCResolutionCenterView.m */; };
@@ -170,6 +175,8 @@
 		92267D33204FA0BC00DF7F71 /* MTCEHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCEHeader.h; sourceTree = "<group>"; };
 		92267D34204FA16500DF7F71 /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
 		92267D35204FA16500DF7F71 /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		922B054E207319B9002D5928 /* MTCStatusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCStatusCell.h; sourceTree = "<group>"; };
+		922B054F207319B9002D5928 /* MTCStatusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCStatusCell.m; sourceTree = "<group>"; };
 		9252DD84204FA68100A85D3E /* MTCSqlManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTCSqlManager.h; path = MoreiTunesConnect_iOS/Utils/Sql/MTCSqlManager.h; sourceTree = SOURCE_ROOT; };
 		9252DD85204FA68100A85D3E /* MTCSqlManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTCSqlManager.m; path = MoreiTunesConnect_iOS/Utils/Sql/MTCSqlManager.m; sourceTree = SOURCE_ROOT; };
 		9252DD8A204FB9A500A85D3E /* MTCSpecialModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCSpecialModel.h; sourceTree = "<group>"; };
@@ -198,6 +205,14 @@
 		92745CB2200E4FB3009DDF39 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92745CBC200E5032009DDF39 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92745CC0200E50C9009DDF39 /* MoreiTunesConnect-README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MoreiTunesConnect-README.md"; sourceTree = "<group>"; };
+		9279AF9B2072312900C073CA /* MTCStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCStatusViewController.h; sourceTree = "<group>"; };
+		9279AF9C2072312900C073CA /* MTCStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCStatusViewController.m; sourceTree = "<group>"; };
+		9279AF9F207238EE00C073CA /* MTCStatusModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCStatusModel.h; sourceTree = "<group>"; };
+		9279AFA0207238EE00C073CA /* MTCStatusModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCStatusModel.m; sourceTree = "<group>"; };
+		9279AFA420724D7800C073CA /* MTCWKWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCWKWebViewController.h; sourceTree = "<group>"; };
+		9279AFA520724D7800C073CA /* MTCWKWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCWKWebViewController.m; sourceTree = "<group>"; };
+		9279AFA720725B1E00C073CA /* MTCStatusView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCStatusView.h; sourceTree = "<group>"; };
+		9279AFA820725B1E00C073CA /* MTCStatusView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCStatusView.m; sourceTree = "<group>"; };
 		927A12AB205BA90A003DAC3E /* MoreiTunesConnect_iOS_Extension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MoreiTunesConnect_iOS_Extension.md; sourceTree = "<group>"; };
 		927A12BA205BF667003DAC3E /* MTCResolutionCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTCResolutionCenterViewController.h; sourceTree = "<group>"; };
 		927A12BB205BF667003DAC3E /* MTCResolutionCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTCResolutionCenterViewController.m; sourceTree = "<group>"; };
@@ -661,6 +676,8 @@
 		92745CBE200E506C009DDF39 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				9279AFA320724D4F00C073CA /* WKWeb */,
+				9279AF99207230EC00C073CA /* Status */,
 				92F6A394206539EA00984307 /* NotFocus */,
 				920A8490205FAD0E002CFC21 /* Keyword&Preview */,
 				927A12AD205BAEC6003DAC3E /* ResolutionCenter */,
@@ -682,6 +699,62 @@
 				92E79EE9200F9F5E002A2257 /* ViewController */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9279AF99207230EC00C073CA /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				9279AF9E207238DF00C073CA /* Model */,
+				9279AFA22072403B00C073CA /* View */,
+				9279AF9A2072310700C073CA /* Controller */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
+		9279AF9A2072310700C073CA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9279AF9B2072312900C073CA /* MTCStatusViewController.h */,
+				9279AF9C2072312900C073CA /* MTCStatusViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9279AF9E207238DF00C073CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9279AF9F207238EE00C073CA /* MTCStatusModel.h */,
+				9279AFA0207238EE00C073CA /* MTCStatusModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9279AFA22072403B00C073CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9279AFAA2072757D00C073CA /* Cell */,
+				9279AFA720725B1E00C073CA /* MTCStatusView.h */,
+				9279AFA820725B1E00C073CA /* MTCStatusView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9279AFA320724D4F00C073CA /* WKWeb */ = {
+			isa = PBXGroup;
+			children = (
+				9279AFA420724D7800C073CA /* MTCWKWebViewController.h */,
+				9279AFA520724D7800C073CA /* MTCWKWebViewController.m */,
+			);
+			path = WKWeb;
+			sourceTree = "<group>";
+		};
+		9279AFAA2072757D00C073CA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				922B054E207319B9002D5928 /* MTCStatusCell.h */,
+				922B054F207319B9002D5928 /* MTCStatusCell.m */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		927A12AD205BAEC6003DAC3E /* ResolutionCenter */ = {
@@ -1184,13 +1257,16 @@
 				9203753D204BB85900E23339 /* MTCiTunesView.m in Sources */,
 				92745CB3200E4FB3009DDF39 /* main.m in Sources */,
 				928CDE01204D4E3C00544C92 /* MTCBaseTabBarViewController.m in Sources */,
+				922B0550207319B9002D5928 /* MTCStatusCell.m in Sources */,
 				92E79EEC200F9F8B002A2257 /* MTCBaseViewController.m in Sources */,
 				92E79F00200FADF2002A2257 /* MTCAccountView.m in Sources */,
 				9203755F204BDC5A00E23339 /* MTCiTunesAppsCell.m in Sources */,
 				920A8494205FAD6E002CFC21 /* MTCKPViewController.m in Sources */,
 				920BB61C2011FDC300B24CE1 /* MTCCreateAccountView.m in Sources */,
 				92F6A39C20653A8900984307 /* MTCNotFocusViewController.m in Sources */,
+				9279AFA1207238EE00C073CA /* MTCStatusModel.m in Sources */,
 				92F6A3A920655BD700984307 /* MTCActivityViewController.m in Sources */,
+				9279AF9D2072312900C073CA /* MTCStatusViewController.m in Sources */,
 				92E79F09200FB562002A2257 /* MTCAccountModel.m in Sources */,
 				92E79EFA200FA29F002A2257 /* QMUIConfigurationTemplate.m in Sources */,
 				92E79EF1200FA10C002A2257 /* MTCBaseNavigationController.m in Sources */,
@@ -1199,6 +1275,8 @@
 				920BB6202012015200B24CE1 /* MTCCreateAccountCell.m in Sources */,
 				92E79F05200FAE3E002A2257 /* QMUITableView+MTCExtension.m in Sources */,
 				92F6A39820653A2B00984307 /* MTCNotFocusModel.m in Sources */,
+				9279AFA920725B1E00C073CA /* MTCStatusView.m in Sources */,
+				9279AFA620724D7800C073CA /* MTCWKWebViewController.m in Sources */,
 				92745CA5200E4FB3009DDF39 /* AppDelegate.m in Sources */,
 				920A8499205FC20F002CFC21 /* MTCKPModel.m in Sources */,
 				9252DD8C204FB9A500A85D3E /* MTCSpecialModel.m in Sources */,

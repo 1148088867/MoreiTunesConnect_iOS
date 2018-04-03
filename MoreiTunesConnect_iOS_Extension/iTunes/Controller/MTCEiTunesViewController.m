@@ -80,9 +80,9 @@ psx(UIActivityIndicatorView, activity);
             [iTunesAppsArr enumerateObjectsUsingBlock:^(MTCiTunesAppsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([obj.adamId isEqualToString:weak_self.specialModel.appid.decryptAESString]) {
                     [weak_self stopAnimating];
-                    NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:obj.versionSets];
-                    MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
-                    MTCiTunesAppDeliverableVersion *appDeliverableVersionModel = appVersionModel.firstObject.deliverableVersion;
+                    NSArray<MTCiTunesAppVersionSetsModel *> *appVersionSetsModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionSetsModel class] json:obj.versionSets];
+                    MTCiTunesAppVersionModel *appInFlightVersionModel = appVersionSetsModel.firstObject.inFlightVersion;
+                    MTCiTunesAppVersionModel *appDeliverableVersionModel = appVersionSetsModel.firstObject.deliverableVersion;
                     [weak_self.iTunesView.icon yy_setImageWithURL:[NSURL URLWithString:obj.iconUrl] options:YYWebImageOptionProgressive];
                     weak_self.iTunesView.name.text = obj.name;
                     weak_self.iTunesView.lastDate.text = obj.lastModifiedDate;

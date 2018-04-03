@@ -39,12 +39,12 @@
 
 @end
 
+@implementation MTCiTunesAppVersionSetsModel
+
+@end
+
 @implementation MTCiTunesAppVersionModel
 
-@end
-
-@implementation MTCiTunesAppInFlightVersion
-
 - (NSString *)stateStr {
     if ([_state isEqualToString:@"inReview"]) {
         return @"正在审核";
@@ -81,40 +81,3 @@
 
 @end
 
-@implementation MTCiTunesAppDeliverableVersion
-
-- (NSString *)stateStr {
-    if ([_state isEqualToString:@"inReview"]) {
-        return @"正在审核";
-    }else if ([_state isEqualToString:@"waitingForReview"]) {
-        return @"等待审核";
-    }else if ([_state isEqualToString:@"prepareForUpload"]) {
-        return @"准备提交";
-    }else if ([_state isEqualToString:@"devRejected"]) {
-        return @"被开发人员拒绝";
-    }else if ([_state isEqualToString:@"rejected"]) {
-        return @"被拒绝";
-    }else if ([_state isEqualToString:@"metadataRejected"]) {
-        return @"元数据被拒绝";
-    }else if ([_state isEqualToString:@"readyForSale"]) {
-        return @"可供销售";
-    }
-    return _state;
-}
-
-- (UIColor *)stateColor {
-    if ([_state isEqualToString:@"inReview"] ||
-        [_state isEqualToString:@"waitingForReview"] ||
-        [_state isEqualToString:@"prepareForUpload"]) {
-        return UIColorMakeRGB(255, 207, 71);
-    }else if ([_state isEqualToString:@"devRejected"] ||
-              [_state isEqualToString:@"rejected"] ||
-              [_state isEqualToString:@"metadataRejected"]) {
-        return UIColorMakeRGB(250, 58, 58);
-    }else if ([_state isEqualToString:@"readyForSale"]) {
-        return UIColorMakeRGB(159, 214, 97);
-    }
-    return UIColorRandom;
-}
-
-@end

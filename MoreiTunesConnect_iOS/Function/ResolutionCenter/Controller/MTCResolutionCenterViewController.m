@@ -34,7 +34,6 @@ psx(MTCResolutionCenterView, resolutionCenter);
     resolutionCenter.kpViewController = ^(NSString *versionid) {
         MTCKPViewController *kp = [[MTCKPViewController alloc] init];
         kp.title = weak_self.title;
-        kp.titleView.subtitle = versionid;
         kp.appid = weak_self.titleView.subtitle;
         kp.versionid = versionid;
         [weak_self.navigationController pushViewController:kp animated:YES];

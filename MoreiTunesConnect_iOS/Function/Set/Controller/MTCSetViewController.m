@@ -26,7 +26,7 @@
         make.top.equalTo(self.baseView.mas_top);
         make.left.right.bottom.equalTo(self.view);
     }];
-    setView.infoStr = [NSString stringWithFormat:@"Current Version %@\nMoreiTunesConnect_iOS由CoderDwang 制作", [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]];
+    setView.infoStr = [NSString stringWithFormat:@"Current Version %@(%@)\nMoreiTunesConnect_iOS由CoderDwang 制作", [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"], [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]];
 }
 
 @end

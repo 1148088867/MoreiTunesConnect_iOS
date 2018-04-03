@@ -8,6 +8,7 @@
 
 #import "MTCSetView.h"
 #import "MTCNotFocusViewController.h"
+#import "MTCWKWebViewController.h"
 
 @interface MTCSetView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -69,12 +70,13 @@ psx(NSArray<NSArray<NSString *> *>, setArr);
         [MTCBaseController(self) showActivityViewControllerWithItems:@[@"欢迎使用MoreiTunesConnect_iOS", UIImageMake(@"logo"), [NSURL URLWithString:MTCGitHub]] obj:MTCBaseController(self)];
     }
     if ([infoStr isEqualToString:@"关于"]) {
+        weakOBJ(self);
         QMUIAlertController *alert = [QMUIAlertController alertControllerWithTitle:@"提示" message:@"请选择所要查看的信息" preferredStyle:0];
         [alert addAction:[QMUIAlertAction actionWithTitle:@"关于MoreiTunesConnect_iOS" style:0 handler:^(QMUIAlertAction *action) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCGitHub]];
+            [weak_self.viewController.navigationController pushViewController:[[MTCWKWebViewController alloc] initWithRequestURLString:MTCGitHub] animated:YES];
         }]];
         [alert addAction:[QMUIAlertAction actionWithTitle:@"关于中国独立开发者项目" style:0 handler:^(QMUIAlertAction *action) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:MTCIndependentDevelopersGitHub]];
+            [weak_self.viewController.navigationController pushViewController:[[MTCWKWebViewController alloc] initWithRequestURLString:MTCIndependentDevelopersGitHub] animated:YES];
         }]];
         [alert addCancelAction];
         [alert showWithAnimated:YES];

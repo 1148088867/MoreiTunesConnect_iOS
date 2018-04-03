@@ -17,3 +17,4 @@
 - ResolutionCenter     解决中心
 - Keyword&Preview    关键词&预览图
 - NotFocus                 不关注的App
+- Status                       状态

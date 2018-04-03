@@ -15,6 +15,9 @@
 /** iTunesApps */
 #define MTCiTunesApps @"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/manageyourapps/summary/v2"
 
+/** iTunes status */
+#define MTCiTunesStatus(appid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/overview", appid]
+
 /** iTunes解决中心 */
 #define MTCiTunesResolutionCenter(appid) [NSString stringWithFormat:@"https://itunesconnect.apple.com/WebObjects/iTunesConnect.woa/ra/apps/%@/platforms/ios/resolutionCenter", appid]
 

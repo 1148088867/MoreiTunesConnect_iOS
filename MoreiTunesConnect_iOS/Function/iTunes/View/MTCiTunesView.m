@@ -9,8 +9,7 @@
 #import "MTCiTunesView.h"
 #import "MTCiTunesAppsCell.h"
 #import <YYWebImage.h>
-//#import "MTCSpecialModel.h"
-#import "MTCResolutionCenterViewController.h"
+#import "MTCStatusViewController.h"
 
 @interface MTCiTunesView ()<QMUITableViewDelegate, QMUITableViewDataSource>
 
@@ -39,9 +38,9 @@
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
-    NSArray<MTCiTunesAppVersionModel *> *appVersionModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionModel class] json:appModel.versionSets];
-    MTCiTunesAppInFlightVersion *appInFlightVersionModel = appVersionModel.firstObject.inFlightVersion;
-    MTCiTunesAppDeliverableVersion *appDeliverableVersionModel = appVersionModel.firstObject.deliverableVersion;
+    NSArray<MTCiTunesAppVersionSetsModel *> *appVersionSetsModel = [NSArray yy_modelArrayWithClass:[MTCiTunesAppVersionSetsModel class] json:appModel.versionSets];
+    MTCiTunesAppVersionModel *appInFlightVersionModel = appVersionSetsModel.firstObject.inFlightVersion;
+    MTCiTunesAppVersionModel *appDeliverableVersionModel = appVersionSetsModel.firstObject.deliverableVersion;
     [cell.icon yy_setImageWithURL:[NSURL URLWithString:appModel.iconUrl] options:YYWebImageOptionProgressive];
     cell.name.text = appModel.name;
     cell.lastDate.text = appModel.lastModifiedDate;
@@ -102,11 +101,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView qmui_clearsSelection];
     MTCiTunesAppsModel *appModel = self.iTunesAppsArr[indexPath.row];
-    MTCResolutionCenterViewController *resolutionCenter = [[MTCResolutionCenterViewController alloc] init];
-    resolutionCenter.title = appModel.name;
-    resolutionCenter.titleView.subtitle = appModel.adamId;
-    resolutionCenter.appid = appModel.adamId;
-    [self.viewController.navigationController pushViewController:resolutionCenter animated:YES];
+    MTCStatusViewController *status = [[MTCStatusViewController alloc] init];
+    status.appid = appModel.adamId;
+    status.title = appModel.name;
+    status.titleView.subtitle = appModel.bundleId;
+    [self.viewController.navigationController pushViewController:status animated:YES];
 }
 
 - (NSMutableArray *)iTunesAppsArr {

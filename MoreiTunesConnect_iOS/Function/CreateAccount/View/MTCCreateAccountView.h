@@ -10,7 +10,7 @@
 
 @interface MTCCreateAccountView : QMUITableView
 
-/** 当为编辑账号信息时有值 */
+/** 当编辑账号信息有值 */
 psx(NSArray<NSString *>, infos);
 
 @end

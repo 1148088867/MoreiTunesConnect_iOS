@@ -1070,7 +1070,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1079,7 +1079,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1312,9 +1312,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C37A0D4E8B9E660DB7699E3 /* Pods-MoreiTunesConnect_iOS_Extension.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS_Extension/MoreiTunesConnect_iOS_Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B57T6XJU36;
+				DEVELOPMENT_TEAM = H6UC2J8G72;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/MoreiTunesConnect_iOS_Extension.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1330,9 +1329,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0BC75BF6BC80414663D71F06 /* Pods-MoreiTunesConnect_iOS_Extension.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS_Extension/MoreiTunesConnect_iOS_Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B57T6XJU36;
+				DEVELOPMENT_TEAM = H6UC2J8G72;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/MoreiTunesConnect_iOS_Extension.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/MoreiTunesConnect_iOS_Extension/Utils/Public/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1453,9 +1451,8 @@
 			baseConfigurationReference = A523B738FAE7FC83A6317D77 /* Pods-MoreiTunesConnect_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B57T6XJU36;
+				DEVELOPMENT_TEAM = H6UC2J8G72;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/JSPatchPlatform",
@@ -1479,9 +1476,8 @@
 			baseConfigurationReference = A6EA84047DE158182FBD0265 /* Pods-MoreiTunesConnect_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MoreiTunesConnect_iOS/MoreiTunesConnect_iOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = B57T6XJU36;
+				DEVELOPMENT_TEAM = H6UC2J8G72;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MoreiTunesConnect_iOS/Library/JSPatchPlatform",

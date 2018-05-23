@@ -29,7 +29,6 @@ psx(UIActivityIndicatorView, activity);
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (self.specialModel.appid.length) {
-        MTCNetworkConfig
         [self loadAppView];
     }else {
         UILabel *noData = [[UILabel alloc] init];

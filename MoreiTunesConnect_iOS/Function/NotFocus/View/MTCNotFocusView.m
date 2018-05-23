@@ -73,7 +73,7 @@ psx(NSMutableArray<MTCNotFocusModel *>, notFocusModelArrM);
     if (!_notFocusModelArrM) {
         _notFocusModelArrM = [NSMutableArray array];
         [MTCSQL.nfKeyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [_notFocusModelArrM insertObject:[MTCNotFocusModel yy_modelWithJSON:obj.itemObject] atIndex:0];
+            [self->_notFocusModelArrM insertObject:[MTCNotFocusModel yy_modelWithJSON:obj.itemObject] atIndex:0];
         }];
     }
     return _notFocusModelArrM;

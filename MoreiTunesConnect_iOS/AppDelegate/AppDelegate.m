@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "FanYiSDK.h"
-#import <DWNetworking.h>
 #import <IQKeyboardManager.h>
 #import <JSPatchPlatform/JSPatch.h>
 #import "MTCBaseTabBarViewController.h"
@@ -45,7 +44,7 @@
 }
 
 - (void)NetworkConfig {
-    MTCNetworkConfig
+    [MTCNetwork setHeader];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 

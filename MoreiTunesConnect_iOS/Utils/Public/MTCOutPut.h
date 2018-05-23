@@ -48,14 +48,4 @@
 /** 获取基础控制器 */
 #define MTCBaseController(obj) ((MTCBaseViewController *)obj.viewController)
 
-/** 设置请求头 */
-#define MTCNetworkConfig [DWNetworking setConfigRequestType:DWRequestTypeJSON responseType:DWResponseTypeJSON];\
-                         [DWNetworking setHttpHeaderConfig:@{@"Connection":@"keep-alive",\
-                                    @"X-Apple-Widget-Key":@"e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42",\
-                                    @"Content-Type":@"application/json",\
-                                    @"Accept":@"application/json, text/javascript, */*; q=0.01",\
-                                    @"X-Requested-With":@"XMLHttpRequest",\
-                                    @"Referer":@"https://idmsa.apple.com/appleauth/auth/signin?widgetKey=e0b80c3bf78523bfe80974d320935bfa30add02e1bff88ec2166c6bd5a706c42&widgetDomain=https://itunesconnect.apple.com:443&font=sf",\
-                                    }];
-
 #endif /* MTCOutPut_h */

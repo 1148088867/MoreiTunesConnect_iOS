@@ -112,7 +112,7 @@
             }];
         }
         [MTCSQL.accountKeyValueItems enumerateObjectsUsingBlock:^(YTKKeyValueItem * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [_accountModelArrM insertObject:[MTCAccountModel yy_modelWithJSON:obj.itemObject] atIndex:0];
+            [self->_accountModelArrM insertObject:[MTCAccountModel yy_modelWithJSON:obj.itemObject] atIndex:0];
         }];
     }
     return _accountModelArrM;

@@ -10,6 +10,8 @@
 
 @interface MTCNetwork : NSObject
 
++ (void)setHeader;
+
 + (void)postUrl:(NSString *)url params:(NSDictionary *)params callBack:(void(^)(id success, NSError *error))callBack;
 
 + (void)getUrl:(NSString *)url callBack:(void(^)(id success, NSError *error))callBack;

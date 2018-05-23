@@ -10,7 +10,9 @@
 
 @interface MTCNetwork : NSObject
 
-+ (void)setHeader;
++ (void)setLoginHeader;
+
++ (void)setQueryHeader;
 
 + (void)postUrl:(NSString *)url params:(NSDictionary *)params callBack:(void(^)(id success, NSError *error))callBack;
 

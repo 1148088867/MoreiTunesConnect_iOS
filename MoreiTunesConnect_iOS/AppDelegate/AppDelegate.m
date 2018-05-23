@@ -44,7 +44,6 @@
 }
 
 - (void)NetworkConfig {
-    [MTCNetwork setHeader];
     [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 }
 

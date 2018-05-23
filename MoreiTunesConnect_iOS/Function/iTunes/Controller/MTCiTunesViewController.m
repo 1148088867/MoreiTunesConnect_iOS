@@ -56,6 +56,7 @@ psrx(NSArray<NSString *>, notFocusArr);
 - (void)iTunesConnectLoginNetworking {
     [self.progressHUD showLoading:@"账号登录中..."];
     weakOBJ(self);
+    [MTCNetwork setLoginHeader];
     [MTCNetwork postUrl:MTCiTunesLogin params:@{@"accountName":self.accountModel.mail.decryptAESString,
                  @"password":self.accountModel.password.decryptAESString,
                  @"rememberMe":@"true"} callBack:^(id success, NSError *error) {
@@ -76,6 +77,7 @@ psrx(NSArray<NSString *>, notFocusArr);
 - (void)iTunesConnectAppsNetworking {
     [self.progressHUD showLoading:@"Apps状态查询中..."];
     weakOBJ(self);
+    [MTCNetwork setQueryHeader];
     [MTCNetwork getUrl:MTCiTunesApps callBack:^(id success, NSError *error) {
         [weak_self dismissProgressHUD];
         if ([success[@"statusCode"] isEqualToString:@"SUCCESS"] && !error) {

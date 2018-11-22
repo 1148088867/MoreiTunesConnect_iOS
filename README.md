@@ -1,7 +1,7 @@
 # MoreiTunesConnect_iOS
 
 # 此项目不再更新,有需要可以扫码下载,或者加群: 583946521
-![](picture/下载.png)
+![](./Picture/下载.png)
 
 # 版本记录&更新日志
 
